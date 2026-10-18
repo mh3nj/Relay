@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="public/icons/Relay-1.png" alt="Relay app icon" width="112" />
+  <img src="docs/images/banner.png" alt="Relay app icon" />
 
   <h1>Relay</h1>
 
@@ -60,7 +60,6 @@ Feature availability and browser behavior can vary by environment. Audio decodin
 
 Media will be added after the owner supplies the final assets. The placeholders below are intentional and are not screenshots or claims of a deployed demo.
 
-- **Banner:** pending owner-provided image.
 - **Application screenshots:** pending capture from the actual running app.
 - **Demo video:** pending owner-provided WebM recording.
 
