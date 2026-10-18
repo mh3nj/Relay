@@ -1,0 +1,50 @@
+# Dependencies
+node_modules
+
+# Build output
+dist
+dist-ssr
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+build/
+coverage/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test / tooling caches
+coverage
+*.tsbuildinfo
+
+# Dev server logs and pid files
+*.log
+*.pid
+
+# Editor and OS files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.local
+
+# Secrets and local credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Test reports
+playwright-report/
+test-results/
