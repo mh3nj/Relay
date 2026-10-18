@@ -1,24 +1,70 @@
-This is free and unencumbered software released into the public domain.
+RELAY PERSONAL-USE AND NON-COMMERCIAL SHARING LICENSE
+Version 1.0 — 18 October 2026
 
-Anyone is free to copy, modify, publish, use, compile, sell, or
-distribute this software, either in source code form or as a compiled
-binary, for any purpose, commercial or non-commercial, and by any
-means.
+Copyright (c) 2026 Mohsen Jafari
 
-In jurisdictions that recognize copyright laws, the author or authors
-of this software dedicate any and all copyright interest in the
-software to the public domain. We make this dedication for the benefit
-of the public at large and to the detriment of our heirs and
-successors. We intend this dedication to be an overt act of
-relinquishment in perpetuity of all present and future rights to this
-software under copyright law.
+IMPORTANT: This is a custom, source-available license, not an OSI-approved open-source license. It is provided as the copyright holder's statement of intended permissions, not as legal advice. Obtain qualified legal review before relying on it for commercial distribution or enforcement.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
-OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
+1. Definitions
 
-For more information, please refer to <https://unlicense.org>
+“Software” means the portions of Relay that Mohsen Jafari owns or is authorized to license, including source code and accompanying materials expressly marked as covered by this License. “You” means the individual or legal entity exercising permissions under this License. “Personal Use” means use by an individual for private, non-commercial learning, experimentation, and operation. “Non-Commercial” means not primarily intended for or directed toward commercial advantage or monetary compensation. “Distribute” means to provide a copy, host for others, publish, sublicense, sell, or otherwise make the Software available to another person or the public.
+
+2. Permissions
+
+Subject to this License, the copyright holder grants you a worldwide, non-exclusive, royalty-free license to:
+
+(a) download, reproduce, and run the Software for Personal Use;
+(b) modify the Software for your own private, non-commercial use; and
+(c) share unmodified copies or modified versions with others for Non-Commercial purposes, provided that you comply with Section 3.
+
+These permissions apply only to material the copyright holder is entitled to license. They do not override third-party license terms.
+
+3. Conditions for non-commercial sharing
+
+When you distribute the Software or a modified version under Section 2(c), you must:
+
+(a) include a complete copy of this License with each copy or substantial portion;
+(b) retain existing copyright, attribution, and license notices;
+(c) clearly identify your changes, including that the version is modified and is not an official release of Relay;
+(d) provide recipients with the source code for the modified version you distribute, where the distributed version is based on source code; and
+(e) distribute the copy or modified version only for Non-Commercial purposes and under this same License, without imposing additional restrictions on the permissions granted by this License.
+
+You may not imply that the copyright holder endorses your fork, changes, or project.
+
+4. Commercial use requires separate permission
+
+Without the copyright holder's prior, express written permission, you may not:
+
+(a) use the Software or a modified version for Commercial purposes;
+(b) sell, rent, sublicense for payment, or charge for access to the Software or a modified version;
+(c) offer the Software or a modified version as a paid hosted service, product, bundled commercial offering, or paid training/service component;
+(d) use the Software to provide a commercial service to third parties; or
+(e) commercially distribute, market, or exploit the Software or a modified version.
+
+A written permission may set additional terms or fees. Silence, public availability, or the ability to view or fork the repository is not commercial permission.
+
+5. Names, logos, and branding
+
+This License does not grant rights to use the Relay name, logo, or other branding to suggest official status, affiliation, sponsorship, or endorsement. Separate permission is required for such use, except where applicable law provides otherwise.
+
+6. Contributions
+
+Unless a contribution agreement says otherwise, by intentionally submitting a contribution for inclusion in the Software, you represent that you have the right to submit it and grant the copyright holder permission to use, modify, reproduce, and distribute that contribution as part of Relay under this License and any later license terms you separately agree to. Contributions may be reviewed and accepted or declined at the maintainer's discretion. Do not submit third-party material unless its terms permit the proposed use.
+
+7. Third-party components
+
+Dependencies, fonts, icons, images, and other third-party materials may be governed by separate licenses and notices. This License does not replace or narrow those terms. Review THIRD_PARTY_NOTICES.md and the relevant upstream license before using or redistributing third-party material. If there is a conflict, the applicable third-party license governs that third-party material.
+
+8. Termination
+
+The permissions granted by this License terminate automatically if you materially violate its terms. Where legally permitted, permissions may be reinstated if the violation is cured promptly after you become aware of it. Termination does not affect rights granted directly by third-party licenses.
+
+9. Disclaimer of warranty and limitation of liability
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SOFTWARE IS PROVIDED “AS IS” AND WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE COPYRIGHT HOLDER SHALL NOT BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR ITS USE, WHETHER IN CONTRACT, TORT, OR OTHERWISE.
+
+10. Reservation of rights and interpretation
+
+All rights not expressly granted are reserved. If any provision is unenforceable, it shall be limited only to the minimum extent necessary, and the remaining provisions shall remain in effect. This License does not limit rights that cannot lawfully be limited under applicable law.
+
+For commercial licensing requests, contact: anoushzadparsi@gmail.com
