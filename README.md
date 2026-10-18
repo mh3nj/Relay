@@ -10,7 +10,7 @@
   <p>
     <a href="https://github.com/mh3nj/Relay/actions/workflows/ci.yml"><img src="https://github.com/mh3nj/Relay/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI status" /></a>
     <a href="https://github.com/mh3nj/Relay/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-custom-lightgrey.svg" alt="Custom license" /></a>
-    <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-5%2B-3178C6?logo=typescript&logoColor=white" alt="TypeScript" /></a>
+    <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-6-3178C6?logo=typescript&logoColor=white" alt="TypeScript" /></a>
     <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-19-149ECA?logo=react&logoColor=white" alt="React" /></a>
     <a href="https://github.com/mh3nj/Relay/issues"><img src="https://img.shields.io/github/issues/mh3nj/Relay" alt="GitHub issues" /></a>
     <a href="https://github.com/mh3nj/Relay/commits/main"><img src="https://img.shields.io/github/last-commit/mh3nj/Relay" alt="Last commit" /></a>
