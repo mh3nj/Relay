@@ -1,24 +1,28 @@
 # Security Policy
 
-## Reporting a vulnerability
-
-Please do not publish exploitable vulnerabilities, API keys, personal backups, or sensitive logs in a public issue.
-
-Until a private GitHub Security Advisories channel or another verified private reporting address is configured, contact the maintainer through a private GitHub communication channel associated with [`mh3nj`](https://github.com/mh3nj). Do not assume that a public issue is confidential.
-
-When reporting, include:
-
-- A concise description of the suspected issue.
-- Affected route, feature, browser, and version/commit if known.
-- Reproduction steps that do not expose real secrets or personal data.
-- Potential impact and any safe proof of concept.
-
-Please give the maintainer a reasonable opportunity to investigate and prepare a fix before publicly disclosing a vulnerability.
-
-## Scope notes
-
-Relay is a browser application. The optional AI assistant sends prompts to the provider endpoint configured by the user. Reports involving third-party AI providers should distinguish Relay behavior from provider-side handling. Do not test against another person's API key, data, or deployment without explicit authorization.
-
 ## Supported versions
 
-No formal version-support policy has been declared yet. Until releases are tagged and a policy is published, the current default branch is the primary development target, without a guarantee of response time or remediation timeline.
+Security fixes are currently evaluated against the latest code on the default branch. There is no published stable release or formal support window yet.
+
+## Reporting a vulnerability
+
+Please do not publish exploitable vulnerabilities, API keys, personal data, or sensitive backups in public issues.
+
+Use GitHub's private vulnerability reporting feature for this repository if it is enabled. If private reporting is unavailable, contact the maintainer at **anoushzadparsi@gmail.com** with a concise description and a safe way to reproduce the issue. Avoid sending secrets or real user data.
+
+Please include, where possible:
+
+- affected file, feature, or commit;
+- impact and realistic attack scenario;
+- reproduction steps or a minimal proof of concept;
+- any proposed mitigation.
+
+## Response expectations
+
+This is an individually maintained project, so response and remediation times are not guaranteed. The maintainer will assess the report, may request additional information, and will coordinate disclosure where practical. Please allow time for investigation and a fix before public disclosure.
+
+## Secrets and AI provider keys
+
+Never commit API keys, access tokens, passwords, private backups, or environment files. If a credential is exposed, revoke or rotate it with the issuing provider immediately; removing it from a later commit does not make the exposed credential safe.
+
+Optional AI integration sends requests to the provider configured by the user. Review the provider's terms and privacy practices and avoid transmitting sensitive information.

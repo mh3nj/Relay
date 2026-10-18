@@ -1,180 +1,91 @@
 <div align="center">
+
   <img src="public/icons/Relay-1.png" alt="Relay app icon" width="112" />
+
   <h1>Relay</h1>
+
   <p><strong>Learn Morse. Hear the signal. Build the skill.</strong></p>
-  <p>An offline-first Morse code learning platform built around structured lessons, deliberate practice, signal tools, games, and personal progress.</p>
+  <p>An offline-first Morse code learning platform for structured lessons, deliberate practice, audio tools, games, and progress tracking.</p>
+
+  <!-- TODO: Add the custom Relay banner here when the owner supplies the final image. -->
+  <!-- TODO: Add a WebM demo video when the owner supplies the final recording. -->
+
   <p>
-    <a href="https://github.com/mh3nj/Relay">Repository</a> ·
     <a href="https://github.com/mh3nj/Relay/issues">Issues</a> ·
     <a href="SECURITY.md">Security</a> ·
-    <a href="docs/PRIVACY.md">Privacy & data</a>
+    <a href="docs/PRIVACY.md">Privacy & data</a> ·
+    <a href="CONTRIBUTING.md">Contributing</a>
   </p>
 </div>
 
 ---
 
-## What is Relay?
+## Overview
 
-Relay is a browser-based Morse code learning environment designed to bring the learning loop into one place: encounter a signal, practise recognising or sending it, review mistakes, and track progress over time.
+Relay is a browser-based Morse code learning environment built around a repeatable loop: learn a signal, practise recognition or transmission, review difficult material, and use progress history to guide the next session.
 
-Rather than focusing only on text-to-Morse conversion, Relay combines a structured learning path with practice modes, interactive games, audio tools, a reference encyclopedia, and locally stored progress. It is built as an installable Progressive Web App (PWA), with an offline-first approach after the app has been loaded and cached by a supported browser.
+It goes beyond a simple text-to-Morse converter by bringing lessons, practice drills, games, audio decoding, a reference encyclopedia, and personal progress into one installable Progressive Web App (PWA).
 
-**Relay is free to use for personal learning.** Its source is published for inspection under a planned custom personal-use license; it is not intended to grant unrestricted commercial or redistribution rights. See [License status](#license-and-permitted-use) before reusing any code or assets.
+> **Project status:** Source available; setup and release verification are in progress. No live demo URL is claimed here. Screenshots and the video demonstration will be added after the owner supplies final media.
 
-> **Live demo:** No public deployment URL has been provided yet. The repository is the source of truth for the current implementation.
+## Features
 
-## At a glance
+| Area | What it offers |
+| --- | --- |
+| **Learn** | Incremental character learning, Koch-style progression, mnemonic aids, and signal exploration |
+| **Practice** | Speed, endless, flashcard, hear-and-type, memory, read-and-type, and translation drills |
+| **Games** | Morse Invaders, Signal Rush, Decode & Translate, Morse Match, and Emergency Relay |
+| **Translator** | Text/Morse conversion, custom dictionaries, and export tools |
+| **Audio tools** | Audio-file decoding, signal analysis, Morse audio playback, and WAV generation |
+| **Progress** | XP, levels, streaks, badges, character mastery, review scheduling, mistake tracking, and WPM trends |
+| **Reference** | Searchable character information and prosigns |
+| **Personalisation** | Multiple interface languages, light/dark themes, audio and timing controls, and accessibility preferences |
+| **Offline-first design** | PWA installation and cached app resources after the app has been loaded successfully |
+| **Data portability** | Browser-local persistence and JSON backup/import tools |
+| **Optional AI helper** | User-configured provider integration; separate from the core local learning workflow |
 
-- **Learn:** Koch-style lesson progression, character-focused learning, mnemonic aids, signal exploration, and transmission practice.
-- **Practise:** speed, endless, flashcard, hear-and-type, memory, read-and-type, and translation drills.
-- **Play:** five built-in games designed to make recognition and recall more engaging.
-- **Translate and analyse:** text/Morse conversion, audio-file decoding, signal analysis, custom dictionaries, and WAV export.
-- **Measure progress:** XP, levels, streaks, badges, character mastery, review scheduling, mistake tracking, and WPM trends.
-- **Look things up:** a reference encyclopedia for characters, Morse sequences, timing, and procedural signals.
-- **Make it yours:** eleven interface languages, light and dark themes, audio/timing controls, accessibility settings, and optional AI assistance.
-- **Keep your data local:** browser-based persistence and portable JSON backups, without a Relay account or app-owned backend in the supplied source.
+Feature availability and browser behavior can vary by environment. Audio decoding depends on recording quality and signal conditions; it should not be treated as guaranteed for every file.
 
-## Product areas
+## Screenshots and demo
 
-### Learn
+Media will be added after the owner supplies the final assets. The placeholders below are intentional and are not screenshots or claims of a deployed demo.
 
-The learning area is organised around incremental character learning and repeated exposure. Source modules include lesson navigation and progress, character-focused presentation, mnemonics, a Morse-tree explorer, signal analysis, and transmission practice.
+- **Banner:** pending owner-provided image.
+- **Application screenshots:** pending capture from the actual running app.
+- **Demo video:** pending owner-provided WebM recording.
 
-### Practice
+## Privacy and data handling
 
-Practice modes let learners work on different forms of recall rather than relying on a single exercise format:
+Relay is designed to work without a Relay account or application-owned backend in the supplied source. Application data is primarily stored in the browser, and backup/export tools are available for portability.
 
-- Speed mode
-- Endless practice
-- Flashcards
-- Hear and type
-- Memory mode
-- Read and type
-- Translation drills
+Important distinctions:
 
-### Games
+- Browser-local storage is associated with the browser profile and origin; clearing site data can remove it.
+- Private/incognito sessions, browser storage limits, and device loss can affect persistence.
+- Optional AI features require network access and send the relevant request to the provider configured by the user. Review that provider's policies before enabling it.
+- Do not place secrets, passwords, or sensitive personal information in custom dictionaries, prompts, or backups.
+- This repository's privacy guide describes the intended behavior and should be checked against the exact release build.
 
-Relay includes five game modules:
-
-- **Morse Invaders**
-- **Signal Rush**
-- **Decode & Translate**
-- **Morse Match**
-- **Emergency Relay**
-
-### Translator and signal tools
-
-The translator area includes text/Morse conversion, audio-file decoding, signal-analysis UI, custom-dictionary editing and selection, export controls, and WAV-generation support. The decoder implementation includes envelope smoothing, adaptive thresholding, glitch filtering, timing estimation, and signal classification. Actual decoding quality depends on the input recording, signal conditions, and browser support; it should not be treated as guaranteed for every audio file.
-
-### Progress and review
-
-Progress tools include experience points and levels, streaks, badges, character mastery, due-for-review information, a mistake notebook, calendar heatmap, and trend charts. These are intended to make practice history and areas needing attention easier to inspect.
-
-### Encyclopedia
-
-The encyclopedia provides searchable/filterable character reference material and a prosigns table. Consult it as a learning reference; it is not a substitute for authoritative operational procedures where those matter.
-
-## Privacy, storage, and AI
-
-Relay is designed to operate without a Relay account or application backend. In the supplied source:
-
-- Application records are stored in browser IndexedDB; the selected interface language is stored in local storage.
-- Users can export and restore a JSON backup of supported application data.
-- AI settings and the configured provider API key are excluded from backup exports.
-- AI assistance is disabled by default and requires the user to configure a provider and key.
-- When AI is used, the submitted conversation is sent directly from the browser to the configured provider endpoint. The provider's terms, retention practices, and charges apply. Custom endpoints must use HTTPS in the current implementation.
-- The PWA configuration caches the application shell for repeat/offline visits. The configuration also includes runtime caching for Google Fonts stylesheets and font files, so those requests may contact Google's infrastructure when online.
-
-Offline availability depends on the app having been loaded and cached, the browser's storage/service-worker support, and the specific feature. AI requests require a network connection. Browser storage can be cleared or evicted, so export backups if the data matters to you.
-
-Read the fuller [Privacy and data guide](docs/PRIVACY.md) before using optional network features.
-
-## Languages and interface
-
-The source registers eleven interface locales:
-
-| Code | Language | Direction |
-|---|---|---|
-| `en` | English | Left-to-right |
-| `fa` | Persian | Right-to-left |
-| `de` | German | Left-to-right |
-| `tr` | Turkish | Left-to-right |
-| `ar` | Arabic | Right-to-left |
-| `es` | Spanish | Left-to-right |
-| `fr` | French | Left-to-right |
-| `ru` | Russian | Left-to-right |
-| `zh` | Chinese | Left-to-right |
-| `ko` | Korean | Left-to-right |
-| `ja` | Japanese | Left-to-right |
-
-Locale registration does not by itself guarantee that every string is perfectly translated or that every layout has been independently reviewed. Contributions should preserve translation keys and test right-to-left layouts where applicable.
+Read [Privacy & data](docs/PRIVACY.md) for more detail.
 
 ## Technology
 
-The supplied project uses:
+The supplied project is built with:
 
-- React 19 and React DOM
-- TypeScript
-- Vite and the React plugin
-- Tailwind CSS 4 with the Vite integration
+- React and TypeScript
+- Vite
+- Tailwind CSS
 - React Router
-- i18next and react-i18next
-- IndexedDB through `idb`
-- `vite-plugin-pwa` / Workbox-backed service-worker generation
-- Vitest, Testing Library, and jsdom
-- oxlint
-- Font Awesome icons
+- i18next / react-i18next
+- IndexedDB utilities through idb
+- Vitest and Testing Library
+- Vite PWA tooling
 
-Dependency versions are defined in `package.json` and locked in `package-lock.json`. This list describes the supplied project files and may change as the project evolves.
+The exact scripts and dependency versions are recorded in `package.json` and `package-lock.json`.
 
-## Application structure
+## Run locally
 
-The app uses route-level feature pages under `src/features/`, with shared UI, hooks, types, and core logic separated into supporting directories.
-
-```text
-src/
-├── app/                 # Application navigation metadata
-├── components/          # Shared layout, UI, charts, and AI components
-├── features/
-│   ├── dashboard/       # Home/dashboard
-│   ├── learn/           # Lessons and transmission practice
-│   ├── practice/        # Practice modes
-│   ├── translator/      # Translation and audio tools
-│   ├── games/           # Five game experiences
-│   ├── progress/        # Progress, mastery, and review
-│   ├── encyclopedia/    # Reference material
-│   └── settings/        # Language, appearance, data, audio, AI, accessibility
-├── hooks/               # Shared React hooks
-├── i18n/                # Locale registration and translation files
-├── lib/                 # Morse logic, audio, persistence, XP, backup, AI, etc.
-├── services/            # Application services
-├── stores/              # State-related modules
-├── types/               # Shared TypeScript types
-└── utils/               # Utilities
-```
-
-Primary routes currently declared in `src/App.tsx`:
-
-| Route | Area |
-|---|---|
-| `/` | Dashboard |
-| `/learn` | Learn |
-| `/practice` | Practice |
-| `/translator` | Translator |
-| `/games` | Games |
-| `/progress` | Progress |
-| `/encyclopedia` | Encyclopedia |
-| `/settings` | Settings |
-
-## Run Relay locally
-
-### Requirements
-
-- Node.js compatible with the versions required by the installed Vite/TypeScript toolchain. Node.js 22 LTS is a practical starting point.
-- npm, which ships with Node.js.
-- A modern browser for development and testing.
-
-### Install and start
+Prerequisites: a current Node.js LTS release compatible with the Vite version in the lockfile, plus npm.
 
 ```bash
 git clone https://github.com/mh3nj/Relay.git
@@ -183,93 +94,75 @@ npm ci
 npm run dev
 ```
 
-Vite prints the local development URL in the terminal. Open that URL in your browser.
+Vite prints the local development URL in the terminal. Open that URL in a modern browser.
 
 ### Available scripts
 
 ```bash
-npm run dev        # Start the Vite development server
-npm test           # Run the Vitest suite once
-npm run test:watch # Run Vitest in watch mode
-npm run test:ui    # Open the Vitest UI
-npm run lint       # Run oxlint
-npm run build      # Type-check and create a production build
-npm run preview    # Preview the built application locally
-```
-
-Before submitting a change, run at least:
-
-```bash
-npm test
+npm run dev       # Start the local development server
+npm run build     # Type-check and create a production build
+npm run preview   # Preview the production build locally
+npm test          # Run the test suite once
+npm run test:watch
 npm run lint
-npm run build
 ```
 
-A command completing successfully on one machine is not a guarantee that every browser or deployment environment behaves identically. The project maintainer should keep CI results and release checks visible.
+Run verification from a clean checkout before treating a build as release-ready. Results may depend on the installed Node.js/npm versions and the environment.
 
-## Production build and deployment
-
-Create a production build with:
+## Production build
 
 ```bash
 npm ci
 npm run build
+npm test
+npm run lint
 ```
 
-Vite writes the generated site to `dist/`. Deploy the contents of that directory to a static host that serves the app over HTTPS. Configure the host to serve `index.html` for application routes (SPA fallback), and verify that service-worker and manifest assets are served from the expected base path.
+The production output is generated in `dist/` and is not intended to be committed. Deployment needs to serve the built files and correctly handle client-side routes; verify direct-route refreshes, PWA behavior, and offline reloads on the actual hosting provider.
 
-The current PWA manifest assumes the application is hosted at the origin root (`start_url: "/"`, `scope: "/"`). Hosting under a subpath requires checking and adapting the Vite base path, manifest paths, asset paths, and service-worker behavior before deployment.
+## Data and backup
 
-No live deployment URL is currently documented here.
+Use Relay's in-app backup/export controls to keep a separate copy of important learning data. Store exported backups somewhere safe: browser storage is not a substitute for a backup, and imported JSON should only come from sources you trust.
 
-## Data and backups
+## Architecture notes
 
-Relay uses browser storage, not a cloud account, for its local application records. Browser data is tied to the browser profile and origin. It may not follow you automatically to another device or browser.
+The codebase separates user-interface features from reusable learning, audio, and persistence logic. Relevant areas include:
 
-- Export a backup before clearing site data, changing browser profiles, or moving devices.
-- Store exported backups somewhere you control.
-- Treat backups as personal data if they contain learning history or custom dictionaries.
-- AI settings and the API key are deliberately excluded from backup files in the supplied implementation.
-- Import only backup files you trust. Backup restoration changes local application data.
+- `src/lib/` — Morse utilities, learning/practice logic, progress, backup, audio, and related helpers
+- `src/components/` — reusable UI components
+- `src/i18n/` — locale setup and translation resources
+- `public/` — static assets and PWA resources
 
-See [Privacy and data](docs/PRIVACY.md).
+These paths are an orientation guide, not a guarantee that every feature is isolated to a single module.
 
-## Testing
+## Language and accessibility
 
-Unit tests are present for core areas including Morse mapping, practice logic, XP, badges, mastery, mnemonics, backup behavior, custom dictionaries, and locale registration. The test suite should be run in CI and before releases.
-
-The supplied archive has not been independently executed as part of preparing this documentation package. Therefore, this README does not claim that the current test suite, lint, or production build has passed in a clean environment.
-
-## Contributing
-
-Contributions are welcome for review, but a pull request is not automatically permission to relicense or redistribute Relay. Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request. The maintainer retains final approval over changes and may decline contributions that do not fit the project's direction or licensing requirements.
-
-## Security
-
-Do not publish API keys, personal backups, logs containing private information, or local configuration. For private vulnerability reports, follow [SECURITY.md](SECURITY.md).
+Relay includes multiple locale resources, including right-to-left language support. Translation completeness and accessibility should be validated against the actual UI, keyboard navigation, screen-reader behavior, zoom, and reduced-motion preferences before each release.
 
 ## License and permitted use
 
-Relay is intended to be free for personal, non-commercial use, while commercial exploitation and unauthorized redistribution remain restricted.
+Relay is **source-available under a custom personal-use and non-commercial sharing license**. This is not an OSI-approved open-source license.
 
-A **custom license draft** is included as [`LICENSE-DRAFT.md`](LICENSE-DRAFT.md). It is a proposal for review, not a substitute for legal advice. Do not treat the draft as a finalized, lawyer-reviewed license. Before public release, the maintainer should finalize the terms, place the operative license in a root-level `LICENSE` file, and audit third-party package and asset licenses.
+The license permits personal learning, private modifications, and conditional non-commercial sharing. Commercial use, paid hosting, and commercial redistribution require prior written permission from the copyright holder.
 
-Until a finalized license is published, do not assume that the repository grants permission to reuse, modify, or redistribute the code. GitHub's platform terms may permit viewing and forking a public repository, but that is distinct from receiving a broad software license. See [GitHub's licensing guidance](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository).
+Read [LICENSE](LICENSE) before using, copying, modifying, or sharing the project. Third-party dependencies and assets may have separate terms; see [Third-party notices](THIRD_PARTY_NOTICES.md). The custom license should receive qualified legal review before being relied on for enforcement.
 
-Relay is **source-available**, not open-source software under the conventional Open Source Definition, if its license prohibits commercial use or restricts redistribution. The Open Source Initiative explains that an open-source license cannot prohibit use in a field of endeavor such as business: https://opensource.org/osd.
+Commercial licensing: [anoushzadparsi@gmail.com](mailto:anoushzadparsi@gmail.com).
 
-## Acknowledgements and third-party notices
+## Contributing
 
-Relay relies on third-party libraries. Their names and license information should be verified from installed package metadata and recorded in [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) before release. Do not assume the project's custom license overrides the licenses of its dependencies or included assets.
+Contributions are welcome for review, but submission does not guarantee acceptance. Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request. Keep changes focused, explain the problem being solved, and include tests where appropriate.
 
-## Contact and project links
+## Security
 
-- Source: https://github.com/mh3nj/Relay
-- Issues: https://github.com/mh3nj/Relay/issues
-- Security reporting: see [SECURITY.md](SECURITY.md)
+Please do not publish exploitable vulnerabilities, API keys, or private user data in public issues. See [SECURITY.md](SECURITY.md) for the reporting process.
+
+## Support and feedback
+
+Use [GitHub Issues](https://github.com/mh3nj/Relay/issues) for reproducible bugs and feature suggestions. Include browser/OS details and clear reproduction steps, but remove personal data and secrets from reports.
 
 ---
 
 <div align="center">
-  <sub>Relay — a personal Morse-learning environment built to help you keep listening, practising, and improving.</sub>
+  <sub>Built for patient practice, clear signals, and steady progress.</sub>
 </div>

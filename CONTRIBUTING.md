@@ -1,32 +1,24 @@
 # Contributing to Relay
 
-Thanks for taking an interest in Relay. Contributions are reviewed by the maintainer; opening a pull request does not guarantee acceptance or publication.
+Thank you for your interest in improving Relay. Contributions are welcome for review, but the maintainer decides whether to accept, revise, or decline each submission.
 
 ## Before you start
 
-1. Read the repository's license and third-party notices.
-2. For substantial changes, open an issue or discussion first so the direction can be agreed upon.
-3. Do not submit secrets, API keys, personal backups, private logs, or copyrighted assets without permission.
-4. Keep contributions focused and explain the user-facing reason for the change.
+1. Read the root [LICENSE](LICENSE) and confirm you understand its personal-use and non-commercial sharing terms.
+2. Check existing issues and pull requests to avoid duplicating work.
+3. For a substantial change, open an issue first to discuss the problem and intended approach.
+4. Never include API keys, private user data, personal backups, or credentials in a commit.
 
-## Licensing and contribution permission
+## Development setup
 
-Relay is intended to use a custom personal-use license, not a conventional open-source license. Until the operative license is finalized, do not assume that contributing grants you or others broad redistribution rights.
-
-By submitting a contribution, you confirm that you have the right to submit it and that you identify any third-party code, assets, or special terms. The maintainer may ask you to clarify provenance or sign a separate contribution agreement before accepting a substantial contribution. Do not assume that a pull request automatically transfers copyright or grants relicensing permission.
-
-The maintainer must finalize the project's contribution and licensing terms before accepting external contributions into a public release.
-
-## Local development
+Use a current Node.js LTS version compatible with the project's Vite toolchain.
 
 ```bash
 npm ci
 npm run dev
 ```
 
-## Checks
-
-Run these before opening a pull request:
+Useful verification commands:
 
 ```bash
 npm test
@@ -34,25 +26,27 @@ npm run lint
 npm run build
 ```
 
-Include the actual output/status of relevant checks in the pull request. If a check cannot be run, say so rather than implying it passed.
+Run relevant checks before submitting. If a check cannot be run in your environment, say so explicitly rather than reporting it as passing.
 
-## Code expectations
+## Pull request expectations
 
-- Preserve existing TypeScript types and avoid introducing `any` without a clear reason.
-- Keep feature-specific behavior in the relevant feature module and reusable logic in shared libraries where practical.
-- Preserve translation keys across all locale files; do not hard-code user-facing strings if they belong in the i18n system.
-- Test right-to-left behavior when touching shared layout or localization code.
-- Keep accessibility, keyboard use, reduced-motion preferences, and audio controls in mind.
-- Avoid adding a dependency for a small utility that can be implemented safely with existing tools.
-- Do not add telemetry, external services, or new outbound network requests without documenting them and receiving maintainer approval.
+- Keep each pull request focused on one coherent change.
+- Explain the user problem, the solution, and any trade-offs.
+- Include reproduction steps for bug fixes and tests for behavior changes where practical.
+- Update documentation and locale resources when user-facing behavior changes.
+- Preserve existing accessibility, reduced-motion, keyboard, responsive, and right-to-left behavior.
+- Avoid adding dependencies unless the benefit justifies the maintenance and bundle cost.
+- Do not commit build output, logs, PID files, local environment files, or generated personal data.
+- Clearly disclose any AI-assisted contribution if requested during review.
 
-## Pull request checklist
+## Licensing and contributions
 
-- [ ] The purpose and behavior change are explained.
-- [ ] Tests were added or updated where appropriate.
-- [ ] `npm test` passes, or any failure is described.
-- [ ] `npm run lint` passes, or any failure is described.
-- [ ] `npm run build` passes, or any failure is described.
-- [ ] User-facing text is localized where appropriate.
-- [ ] No secrets, private data, or unlicensed assets are included.
-- [ ] Privacy, offline, and backup behavior is documented if affected.
+Only submit work you created or are legally permitted to contribute. By intentionally submitting a contribution for inclusion, you confirm that you have the right to submit it and grant the rights described in the root license. The maintainer may request clarification about provenance or licensing before accepting a contribution.
+
+Submitting a pull request does not transfer copyright automatically and does not guarantee acceptance. Discuss any proposed alternative licensing before sending substantial work.
+
+## Reporting bugs
+
+Use GitHub Issues for non-sensitive, reproducible bugs and feature requests. Include the browser, operating system, steps to reproduce, expected result, actual result, and relevant console output with personal data removed.
+
+For security-sensitive issues, follow [SECURITY.md](SECURITY.md) instead of filing a public issue.

@@ -1,45 +1,34 @@
-# Relay — Privacy and Data Guide
+# Privacy and Data Handling
 
-This guide describes behavior visible in the supplied source snapshot. It is not a guarantee about a future deployment, hosting provider, browser extension, or modified build. Re-check the implementation before each release.
+Relay is designed as a browser-first learning application. This document describes the intended behavior of the source currently being prepared for publication; verify it against the exact deployed build before making privacy claims about a hosted instance.
 
-## Design approach
+## Local application data
 
-Relay does not implement a mandatory user account or a Relay-owned application backend in the supplied source. Core application records are stored in the browser using IndexedDB, with the chosen language stored in local storage.
+The application uses browser storage for user-facing state and progress. Browser storage is scoped to the browser profile and site origin, not to a Relay account. It may be lost if site data is cleared, the browser profile is removed, storage is evicted, or the device fails.
 
-## Data stored in the browser
+Use the application's backup/export controls to keep an independent copy of data you care about. Treat exported backups as personal data: anyone who obtains a backup may be able to inspect its contents.
 
-Depending on which features you use, browser storage can contain settings, learning progress, practice/session statistics, custom dictionaries, game scores, review information, and related application records. This data is associated with the browser profile and site origin. It is not automatically synced across devices by Relay.
+## Network requests
 
-Browser storage can be cleared by the user, browser, privacy software, or device management policies. Export backups if you want to preserve your data.
+Core learning features are designed to work without a Relay-owned application backend. Normal web delivery, PWA resource caching, and any configured external features can still involve network requests.
 
-## Backups
+### Optional AI assistance
 
-Relay supports JSON backup export and restoration. In the current source, backup export excludes `aiSettings`, `autoBackupSnapshot`, and `lastAutoBackupAt`; the AI settings exclusion is also applied during import. This protects the configured provider key from being placed in an exported backup by the ordinary backup implementation.
+AI functionality is optional and depends on the provider and endpoint configured by the user. When enabled, the relevant prompt or request content is sent to that external provider over the network. The provider's privacy policy, retention practices, and terms apply to those requests.
 
-Backups may still contain personal learning history or custom dictionary data. Store them carefully and only import files you trust.
+Do not send sensitive personal information, passwords, API secrets, or data you do not have permission to disclose. Keep provider API keys private and out of public issues, source files, screenshots, and backups.
 
-## Optional AI assistant
+## Data minimisation and user control
 
-AI assistance is optional and disabled by default. To use it, the user configures a provider and supplies their own API key. The current implementation supports OpenAI, Anthropic, and a custom HTTPS endpoint.
+- No Relay account is required by the supplied application source.
+- Use in-app settings and backup/export controls to manage local application data.
+- Removing the application or clearing browser data may remove local progress; export a backup first.
+- Do not assume local data synchronises between browsers or devices unless you explicitly configure a separate mechanism.
 
-When a user submits a prompt, Relay sends the relevant chat messages directly from the browser to the configured endpoint. The provider receives that request and processes it under its own terms and policies. Network requests may reveal ordinary request metadata such as IP address and user-agent to the provider. Relay cannot control a provider's retention, training, billing, or processing practices.
+## Third-party services and dependencies
 
-The API key is stored in the browser's IndexedDB settings and is not included in the app's normal backup export. Anyone with access to the same unlocked browser profile or developer tools may still be able to access client-side stored data. Do not use a personal API key on a shared or untrusted device.
-
-Custom endpoints must begin with `https://` in the current code. Only configure endpoints you trust. The user is responsible for any provider charges and for complying with the provider's terms.
-
-## Fonts and network activity
-
-The PWA configuration includes runtime caching for Google Fonts stylesheets and font files. When those assets are requested while online, the browser may contact `fonts.googleapis.com` and `fonts.gstatic.com`. This means that “offline-first” should not be read as “no network requests ever.” AI use also requires a network connection.
-
-## Offline behavior
-
-The service-worker configuration precaches the production app shell and common static assets. Offline behavior depends on a successful initial load/cache, browser support, storage availability, and the feature being used. Provider-backed AI cannot work offline. Do not assume every external asset or every browser feature is available offline.
-
-## Data deletion
-
-Use the app's available reset controls where appropriate and clear the site's storage through your browser if you want to remove local records. Clearing browser data can also remove useful settings and progress. Export first if you want a copy.
+The browser, hosting provider, optional AI provider, and third-party dependencies may have their own data practices. This document does not supersede their policies.
 
 ## Reporting a privacy concern
 
-Please report suspected privacy or data-handling issues privately using the instructions in [`../SECURITY.md`](../SECURITY.md). Do not attach API keys, personal backups, or sensitive logs to a public issue.
+For a reproducible privacy or data-handling concern, use the private reporting route described in [SECURITY.md](../SECURITY.md). Avoid posting personal data, exported backups, or secrets in public issues.

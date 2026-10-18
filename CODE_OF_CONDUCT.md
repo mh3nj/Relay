@@ -1,19 +1,20 @@
-# Community Standards
+# Code of Conduct
 
-Relay aims to maintain a respectful, constructive environment for bug reports, discussions, and reviewed contributions.
+## Our standard
 
-Expected behavior:
+Relay aims to be a constructive space for learning, careful engineering, and respectful collaboration. Participants are expected to be considerate, communicate clearly, and focus criticism on ideas and code rather than people.
 
-- Be respectful and specific when disagreeing.
-- Critique ideas and implementations, not people.
-- Share reproducible technical details without exposing private data.
-- Respect the project's licensing terms and the rights of contributors and third parties.
-- Do not harass, threaten, impersonate, or disclose private information about others.
+Examples of welcome behavior include:
 
-Unacceptable behavior may result in a discussion being closed, content being removed where possible, or a participant being blocked from project spaces under the maintainer's control.
+- giving actionable, respectful feedback;
+- accepting that maintainers may decline a proposal;
+- explaining disagreements with technical reasoning;
+- respecting privacy and keeping credentials or personal data out of public discussion.
 
-## Reporting
+Unacceptable behavior includes harassment, insults, discriminatory language, deliberate intimidation, publishing private information without permission, and persistent disruptive conduct.
 
-Contact the maintainer privately through GitHub if a community interaction violates these standards. Include links and a concise explanation. Do not use public issues for sensitive reports.
+## Maintainer response
 
-This is a lightweight community policy, not a promise of formal moderation service or guaranteed response time.
+The maintainer may edit or remove inappropriate content, close discussions, or decline contributions that violate this standard. Reports can be sent to **anoushzadparsi@gmail.com**. Security-sensitive reports should follow [SECURITY.md](SECURITY.md).
+
+This policy is intended to support respectful project collaboration; it does not create a guarantee of response time or acceptance of contributions.
