@@ -1,0 +1,701 @@
+{
+  "app": {
+    "name": "Relay",
+    "tagline": "Ücretsiz ve Çevrimdışı"
+  },
+  "nav": {
+    "dashboard": "Kontrol Paneli",
+    "learn": "Öğren",
+    "practice": "Pratik",
+    "translator": "Çevirmen",
+    "games": "Oyunlar",
+    "progress": "İlerleme",
+    "encyclopedia": "Ansiklopedi",
+    "settings": "Ayarlar",
+    "freeForever": "Sonsuza Dek Ücretsiz"
+  },
+  "common": {
+    "copy": "Kopyala",
+    "copied": "Kopyalandı",
+    "clear": "Temizle",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "close": "Kapat",
+    "delete": "Sil",
+    "confirm": "Onayla",
+    "loading": "Yükleniyor…",
+    "error": "Hata",
+    "success": "Başarılı",
+    "back": "Geri",
+    "next": "İleri",
+    "previous": "Önceki",
+    "continue": "Devam",
+    "start": "Başlat",
+    "stop": "Durdur",
+    "play": "Oynat",
+    "pause": "Duraklat",
+    "retry": "Tekrar Dene",
+    "download": "İndir",
+    "upload": "Yükle",
+    "import": "İçe Aktar",
+    "export": "Dışa Aktar",
+    "enabled": "Etkin",
+    "disabled": "Devre Dışı",
+    "on": "Açık",
+    "off": "Kapalı",
+    "comingSoon": "{{feature}} sıradaki özellik",
+    "characters": "{{count}} karakter",
+    "minutes": "{{count}} dakika",
+    "seconds": "{{count}}s",
+    "mainNavigation": "Ana navigasyon",
+    "primaryNavigation": "Birincil",
+    "chartRange": "Grafik aralığı",
+    "clearTranslation": "Çeviriyi temizle",
+    "reviewWeakSymbols": "Tüm zayıf sembolleri gözden geçir",
+    "percent": "{{percent}} percent",
+    "less": "less",
+    "more": "more",
+    "requestFailed": "Request failed.",
+    "rangeWeek": "1W",
+    "rangeMonth": "1M",
+    "rangeAll": "ALL",
+    "daySun": "Sun",
+    "dayMon": "Mon",
+    "dayTue": "Tue",
+    "dayWed": "Wed",
+    "dayThu": "Thu",
+    "dayFri": "Fri",
+    "daySat": "Sat",
+    "eg": "e.g.",
+    "playMorseFor": "Play Morse for {{char}}"
+  },
+  "errorBoundary": {
+    "description": "Relay beklenmeyen bir hatayla karşılaştı. Kaydettiğiniz ilerleme kaybolmadı. Genellikle sayfayı yenilemek sorunu çözer.",
+    "goHome": "Kontrol Paneline Git"
+  },
+  "dashboard": {
+    "title": "Kontrol Paneli",
+    "description": "Kaldığın yerden devam et ve nelerin değiştiğini gör.",
+    "startLearning": "Öğrenmeye Başla",
+    "streakDays": "{{count}} Günlük Seri",
+    "welcomeBack": "Hoş geldin, Operatör.",
+    "continuePrompt": "'{{char}}' harfi üzerinde çalışıyorsun. Serini devam ettir.",
+    "continueLesson": "'{{char}}' Dersine Devam Et",
+    "dailyChallenge": "Günlük Meydan Okuma",
+    "dailyChallengeGoal": "Bugün {{target}} doğru cevap al",
+    "startChallenge": "Meydan Okumayı Başlat",
+    "overallMastery": "Genel Ustalık",
+    "needsReview": "Gözden Geçirilmesi Gerekenler",
+    "recentBadges": "Son Rozetler",
+    "locked": "Kilitli: {{label}}",
+    "speedProgression": "Hız İlerlemesi (DSD)",
+    "accuracyTooltip": "Accuracy: {{accuracy}}%",
+    "greetingMorning": "Günaydın, Operatör.",
+    "greetingAfternoon": "İyi günler, Operatör.",
+    "greetingEvening": "İyi akşamlar, Operatör.",
+    "challengeComplete": "Harika iş. Bugünkü görev tamamlandı.",
+    "noSpeedDataYet": "Bu aralıkta henüz süreli oturum yok.",
+    "playAGame": "Bir Oyun Oyna"
+  },
+  "learn": {
+    "title": "Öğren",
+    "description": "Her seferinde bir karakter ekleyen Koch yöntemi dersleri; zamanlama ve tekrar dinleyebileceğin sesle.",
+    "progress": "İlerleme",
+    "character": "Karakter",
+    "signalAnalysis": "Sinyal Analizi",
+    "oneUnitDuration": "Bir birim süresi.",
+    "unitsWithGap": "{{count}} birim, her biri bir boşluklu.",
+    "transmissionPractice": "İletim Pratiği",
+    "spaceToKey": "[Boşluk] tuşu",
+    "ctrlKeyHint": "veya L-Ctrl = nokta, R-Ctrl = çizgi",
+    "tapToTransmit": "'{{char}}' iletmek için boşluk tuşuna bas veya basılı tut",
+    "mnemonic": "Kodlama",
+    "examples": "Örnekler",
+    "loadingProgress": "İlerlemeniz yükleniyor…",
+    "start": "BAŞLAT",
+    "signal": "SİNYAL",
+    "end": "SON",
+    "unitTiming": "1 dit = {{ms}}ms @ {{wpm}} DSD",
+    "stopPlayback": "Oynatmayı durdur",
+    "playAudio": "Mors sesini oynat",
+    "nextCharacter": "Sonraki Karakter",
+    "masteryGate": {
+      "progress": "Bir sonraki karakterin kilidini açmak için {{correct}}/{{needed}} doğru gerekiyor",
+      "readyHint": "Güzel iş. Hazır olduğunda devam edebilirsin.",
+      "kochExplainer": "Öğrenme sırası Koch yöntemini izler: K ve M ile başlar (A ile değil) çünkü kulağa en farklı gelen seslerdir, bu da benzer sesleri eklemeden önce zamanlama kulağını güçlendirir."
+    },
+    "dot": "Dot",
+    "dash": "Dash"
+  },
+  "practice": {
+    "title": "Pratik",
+    "description": "Sürekli karıştırdığın sembollere odaklanan kısa alıştırmalar.",
+    "modes": {
+      "hearAndType": "Dinle ve Yaz",
+      "readAndType": "Oku ve Yaz",
+      "translateDrill": "Çeviri Alıştırması",
+      "flashcards": "Bilgi Kartları",
+      "speed": "Hız Modu",
+      "endless": "Sınırsız",
+      "memory": "Hafıza",
+      "morseTree": {
+        "title": "Mors Ağacı Gezgini",
+        "idle": "Mors ağacını keşfetmek için Başlat'a bas",
+        "path": "Yol",
+        "deadEnd": "✕ Çıkmaz sokak, köke dön",
+        "hint": "Gezinmek için nokta tuşuna (L-Ctrl, . veya 4) ya da çizgi tuşuna (R-Ctrl, - veya 6) bas",
+        "pathEquals": " = {{char}}",
+        "correct": "Doğru",
+        "incorrect": "Yanlış",
+        "accuracy": "Doğruluk",
+        "streak": "Seri"
+      }
+    },
+    "hearAndType": {
+      "instructions": "Sesi dinle, ardından duyduğun karakteri yaz.",
+      "replay": "Tekrar Oynat",
+      "inputPlaceholder": "Karakteri yaz…",
+      "correct": "Doğru!",
+      "incorrect": "Pek sayılmaz. Cevap '{{answer}}' idi",
+      "inputPlaceholderShort": "Type"
+    },
+    "readAndType": {
+      "instructions": "Mors kodunu oku, ardından temsil ettiği karakteri yaz.",
+      "inputPlaceholder": "Karakteri yaz…",
+      "inputPlaceholderShort": "Type"
+    },
+    "translateDrill": {
+      "instructions": "Gösterilen karakterin Mors kodunu . ve - tuşlarını kullanarak gönder.",
+      "spaceToKey": "Doğrudan . ve - yaz veya L-Ctrl / R-Ctrl kullan"
+    },
+    "endless": {
+      "instructions": "Kendi hızında dinle ve yaz. Zamanlayıcı yok, baskı yok. İstediğin zaman durabilirsin.",
+      "stop": "Oturumu Durdur",
+      "summary": "Oturum özeti"
+    },
+    "memory": {
+      "instructions": "Sırayı izle, ardından gördüğün sırayla tekrar et.",
+      "watchPrompt": "İzleniyor…",
+      "yourTurn": "Sıra sende. Gördüğün sırayı yaz",
+      "sequenceLength": "Sıra: {{length}}",
+      "bestLength": "En iyi: {{length}}",
+      "roundFailed": "Tam olarak doğru değil. En iyi sıra: {{length}}",
+      "startRound": "Başlat"
+    },
+    "flashcards": {
+      "instructions": "Cevabını kontrol etmek için kartı çevir.",
+      "showAnswer": "Cevabı Göster",
+      "iKnewIt": "Biliyordum",
+      "didNotKnow": "Bilmiyordum"
+    },
+    "speed": {
+      "instructions": "Zaman dolmadan her karakteri olabildiğince hızlı yaz.",
+      "timeLeft": "Kalan süre",
+      "wpm": "DSD",
+      "accuracy": "Doğruluk",
+      "streak": "Seri",
+      "sessionOver": "Oturum tamamlandı!",
+      "startSession": "Oturumu Başlat",
+      "playAgain": "Tekrar Oyna"
+    },
+    "session": {
+      "correct": "Doğru",
+      "attempts": "Denemeler",
+      "endSession": "Oturumu Bitir",
+      "bestStreak": "En İyi Seri"
+    },
+    "focusedFilter": {
+      "label": "Odaklı pratik: {{chars}}",
+      "clear": "Filtreyi temizle"
+    }
+  },
+  "games": {
+    "title": "Oyunlar",
+    "description": "Ders olmadan çalışmak istediğinde beş küçük oyun.",
+    "notPlayedYet": "Henüz oynanmadı",
+    "best": "En iyi: {{score}}",
+    "play": "Oyna",
+    "score": "Puan",
+    "topWpm": "En Yüksek DSD",
+    "destroyed": "Yok Edilen",
+    "rounds": "Turlar",
+    "newHighScore": "Yeni en yüksek puan!",
+    "morseInvaders": {
+      "title": "Mors İstilacıları",
+      "cardDescription": "Harfler yukarıdan düşer. Yere düşmeden nokta/çizgi kodlarını yaz.",
+      "instructions": "Harfler yukarıdan düşer. Yere düşmeden Mors kodlarını (nokta/çizgi) yaz. Üç kaçırışta oyun biter.",
+      "hint": "Düğmelere tıkla, . / - yaz veya L-Ctrl / R-Ctrl kullan",
+      "bestScore": "En iyi puan: {{score}}",
+      "destroyedLabel": "Yok Edilen",
+      "dash": "Çizgi",
+      "dot": "Nokta",
+      "difficulty": {
+        "easy": "Kolay (yavaş düşüş)",
+        "medium": "Orta (normal)",
+        "hard": "Zor (hızlı düşüş)"
+      }
+    },
+    "signalRush": {
+      "title": "Sinyal Hücumu",
+      "cardDescription": "Dinle ve olabildiğince hızlı yaz. Her doğru cevapta hız artar.",
+      "instructions": "Dinle ve olabildiğince hızlı yaz. Her doğru cevapta hız artar. Üç kaçırışta oyun biter.",
+      "speedLabel": "Hız: {{wpm}} DSD",
+      "bestScore": "En iyi puan: {{score}}",
+      "difficulty": {
+        "easy": "Kolay (yumuşak artış)",
+        "medium": "Orta (normal)",
+        "hard": "Zor (sert artış)"
+      }
+    },
+    "decodeTranslate": {
+      "title": "Çöz ve Çevir",
+      "cardDescription": "Morsla tam bir kelime dinleyin. Süre dolmadan çözülen kelimeyi yazın.",
+      "instructions": "Mors dizisini dinleyin, ardından hecelediği kelimeyi yazın. Her doğru yanıtta süre kısalır.",
+      "replay": "Tekrar dinle",
+      "inputPlaceholder": "Kelimeyi yazın…",
+      "correctWord": "{{word}}, doğru!",
+      "incorrectWord": "Doğrusu '{{word}}' idi",
+      "difficulty": {
+        "easy": "Kolay (3 harfli kelimeler)",
+        "medium": "Orta (5 harfli kelimeler)",
+        "hard": "Zor (cümleler ve noktalama)"
+      },
+      "round": "Tur {{n}}",
+      "bestScore": "En iyi skor: {{score}}"
+    },
+    "morseMatch": {
+      "title": "Mors Eşleştirme",
+      "cardDescription": "Her harfi Mors koduyla eşleştirmek için kartları çevirin. Saf görsel hafıza.",
+      "instructions": "Eşleşen harf/Mors çiftlerini bulmak için her seferinde iki kart çevirin. Tüm çiftler bulunursa tur kazanılır.",
+      "pairsFound": "Çiftler: {{count}}/{{total}}",
+      "flips": "Çevirme: {{count}}",
+      "timeBonus": "Süre Bonusu",
+      "youWon": "Tüm çiftler bulundu!",
+      "difficulty": {
+        "easy": "Kolay (4×4)",
+        "hard": "Zor (6×6)"
+      },
+      "bestScore": "En iyi skor: {{score}}"
+    },
+    "emergencyRelay": {
+      "title": "Acil Aktarım",
+      "cardDescription": "Kısalan bir zamanlayıcı altında imdat sinyallerine yanıt verin. Her hatada baskı artar.",
+      "instructions": "Bir imdat sinyali yanıp söner. Zamanlayıcı dolmadan doğru Mors kodunu gönderin. Hatalar saati hızlandırır.",
+      "timer": "{{ms}}ms",
+      "lifeLost": "Çok yavaş!",
+      "bestScore": "En iyi skor: {{score}}",
+      "difficulty": {
+        "easy": "Kolay (SOS + harfler)",
+        "hard": "Zor (noktalama dahil)"
+      }
+    },
+    "accuracy": "Doğruluk",
+    "bestCombo": "En İyi Kombo",
+    "combo": "{{count}}x kombo!",
+    "efficiency": "Verimlilik"
+  },
+  "progress": {
+    "title": "İlerleme Analizleri",
+    "description": "Neyi öğrendiğini ve neyin hâlâ çalışma istediğini gör.",
+    "exportReport": "Raporu Dışa Aktar",
+    "mastery": "Ustalık",
+    "practiceTime": "Pratik Süresi",
+    "currentStreak": "Mevcut Seri",
+    "performanceTrends": "Performans Eğilimleri",
+    "trendEmptyState": "Eğilimini takip etmeye başlamak için bir Hız Modu veya Oyun oturumu tamamla.",
+    "characterMastery": "Karakter Ustalığı",
+    "mastered": "Ustalaşıldı",
+    "learning": "Öğreniliyor",
+    "notPracticedYet": "Henüz pratik yapılmadı",
+    "accuracyLabel": "Doğ: %{{percent}} ({{attempts}} deneme)",
+    "confusingPairs": "Karıştırılan Çiftler",
+    "noMixups": "Henüz hiçbir karışıklık kaydedilmedi. Pratik yapmaya devam et, burası kendiliğinden dolacak.",
+    "mixupCount": "{{count}} karışıklık",
+    "mixupCount_other": "{{count}} karışıklık",
+    "focusedPractice": "Odaklı Pratik",
+    "wpmLabel": "DSD",
+    "vs": "karşı",
+    "level": "Seviye {{level}}",
+    "xpProgress": "{{current}} / {{total}} XP",
+    "activityHeatmap": "Aktivite",
+    "dueForReview": "Gözden Geçirilecekler",
+    "dueForReviewEmpty": "Şu anda gözden geçirilecek bir şey yok. Böyle kalması için pratik yapmaya devam et.",
+    "reviewNow": "Şimdi Gözden Geçir",
+    "badgesTitle": "Rozetler",
+    "badges": {
+      "firstLesson": "İlk Ders",
+      "halfway": "Yarı Yolda",
+      "fullAlphabet": "Tam Alfabe",
+      "wpm10": "10 DSD Zirvesi",
+      "wpm20": "20 DSD Zirvesi",
+      "perfectEar": "Mükemmel Kulak",
+      "sharpShooter": "Keskin Nişancı",
+      "streak3": "3 Günlük Seri",
+      "streak7": "7 Günlük Seri",
+      "streak30": "30 Günlük Seri",
+      "gameExplorer": "Oyun Kaşifi",
+      "level5": "Seviye 5",
+      "level10": "Seviye 10"
+    },
+    "activeDaysThisMonth": "{{count}} active days this month",
+    "masteryLabel": "{{percent}}% mastery"
+  },
+  "encyclopedia": {
+    "title": "Ansiklopedi",
+    "description": "Her karakter, kodu, zamanlaması ve kısa bir tarihçesiyle.",
+    "searchPlaceholder": "Karakter veya fonetik ara…",
+    "categories": {
+      "all": "Tümü",
+      "letter": "Alfabe",
+      "number": "Rakamlar",
+      "punctuation": "Noktalama",
+      "prosign": "Proişaretler"
+    },
+    "noResults": "Aramanızla eşleşen karakter bulunamadı.",
+    "prosignsTitle": "Proişaretler ve Özel Sinyaller",
+    "abbreviationsTitle": "Yaygın Kısaltmalar",
+    "historyTitle": "Kısa Bir Tarihçe",
+    "historyText": "Mors kodu, 1830'lu ve 40'lı yıllarda Samuel Morse ve Alfred Vail tarafından elektrikli telgrafta kullanılmak üzere geliştirildi. Orijinal Amerikan Mors kodu daha sonra bugün kullanılan Uluslararası Mors koduna dönüştürülerek zamanlama standartlaştırıldı ve aksanlı harfler için destek eklendi. Telgrafın önemini kaybetmesinden çok sonra, kod amatör radyo, havacılık ve denizcilik sinyalizasyonunda yaşamaya devam etti, basit bir açık/kapalı sinyalin, sesi boğacak gürültü içinde bile ne kadar uzağa gidebildiği için değerliydi."
+  },
+  "translator": {
+    "title": "Çevirmen",
+    "description": "Metni Mors'a ve geri çevir ya da bir ses kaydını çöz. Çevrimdışı çalışır.",
+    "plainText": "Düz Metin",
+    "morseCode": "Mors Kodu",
+    "textPlaceholder": "Çevrilecek metni yazın...",
+    "morsePlaceholder": ".. --- ...",
+    "swapDirection": "Çeviri yönünü değiştir",
+    "decodeAudio": "Sesi Koda Çevir",
+    "decodeAudioDescription": "Bir Mors kodu kaydı yükleyin, tamamen bu cihazda metne dönüştürülecektir.",
+    "clickToUpload": "Yüklemek için tıkla",
+    "orDragAndDrop": "veya sürükle ve bırak",
+    "fileSizeLimit": "10MB'a kadar ses dosyaları",
+    "decoding": "Kod çözülüyor…",
+    "decoded": "Kod çözüldü, güven %{{confidence}}",
+    "unrecognizedSequences": "Tanınmayan diziler: {{sequences}}",
+    "useThisText": "Bu metni kullan",
+    "fileTooLarge": "Dosya çok büyük. Lütfen 10MB'ın altında tutun.",
+    "notAudioFile": "Bu bir ses dosyasına benzemiyor.",
+    "noSignalDetected": "Bu kayıtta Mors sinyali tespit edilemedi.",
+    "decodeFailed": "Bu dosyanın kodu çözülemedi. Bozuk veya desteklenmeyen bir formatta olabilir.",
+    "speedWpm": "Hız (DSD)",
+    "toneHz": "Ton (Hz)",
+    "exportTxt": "TXT Olarak Dışa Aktar",
+    "exportJson": "JSON Olarak Dışa Aktar",
+    "downloadWav": "WAV İndir",
+    "referencePdf": "Referans PDF",
+    "typeToSeeSignal": "Sinyali görmek için bir şeyler yazın.",
+    "dictionary": {
+      "title": "Sözlük",
+      "default": "Varsayılan Alfabe",
+      "new": "Yeni Sözlük",
+      "namePlaceholder": "Sözlük adı",
+      "duplicate": "Çoğalt",
+      "rename": "Yeniden Adlandır",
+      "delete": "Sil",
+      "deleteConfirm": "Bu sözlük silinsin mi? Bu işlem geri alınamaz.",
+      "export": "Dışa Aktar",
+      "import": "İçe Aktar",
+      "importFailed": "Bu dosya geçerli bir sözlük dışa aktarımı değil.",
+      "editorTitle": "Sözlüğü Düzenle",
+      "character": "Karakter",
+      "code": "Mors Kodu",
+      "addEntry": "Karakter Ekle",
+      "conflictWarning": "'{{code}}' zaten '{{other}}' tarafından kullanılıyor, bu yüzden kod çözerken belirsizlik olacak.",
+      "invalidCode": "Yalnızca nokta ve çizgiye izin verilir.",
+      "noEntries": "Henüz özel karakter yok. Aşağıya bir tane ekleyin.",
+      "removeEntry": "Kaldır"
+    },
+    "script": {
+      "title": "Script / Language",
+      "default": "Default (ITU)",
+      "fa": "Persian (فارسی)",
+      "ar": "Arabic (العربية)",
+      "tr": "Turkish (Türkçe)",
+      "fr": "French (Français)",
+      "de": "German (Deutsch)",
+      "es": "Spanish (Español)",
+      "ru": "Russian (Русский)",
+      "ko": "Korean (한국어)",
+      "ja": "Japanese (日本語)",
+      "zh": "Chinese (中文)",
+      "el": "Greek (Ελληνικά)",
+      "he": "Hebrew (עברית)"
+    }
+  },
+  "settings": {
+    "title": "Ayarlar",
+    "description": "Tema, ses, zamanlama, yedeklemeler ve yapay zekâ asistanı.",
+    "sections": {
+      "language": "Dil",
+      "backup": "Veri ve Yedekleme",
+      "aiAssistant": "AI Asistanı",
+      "appearance": "Görünüm",
+      "audio": "Ses ve Zamanlama",
+      "accessibility": "Erişilebilirlik",
+      "shortcuts": "Klavye Kısayolları"
+    },
+    "language": {
+      "description": "Uygulamanın görüntüleme dilini seçin. Çoğu bölüm çevrildi, bazı metinler hâlâ İngilizce görünebilir.",
+      "placeholderBadge": "Yer Tutucu"
+    },
+    "backup": {
+      "description": "Yaptığınız her şey yalnızca bu cihazda saklanır. İlerlemenizi kaybetmemek için düzenli olarak yedekleyin.",
+      "autoBackup": "Otomatik yerel yedekleme",
+      "autoBackupDescription": "Her seferinde dosya indirmeden, ilerlemenizin anlık görüntüsünü belirli aralıklarla bu cihaza sessizce kaydeder.",
+      "interval": "Yedekleme aralığı",
+      "lastBackup": "Son otomatik yedekleme: {{time}}",
+      "neverBackedUp": "Henüz otomatik yedekleme yok",
+      "downloadNow": "Şimdi Yedek İndir",
+      "saveToFolder": "Senkronize Klasöre Kaydet",
+      "saveToFolderDescription": "Google Drive, Dropbox veya iCloud ile senkronize edilmiş bir klasör seçin; Relay yedeklemenizi doğrudan oraya yazacaktır. Hesap gerekmez.",
+      "saveToFolderUnsupported": "Tarayıcınız doğrudan bir klasöre kaydetmeyi desteklemiyor. Bunun yerine \"Şimdi Yedek İndir\" seçeneğini kullanın, ardından dosyayı senkronize klasörünüze taşıyın.",
+      "restoreFromFile": "Dosyadan Geri Yükle",
+      "restoreWarning": "Geri yükleme, mevcut ilerlemenizin üzerine yazacaktır.",
+      "restoreSuccess": "İlerleme başarıyla geri yüklendi.",
+      "restoreFailed": "Bu dosya geçerli bir Relay yedeklemesine benzemiyor.",
+      "factoryReset": "Fabrika Ayarlarına Sıfırla",
+      "factoryResetWarning": "Bu, bu cihazdaki tüm ilerlemeyi, istatistikleri ve ayarları kalıcı olarak siler. Bu işlem geri alınamaz.",
+      "factoryResetConfirm": "Evet, her şeyi sil",
+      "resetFailed": "Bir şeyler ters gitti ve verileriniz sıfırlanamadı. Hiçbir şey silinmedi."
+    },
+    "ai": {
+      "description": "Mors kodu, zamanlama veya uygulamanın nasıl çalıştığı hakkında sorular sorun, Relay'nın içinde. Bu, kendi API anahtarınızı kullanır ve sohbet mesajlarınız dışında hiçbir şey göndermez.",
+      "provider": "Sağlayıcı",
+      "apiKey": "API Anahtarı",
+      "apiKeyPlaceholder": "API anahtarınızı yapıştırın",
+      "apiKeyHelp": "Yalnızca bu tarayıcının yerel deposunda saklanır. Yedeklemelere veya dışa aktarımlara asla dahil edilmez. Seçtiğiniz sağlayıcı dışında hiçbir yere gönderilmez.",
+      "showKey": "Anahtarı göster",
+      "hideKey": "Anahtarı gizle",
+      "clearKey": "Anahtarı kaldır",
+      "costWarning": "API sağlayıcınızdan kaynaklanan tüm ücretlerden siz sorumlusunuz. Bu özelliği kullanmadan önce sağlayıcınızın panelinde bir harcama limiti veya bütçe uyarısı ayarlamanızı öneririz.",
+      "dailyLimit": "Günlük mesaj limiti",
+      "dailyLimitHelp": "Kontrolsüz maliyetleri önlemek için sert bir sınır. Her 24 saatte bir sıfırlanır.",
+      "maxTokens": "Maksimum yanıt uzunluğu",
+      "enable": "AI Asistanını Etkinleştir",
+      "notConfigured": "Asistanı etkinleştirmek için bir API anahtarı ekleyin.",
+      "providerOpenAI": "OpenAI",
+      "providerAnthropic": "Anthropic",
+      "providerCustom": "Custom (OpenAI-compatible)",
+      "endpointUrl": "Endpoint URL",
+      "endpointPlaceholder": "https://your-provider.example.com/v1/chat/completions"
+    },
+    "appearance": {
+      "themeLabel": "Tema",
+      "themes": {
+        "dark": "Varsayılan Karanlık",
+        "light": "Varsayılan Aydınlık",
+        "midnight": "Gece Yarısı",
+        "ocean": "Okyanus",
+        "forest": "Orman",
+        "coffee": "Kahve",
+        "frost": "Kırağı",
+        "sunrise": "Gün Doğumu"
+      },
+      "installTitle": "Relay'nı Yükle",
+      "installDescription": "Uygulamayı, kendi simgesiyle tam ekran, çevrimdışı çalışabilen bir deneyim için yükleyin.",
+      "install": "Uygulamayı Yükle",
+      "installed": "Zaten yüklü",
+      "installUnsupported": "Tarayıcınız tek tıkla yüklemeyi desteklemiyor. Bunun yerine tarayıcınızın menüsünde \"Ana Ekrana Ekle\" veya \"Yükle\" seçeneğini arayın."
+    },
+    "audioSettings": {
+      "title": "Varsayılan Hız ve Ton",
+      "description": "Bu varsayılanlar, Öğren, Pratik veya bir oyunu bir sonraki açışınızda geçerli olur. Çevirmen kendi oturum kontrollerini korur.",
+      "wpm": "Varsayılan Hız (DSD)",
+      "farnsworth": "Farnsworth Aralığı",
+      "farnsworthOff": "Kapalı (karakter hızıyla eşle)",
+      "farnsworthHelp": "Her harfin kendi zamanlamasını hızlı tutarken harfler/kelimeler arasındaki boşluğu yavaşlatır, yüksek karakter hızında öğrenmek için klasik bir teknik.",
+      "frequency": "Ton (Hz)",
+      "volume": "Ses Seviyesi",
+      "reset": "Varsayılanlara Sıfırla"
+    },
+    "accessibility": {
+      "highContrast": "Yüksek Kontrast",
+      "highContrastHelp": "Daha kolay görsel ayrım için kenarlıkları ve ayırıcıları güçlendirir.",
+      "textSize": "Yazı Boyutu",
+      "textSizes": {
+        "small": "Küçük",
+        "default": "Varsayılan",
+        "large": "Büyük"
+      },
+      "reducedMotion": "Azaltılmış Hareket",
+      "reducedMotionAuto": "Sistem ayarını takip et",
+      "reducedMotionOn": "Hareketi her zaman azalt",
+      "reducedMotionOff": "Harekete her zaman izin ver"
+    },
+    "shortcuts": {
+      "title": "Klavye Kısayolları",
+      "context": "Bağlam",
+      "action": "Eylem",
+      "key": "Tuş",
+      "learnTransmit": "Geçerli karakter için Mors iletmek için basılı tut",
+      "morseInvadersDot": "Nokta gönder",
+      "morseInvadersDash": "Çizgi gönder",
+      "spaceKey": "Boşluk",
+      "dotKey": ". veya 4",
+      "dashKey": "- veya 6"
+    }
+  },
+  "mnemonics": {
+    "0": {
+      "hint": "Five dashes: the longest number.",
+      "examples": "Zero"
+    },
+    "1": {
+      "hint": "One dot, four dashes.",
+      "examples": "First"
+    },
+    "2": {
+      "hint": "Two dots, three dashes.",
+      "examples": "Second"
+    },
+    "3": {
+      "hint": "Three dots, two dashes.",
+      "examples": "Third"
+    },
+    "4": {
+      "hint": "Four dots, one dash.",
+      "examples": "Fourth"
+    },
+    "5": {
+      "hint": "Five dots: all short.",
+      "examples": "Fifth"
+    },
+    "6": {
+      "hint": "One dash, four dots.",
+      "examples": "Sixth"
+    },
+    "7": {
+      "hint": "Two dashes, three dots.",
+      "examples": "Seventh"
+    },
+    "8": {
+      "hint": "Three dashes, two dots.",
+      "examples": "Eighth"
+    },
+    "9": {
+      "hint": "Four dashes, one dot.",
+      "examples": "Ninth"
+    },
+    "A": {
+      "hint": "A short dot, then a long dash: like saying 'a-BOUT'.",
+      "examples": "Apple|Around|Ago"
+    },
+    "B": {
+      "hint": "One long dash, then three short dots.",
+      "examples": "Banana|Bottle|Beacon"
+    },
+    "C": {
+      "hint": "Dash dot dash dot: a rhythmic, rocking pattern.",
+      "examples": "Coconut|Circle|Compass"
+    },
+    "D": {
+      "hint": "One dash, two dots: 'DAH-dit-dit'.",
+      "examples": "Dog|Delta|Drum"
+    },
+    "E": {
+      "hint": "The shortest, sharpest sound: just one dot.",
+      "examples": "Echo|Egg|Elephant"
+    },
+    "F": {
+      "hint": "Dot dot dash dot: fast and fluttery.",
+      "examples": "Falcon|Forest|Flute"
+    },
+    "G": {
+      "hint": "Two dashes, then a dot: 'GAH-gah-dit'.",
+      "examples": "Garden|Guitar|Galaxy"
+    },
+    "H": {
+      "hint": "Four quick dots in a row: like a giggle.",
+      "examples": "Harbor|Hello|Horizon"
+    },
+    "I": {
+      "hint": "Two short dots: brief and light.",
+      "examples": "Island|Ice|Igloo"
+    },
+    "J": {
+      "hint": "One dot, three dashes: starts short, stays long.",
+      "examples": "Jungle|Jupiter|Journey"
+    },
+    "K": {
+      "hint": "Dash dot dash: 'KAH-dit-DAH'.",
+      "examples": "Kite|Koala|Kettle"
+    },
+    "L": {
+      "hint": "Dot dash dot dot: a lilting little run.",
+      "examples": "Lantern|Lighthouse|Lemon"
+    },
+    "M": {
+      "hint": "Two dashes: 'MAH-dah', slow and heavy.",
+      "examples": "Mountain|Moon|Music"
+    },
+    "N": {
+      "hint": "One dash, one dot: 'NAH-dit'.",
+      "examples": "Nest|North|Nova"
+    },
+    "O": {
+      "hint": "Three long dashes: the roundest, heaviest letter.",
+      "examples": "Ocean|Orbit|Oasis"
+    },
+    "P": {
+      "hint": "Dot dash dash dot: bookended by dots.",
+      "examples": "Puzzle|Planet|Piano"
+    },
+    "Q": {
+      "hint": "Dash dash dot dash: mostly long, one short.",
+      "examples": "Quartz|Quest|Quiet"
+    },
+    "R": {
+      "hint": "Dot dash dot: a little arch shape.",
+      "examples": "River|Rocket|Rainbow"
+    },
+    "S": {
+      "hint": "Three quick dots: 'dit-dit-dit', like a snake hiss.",
+      "examples": "Sunset|Silver|Star"
+    },
+    "T": {
+      "hint": "A single dash: the longest, simplest sound.",
+      "examples": "Tree|Thunder|Torch"
+    },
+    "U": {
+      "hint": "Dot dot dash: two short, one long.",
+      "examples": "Umbrella|Universe|Uphill"
+    },
+    "V": {
+      "hint": "Dot dot dot dash: Beethoven's Fifth Symphony.",
+      "examples": "Valley|Violet|Voyage"
+    },
+    "W": {
+      "hint": "Dot dash dash: starts short, ends long.",
+      "examples": "Waterfall|Wonder|Willow"
+    },
+    "X": {
+      "hint": "Dash dot dot dash: long, short, short, long.",
+      "examples": "Xylophone|Xenon"
+    },
+    "Y": {
+      "hint": "Dash dot dash dash: mostly dashes.",
+      "examples": "Yellow|Yonder|Yoga"
+    },
+    "Z": {
+      "hint": "Dash dash dot dot: heavy start, light end.",
+      "examples": "Zephyr|Zigzag|Zenith"
+    },
+    "fallbackHint": "No mnemonic yet for this symbol."
+  },
+  "aiChat": {
+    "openLabel": "AI asistanını aç",
+    "closeLabel": "AI asistanını kapat",
+    "placeholder": "Mors kodu, zamanlama veya bu uygulama hakkında sorun…",
+    "send": "Gönder",
+    "thinking": "Düşünülüyor…",
+    "notConfigured": "Sohbete başlamak için Ayarlar → AI Asistanı bölümüne gidip API anahtarınızı ekleyin.",
+    "goToSettings": "Ayarlara Git",
+    "limitReached": "Bugünkü mesaj limitine ulaştınız ({{limit}}). Bu, {{resetIn}} içinde sıfırlanır.",
+    "messagesRemaining": "Bugün {{count}} mesaj kaldı",
+    "error": "AI sağlayıcısına ulaşılırken bir şeyler ters gitti. Anahtarınız ve mesajınız etkilenmedi.",
+    "clearChat": "Sohbeti temizle",
+    "disclaimer": "Yanıtlar hatalı olabilir. Kendi API anahtarınızı ve kotanızı kullanır.",
+    "title": "AI Assistant"
+  }
+}
