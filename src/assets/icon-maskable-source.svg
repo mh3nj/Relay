@@ -1,0 +1,15 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" fill="#13131b"/>
+  <rect width="512" height="512" fill="url(#g)" fill-opacity="0.25"/>
+  <defs>
+    <radialGradient id="g" cx="50%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#c0c1ff"/>
+      <stop offset="100%" stop-color="#13131b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Morse code for M, dash dash, kept inside safe zone -->
+  <g fill="#c0c1ff">
+    <rect x="152" y="246" width="88" height="34" rx="17"/>
+    <rect x="272" y="246" width="88" height="34" rx="17"/>
+  </g>
+</svg>
