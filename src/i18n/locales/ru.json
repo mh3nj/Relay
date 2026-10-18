@@ -1,0 +1,701 @@
+{
+  "app": {
+    "name": "Relay",
+    "tagline": "Бесплатно и офлайн"
+  },
+  "nav": {
+    "dashboard": "Панель",
+    "learn": "Обучение",
+    "practice": "Тренировка",
+    "translator": "Переводчик",
+    "games": "Игры",
+    "progress": "Прогресс",
+    "encyclopedia": "Энциклопедия",
+    "settings": "Настройки",
+    "freeForever": "Навсегда бесплатно"
+  },
+  "common": {
+    "copy": "Копировать",
+    "copied": "Скопировано",
+    "clear": "Очистить",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "close": "Закрыть",
+    "delete": "Удалить",
+    "confirm": "Подтвердить",
+    "loading": "Загрузка…",
+    "error": "Ошибка",
+    "success": "Успешно",
+    "back": "Назад",
+    "next": "Далее",
+    "previous": "Назад",
+    "continue": "Продолжить",
+    "start": "Старт",
+    "stop": "Стоп",
+    "play": "Воспроизвести",
+    "pause": "Пауза",
+    "retry": "Повторить",
+    "download": "Скачать",
+    "upload": "Загрузить",
+    "import": "Импорт",
+    "export": "Экспорт",
+    "enabled": "Включено",
+    "disabled": "Отключено",
+    "on": "Вкл",
+    "off": "Выкл",
+    "comingSoon": "{{feature}} скоро появится",
+    "characters": "{{count}} символов",
+    "minutes": "{{count}} минут",
+    "seconds": "{{count}}с",
+    "mainNavigation": "Основная навигация",
+    "primaryNavigation": "Основное",
+    "chartRange": "Диапазон графика",
+    "clearTranslation": "Очистить перевод",
+    "reviewWeakSymbols": "Просмотреть все слабые символы",
+    "percent": "{{percent}} percent",
+    "less": "less",
+    "more": "more",
+    "requestFailed": "Request failed.",
+    "rangeWeek": "1W",
+    "rangeMonth": "1M",
+    "rangeAll": "ALL",
+    "daySun": "Sun",
+    "dayMon": "Mon",
+    "dayTue": "Tue",
+    "dayWed": "Wed",
+    "dayThu": "Thu",
+    "dayFri": "Fri",
+    "daySat": "Sat",
+    "eg": "e.g.",
+    "playMorseFor": "Play Morse for {{char}}"
+  },
+  "errorBoundary": {
+    "description": "Relay столкнулся с неожиданной ошибкой. Ваш сохраненный прогресс не затронут. Перезагрузка обычно исправляет это.",
+    "goHome": "На главную"
+  },
+  "dashboard": {
+    "title": "Панель",
+    "description": "Продолжите с того места, где остановились, и посмотрите, что изменилось.",
+    "startLearning": "Начать обучение",
+    "streakDays": "Серия: {{count}} дней",
+    "welcomeBack": "С возвращением, Оператор.",
+    "continuePrompt": "Сейчас вы работаете над буквой '{{char}}'. Продолжайте в том же духе.",
+    "continueLesson": "Продолжить урок '{{char}}'",
+    "dailyChallenge": "Ежедневное задание",
+    "dailyChallengeGoal": "Дайте {{target}} правильных ответов сегодня",
+    "startChallenge": "Начать задание",
+    "overallMastery": "Общее освоение",
+    "needsReview": "Требует повторения",
+    "recentBadges": "Последние значки",
+    "locked": "Заблокировано: {{label}}",
+    "speedProgression": "Прогресс скорости (WPM)",
+    "accuracyTooltip": "Accuracy: {{accuracy}}%",
+    "greetingMorning": "Доброе утро, Оператор.",
+    "greetingAfternoon": "Добрый день, Оператор.",
+    "greetingEvening": "Добрый вечер, Оператор.",
+    "challengeComplete": "Отличная работа. Сегодняшнее задание выполнено.",
+    "noSpeedDataYet": "За этот период ещё нет сессий с таймером.",
+    "playAGame": "Сыграть в игру"
+  },
+  "learn": {
+    "title": "Обучение",
+    "description": "Уроки по методу Коха добавляют по одной букве, с таймингом и записью для повторного прослушивания.",
+    "progress": "Прогресс",
+    "character": "Символ",
+    "signalAnalysis": "Анализ сигнала",
+    "oneUnitDuration": "Длительность одной единицы.",
+    "unitsWithGap": "{{count}} единиц, с паузой между каждой.",
+    "transmissionPractice": "Практика передачи",
+    "spaceToKey": "[Пробел] для передачи",
+    "ctrlKeyHint": "или L-Ctrl = точка, R-Ctrl = тире",
+    "tapToTransmit": "Нажмите или удерживайте пробел для передачи '{{char}}'",
+    "mnemonic": "Мнемоника",
+    "examples": "Примеры",
+    "loadingProgress": "Загрузка вашего прогресса…",
+    "start": "СТАРТ",
+    "signal": "СИГНАЛ",
+    "end": "КОНЕЦ",
+    "unitTiming": "1 тик = {{ms}}мс при {{wpm}} WPM",
+    "stopPlayback": "Остановить воспроизведение",
+    "playAudio": "Воспроизвести звук Морзе",
+    "nextCharacter": "Следующий символ",
+    "masteryGate": {
+      "progress": "{{correct}}/{{needed}} правильных ответов для разблокировки следующего символа",
+      "readyHint": "Отличная работа. Вы можете перейти дальше, когда будете готовы.",
+      "kochExplainer": "Порядок обучения следует методу Коха: он начинается с K и M (а не с A), потому что они звучат максимально по-разному, что развивает лучшее восприятие тайминга перед добавлением более сложных похожих символов."
+    },
+    "dot": "Dot",
+    "dash": "Dash"
+  },
+  "practice": {
+    "title": "Тренировка",
+    "description": "Короткие упражнения на символы, которые вы постоянно путаете.",
+    "modes": {
+      "hearAndType": "Слушай и печатай",
+      "readAndType": "Читай и печатай",
+      "translateDrill": "Перевод",
+      "flashcards": "Карточки",
+      "speed": "Скоростной режим",
+      "endless": "Бесконечный",
+      "memory": "Память",
+      "morseTree": {
+        "title": "Обозреватель дерева Морзе",
+        "idle": "Нажмите «Старт», чтобы исследовать дерево Морзе",
+        "path": "Путь",
+        "deadEnd": "✕ Тупик: возврат к корню",
+        "hint": "Нажимайте клавишу точки (L-Ctrl, . или 4) или клавишу тире (R-Ctrl, - или 6) для навигации",
+        "pathEquals": " = {{char}}",
+        "correct": "Правильно",
+        "incorrect": "Неправильно",
+        "accuracy": "Точность",
+        "streak": "Серия"
+      }
+    },
+    "hearAndType": {
+      "instructions": "Прослушайте тон, затем введите услышанный символ.",
+      "replay": "Повтор",
+      "inputPlaceholder": "Введите символ…",
+      "correct": "Правильно!",
+      "incorrect": "Не совсем. Это был '{{answer}}'",
+      "inputPlaceholderShort": "Type"
+    },
+    "readAndType": {
+      "instructions": "Прочитайте код Морзе и введите соответствующий символ.",
+      "inputPlaceholder": "Введите символ…",
+      "inputPlaceholderShort": "Type"
+    },
+    "translateDrill": {
+      "instructions": "Отправьте код Морзе для показанного символа, используя клавиши . и -.",
+      "spaceToKey": "Вводите . и - напрямую или используйте L-Ctrl / R-Ctrl"
+    },
+    "endless": {
+      "instructions": "Слушайте и печатайте в своем темпе. Без таймера и давления. Остановитесь, когда захотите.",
+      "stop": "Завершить сессию",
+      "summary": "Итоги сессии"
+    },
+    "memory": {
+      "instructions": "Посмотрите последовательность, затем воспроизведите ее в правильном порядке.",
+      "watchPrompt": "Смотрю…",
+      "yourTurn": "Ваша очередь. Введите увиденную последовательность",
+      "sequenceLength": "Последовательность: {{length}}",
+      "bestLength": "Лучшая: {{length}}",
+      "roundFailed": "Это не совсем правильно. Лучшая последовательность: {{length}}",
+      "startRound": "Начать"
+    },
+    "flashcards": {
+      "instructions": "Переверните карточку, чтобы проверить свой ответ.",
+      "showAnswer": "Показать ответ",
+      "iKnewIt": "Я знал это",
+      "didNotKnow": "Не знал"
+    },
+    "speed": {
+      "instructions": "Вводите каждый символ как можно быстрее, пока не истекло время.",
+      "timeLeft": "Осталось времени",
+      "wpm": "WPM",
+      "accuracy": "Точность",
+      "streak": "Серия",
+      "sessionOver": "Сессия завершена!",
+      "startSession": "Начать сессию",
+      "playAgain": "Сыграть снова"
+    },
+    "session": {
+      "correct": "Правильно",
+      "attempts": "Попытки",
+      "endSession": "Завершить сессию",
+      "bestStreak": "Лучшая серия"
+    },
+    "focusedFilter": {
+      "label": "Целевая тренировка: {{chars}}",
+      "clear": "Очистить фильтр"
+    }
+  },
+  "games": {
+    "title": "Игры",
+    "description": "Пять небольших игр для практики без урока.",
+    "notPlayedYet": "Еще не играли",
+    "best": "Лучший: {{score}}",
+    "play": "Играть",
+    "score": "Очки",
+    "topWpm": "Макс. WPM",
+    "destroyed": "Уничтожено",
+    "rounds": "Раунды",
+    "newHighScore": "Новый рекорд!",
+    "morseInvaders": {
+      "title": "Морзе-захватчики",
+      "cardDescription": "Буквы падают сверху. Введите их код точками/тире до приземления.",
+      "instructions": "Буквы падают сверху. Введите их код Морзе (точка/тире) до приземления. Три промаха, и игра окончена.",
+      "hint": "Нажимайте кнопки, вводите . / - или используйте L-Ctrl / R-Ctrl",
+      "bestScore": "Лучший результат: {{score}}",
+      "destroyedLabel": "Уничтожено",
+      "dash": "Тире",
+      "dot": "Точка",
+      "difficulty": {
+        "easy": "Легко (медленное падение)",
+        "medium": "Средне (обычное)",
+        "hard": "Сложно (быстрое падение)"
+      }
+    },
+    "signalRush": {
+      "title": "Сигнальный рывок",
+      "cardDescription": "Слушайте и вводите как можно быстрее. Скорость растет с каждым правильным ответом.",
+      "instructions": "Слушайте и вводите как можно быстрее. Скорость увеличивается с каждым правильным ответом. Три промаха завершают забег.",
+      "speedLabel": "Скорость: {{wpm}} WPM",
+      "bestScore": "Лучший результат: {{score}}",
+      "difficulty": {
+        "easy": "Легко (плавный рост)",
+        "medium": "Средне (обычный)",
+        "hard": "Сложно (резкий рост)"
+      }
+    },
+    "decodeTranslate": {
+      "title": "Расшифруй и переведи",
+      "cardDescription": "Услышьте целое слово азбукой Морзе. Впишите расшифрованное слово, пока не вышло время.",
+      "instructions": "Прослушайте последовательность Морзе, затем впишите слово, которое она составляет. С каждым верным ответом времени меньше.",
+      "replay": "Повторить",
+      "inputPlaceholder": "Введите слово…",
+      "correctWord": "{{word}}, верно!",
+      "incorrectWord": "Было «{{word}}»",
+      "difficulty": {
+        "easy": "Легко (слова из 3 букв)",
+        "medium": "Средне (слова из 5 букв)",
+        "hard": "Сложно (фразы и пунктуация)"
+      },
+      "round": "Раунд {{n}}",
+      "bestScore": "Лучший счёт: {{score}}"
+    },
+    "morseMatch": {
+      "title": "Пары Морзе",
+      "cardDescription": "Переворачивайте карточки и находите пары «буква. Код Морзе»: чистая зрительная память.",
+      "instructions": "Переворачивайте по две карточки, чтобы найти пары буква/Морзе. Найдены все пары, раунд выигран.",
+      "pairsFound": "Пары: {{count}}/{{total}}",
+      "flips": "Переворотов: {{count}}",
+      "timeBonus": "Бонус времени",
+      "youWon": "Все пары найдены!",
+      "difficulty": {
+        "easy": "Легко (4×4)",
+        "hard": "Сложно (6×6)"
+      },
+      "bestScore": "Лучший счёт: {{score}}"
+    },
+    "emergencyRelay": {
+      "title": "Эстафета тревоги",
+      "cardDescription": "Отвечайте на сигналы бедствия под сокращающимся таймером. Каждая ошибка усиливает давление.",
+      "instructions": "Мигает сигнал бедствия. Отправьте верный код Морзе до конца таймера. Ошибки ускоряют часы.",
+      "timer": "{{ms}}ms",
+      "lifeLost": "Слишком медленно!",
+      "bestScore": "Лучший счёт: {{score}}",
+      "difficulty": {
+        "easy": "Легко (SOS + буквы)",
+        "hard": "Сложно (со знаками препинания)"
+      }
+    },
+    "accuracy": "Точность",
+    "bestCombo": "Лучшее комбо",
+    "combo": "Комбо x{{count}}!",
+    "efficiency": "Эффективность"
+  },
+  "progress": {
+    "title": "Аналитика прогресса",
+    "description": "Смотрите, что вы освоили, а что ещё требует работы.",
+    "exportReport": "Экспорт отчета",
+    "mastery": "Мастерство",
+    "practiceTime": "Время тренировок",
+    "currentStreak": "Текущая серия",
+    "performanceTrends": "Тенденции производительности",
+    "trendEmptyState": "Пройдите сессию в скоростном режиме или играх, чтобы начать отслеживать тенденцию.",
+    "characterMastery": "Мастерство символов",
+    "mastered": "Освоено",
+    "learning": "В процессе",
+    "notPracticedYet": "Еще не тренировалось",
+    "accuracyLabel": "Точн.: {{percent}}% ({{attempts}} попыток)",
+    "confusingPairs": "Путающиеся пары",
+    "noMixups": "Пока нет зафиксированных ошибок. Продолжайте тренироваться, и это заполнится автоматически.",
+    "mixupCount": "{{count}} ошибка",
+    "mixupCount_other": "{{count}} ошибок",
+    "focusedPractice": "Целевая тренировка",
+    "wpmLabel": "WPM",
+    "vs": "против",
+    "level": "Уровень {{level}}",
+    "xpProgress": "{{current}} / {{total}} XP",
+    "activityHeatmap": "Активность",
+    "dueForReview": "К повторению",
+    "dueForReviewEmpty": "Сейчас ничего не требует повторения. Продолжайте тренироваться, чтобы так и оставалось.",
+    "reviewNow": "Повторить сейчас",
+    "badgesTitle": "Значки",
+    "badges": {
+      "firstLesson": "Первый урок",
+      "halfway": "На полпути",
+      "fullAlphabet": "Полный алфавит",
+      "wpm10": "10 WPM пик",
+      "wpm20": "20 WPM пик",
+      "perfectEar": "Идеальный слух",
+      "sharpShooter": "Меткий стрелок",
+      "streak3": "3 дня серии",
+      "streak7": "7 дней серии",
+      "streak30": "30 дней серии",
+      "gameExplorer": "Исследователь игр",
+      "level5": "Уровень 5",
+      "level10": "Уровень 10"
+    },
+    "activeDaysThisMonth": "{{count}} active days this month",
+    "masteryLabel": "{{percent}}% mastery"
+  },
+  "encyclopedia": {
+    "title": "Энциклопедия",
+    "description": "Каждый символ: код, тайминг и немного истории.",
+    "searchPlaceholder": "Поиск символов или фонетики…",
+    "categories": {
+      "all": "Все",
+      "letter": "Алфавит",
+      "number": "Цифры",
+      "punctuation": "Пунктуация",
+      "prosign": "Просignы"
+    },
+    "noResults": "Нет символов, соответствующих вашему запросу.",
+    "prosignsTitle": "Просignы и специальные сигналы",
+    "abbreviationsTitle": "Распространенные сокращения",
+    "historyTitle": "Краткая история",
+    "historyText": "Азбука Морзе была разработана в 1830-40-х годах Сэмюэлем Морзе и Альфредом Вейлом для использования на электрическом телеграфе. Оригинальный американский код Морзе позже был усовершенствован до международного кода Морзе, используемого сегодня, стандартизируя тайминг и добавляя поддержку букв с диакритическими знаками. Давно после того, как телеграфия угасла, код продолжал жить в любительском радио, авиации и морской сигнализации, ценимый за то, как далеко простой сигнал вкл/выкл может пройти через шум, который заглушил бы голос."
+  },
+  "translator": {
+    "title": "Переводчик",
+    "description": "Переводите текст в азбуку Морзе и обратно или расшифровывайте запись. Работает офлайн.",
+    "plainText": "Обычный текст",
+    "morseCode": "Код Морзе",
+    "textPlaceholder": "Введите текст для перевода...",
+    "morsePlaceholder": ".. --- ...",
+    "swapDirection": "Поменять направление перевода",
+    "decodeAudio": "Декодировать аудио",
+    "decodeAudioDescription": "Загрузите запись кода Морзе, и она будет декодирована в текст, полностью на этом устройстве.",
+    "clickToUpload": "Нажмите для загрузки",
+    "orDragAndDrop": "или перетащите",
+    "fileSizeLimit": "Аудиофайлы до 10 МБ",
+    "decoding": "Декодирование…",
+    "decoded": "Декодировано, уверенность {{confidence}}%",
+    "unrecognizedSequences": "Нераспознанные последовательности: {{sequences}}",
+    "useThisText": "Использовать этот текст",
+    "fileTooLarge": "Файл слишком большой. Пожалуйста, не более 10 МБ.",
+    "notAudioFile": "Это не похоже на аудиофайл.",
+    "noSignalDetected": "В этой записи не обнаружен сигнал Морзе.",
+    "decodeFailed": "Не удалось декодировать этот файл. Возможно, он поврежден или имеет неподдерживаемый формат.",
+    "speedWpm": "Скорость (WPM)",
+    "toneHz": "Тон (Гц)",
+    "exportTxt": "Экспорт TXT",
+    "exportJson": "Экспорт JSON",
+    "downloadWav": "Скачать WAV",
+    "referencePdf": "PDF-справочник",
+    "typeToSeeSignal": "Введите что-нибудь, чтобы увидеть сигнал.",
+    "dictionary": {
+      "title": "Словарь",
+      "default": "Стандартный алфавит",
+      "new": "Новый словарь",
+      "namePlaceholder": "Название словаря",
+      "duplicate": "Дублировать",
+      "rename": "Переименовать",
+      "delete": "Удалить",
+      "deleteConfirm": "Удалить этот словарь? Это действие нельзя отменить.",
+      "export": "Экспорт",
+      "import": "Импорт",
+      "importFailed": "Этот файл не является допустимым экспортом словаря.",
+      "editorTitle": "Редактировать словарь",
+      "character": "Символ",
+      "code": "Код Морзе",
+      "addEntry": "Добавить символ",
+      "conflictWarning": "'{{code}}' уже используется в '{{other}}', поэтому декодирование будет неоднозначным.",
+      "invalidCode": "Допустимы только точки и тире.",
+      "noEntries": "Пока нет пользовательских символов. Добавьте один ниже.",
+      "removeEntry": "Удалить"
+    },
+    "script": {
+      "title": "Script / Language",
+      "default": "Default (ITU)",
+      "fa": "Persian (فارسی)",
+      "ar": "Arabic (العربية)",
+      "tr": "Turkish (Türkçe)",
+      "fr": "French (Français)",
+      "de": "German (Deutsch)",
+      "es": "Spanish (Español)",
+      "ru": "Russian (Русский)",
+      "ko": "Korean (한국어)",
+      "ja": "Japanese (日本語)",
+      "zh": "Chinese (中文)",
+      "el": "Greek (Ελληνικά)",
+      "he": "Hebrew (עברית)"
+    }
+  },
+  "settings": {
+    "title": "Настройки",
+    "description": "Темы, звук, тайминги, резервные копии и ИИ-помощник.",
+    "sections": {
+      "language": "Язык",
+      "backup": "Данные и резервное копирование",
+      "aiAssistant": "ИИ-помощник",
+      "appearance": "Внешний вид",
+      "audio": "Аудио и тайминг",
+      "accessibility": "Доступность",
+      "shortcuts": "Горячие клавиши"
+    },
+    "language": {
+      "description": "Выберите язык интерфейса. Большинство разделов переведены, но часть текста может оставаться на английском.",
+      "placeholderBadge": "Заполнитель"
+    },
+    "backup": {
+      "description": "Все, что вы делаете, хранится только на этом устройстве. Регулярно создавайте резервные копии, чтобы не потерять прогресс.",
+      "autoBackup": "Автоматическое локальное резервирование",
+      "autoBackupDescription": "Автоматически создавайте снимок вашего прогресса на этом устройстве с заданным интервалом без загрузки файла каждый раз.",
+      "interval": "Интервал резервирования",
+      "lastBackup": "Последнее автоматическое резервирование: {{time}}",
+      "neverBackedUp": "Автоматических резервных копий еще нет",
+      "downloadNow": "Скачать резервную копию",
+      "saveToFolder": "Сохранить в синхронизированную папку",
+      "saveToFolderDescription": "Выберите папку, синхронизированную с Google Drive, Dropbox или iCloud, и Relay будет записывать вашу резервную копию прямо туда. Без необходимости аккаунта.",
+      "saveToFolderUnsupported": "Ваш браузер не поддерживает прямое сохранение в папку. Используйте «Скачать резервную копию», затем переместите файл в синхронизированную папку.",
+      "restoreFromFile": "Восстановить из файла",
+      "restoreWarning": "Восстановление перезапишет ваш текущий прогресс.",
+      "restoreSuccess": "Прогресс успешно восстановлен.",
+      "restoreFailed": "Этот файл не похож на действительную резервную копию Relay.",
+      "factoryReset": "Сброс до заводских настроек",
+      "factoryResetWarning": "Это навсегда удалит весь прогресс, статистику и настройки на этом устройстве. Это действие нельзя отменить.",
+      "factoryResetConfirm": "Да, удалить все",
+      "resetFailed": "Что-то пошло не так, и ваши данные не были сброшены. Ничего не было удалено."
+    },
+    "ai": {
+      "description": "Задавайте вопросы об азбуке Морзе, тайминге или работе приложения прямо в Relay. Используется ваш собственный API-ключ, и ничего кроме ваших сообщений не отправляется.",
+      "provider": "Провайдер",
+      "apiKey": "API-ключ",
+      "apiKeyPlaceholder": "Вставьте ваш API-ключ",
+      "apiKeyHelp": "Хранится только в локальном хранилище этого браузера. Никогда не включается в резервные копии или экспорт. Никуда не отправляется, кроме выбранного провайдера.",
+      "showKey": "Показать ключ",
+      "hideKey": "Скрыть ключ",
+      "clearKey": "Удалить ключ",
+      "costWarning": "Вы несете ответственность за все расходы вашего API-провайдера. Рекомендуем установить лимит расходов или бюджетное оповещение в панели управления провайдера перед использованием этой функции.",
+      "dailyLimit": "Дневной лимит сообщений",
+      "dailyLimitHelp": "Жесткий лимит для предотвращения неконтролируемых расходов. Сбрасывается каждые 24 часа.",
+      "maxTokens": "Максимальная длина ответа",
+      "enable": "Включить ИИ-помощника",
+      "notConfigured": "Добавьте API-ключ, чтобы активировать помощника.",
+      "providerOpenAI": "OpenAI",
+      "providerAnthropic": "Anthropic",
+      "providerCustom": "Custom (OpenAI-compatible)",
+      "endpointUrl": "Endpoint URL",
+      "endpointPlaceholder": "https://your-provider.example.com/v1/chat/completions"
+    },
+    "appearance": {
+      "themeLabel": "Тема",
+      "themes": {
+        "dark": "Темная по умолчанию",
+        "light": "Светлая по умолчанию",
+        "midnight": "Полночь",
+        "ocean": "Океан",
+        "forest": "Лес",
+        "coffee": "Кофе",
+        "frost": "Мороз",
+        "sunrise": "Рассвет"
+      },
+      "installTitle": "Установить Relay",
+      "installDescription": "Установите приложение для полноэкранного офлайн-опыта с собственным значком.",
+      "install": "Установить приложение",
+      "installed": "Уже установлено",
+      "installUnsupported": "Ваш браузер не поддерживает установку в один клик. Найдите «Добавить на главный экран» или «Установить» в меню браузера."
+    },
+    "audioSettings": {
+      "title": "Скорость и тон по умолчанию",
+      "description": "Эти настройки по умолчанию применяются при следующем открытии обучения, тренировки или игры. Переводчик сохраняет собственные элементы управления сессией.",
+      "wpm": "Скорость по умолчанию (WPM)",
+      "farnsworth": "Интервал Фарнсворта",
+      "farnsworthOff": "Выкл (соответствует скорости символа)",
+      "farnsworthHelp": "Замедляет интервал между буквами и словами, сохраняя высокую скорость каждого символа. Это классический метод обучения на высокой скорости.",
+      "frequency": "Тон (Гц)",
+      "volume": "Громкость",
+      "reset": "Сбросить до стандартных"
+    },
+    "accessibility": {
+      "highContrast": "Высокий контраст",
+      "highContrastHelp": "Усиливает границы и разделители для лучшего визуального разделения.",
+      "textSize": "Размер текста",
+      "textSizes": {
+        "small": "Маленький",
+        "default": "Стандартный",
+        "large": "Большой"
+      },
+      "reducedMotion": "Уменьшение движения",
+      "reducedMotionAuto": "Следовать системным настройкам",
+      "reducedMotionOn": "Всегда уменьшать движение",
+      "reducedMotionOff": "Всегда разрешать движение"
+    },
+    "shortcuts": {
+      "title": "Горячие клавиши",
+      "context": "Контекст",
+      "action": "Действие",
+      "key": "Клавиша",
+      "learnTransmit": "Удерживайте для передачи Морзе текущего символа",
+      "morseInvadersDot": "Отправить точку",
+      "morseInvadersDash": "Отправить тире",
+      "spaceKey": "Пробел",
+      "dotKey": ". или 4",
+      "dashKey": "- или 6"
+    }
+  },
+  "mnemonics": {
+    "0": {
+      "hint": "Five dashes: the longest number.",
+      "examples": "Zero"
+    },
+    "1": {
+      "hint": "One dot, four dashes.",
+      "examples": "First"
+    },
+    "2": {
+      "hint": "Two dots, three dashes.",
+      "examples": "Second"
+    },
+    "3": {
+      "hint": "Three dots, two dashes.",
+      "examples": "Third"
+    },
+    "4": {
+      "hint": "Four dots, one dash.",
+      "examples": "Fourth"
+    },
+    "5": {
+      "hint": "Five dots: all short.",
+      "examples": "Fifth"
+    },
+    "6": {
+      "hint": "One dash, four dots.",
+      "examples": "Sixth"
+    },
+    "7": {
+      "hint": "Two dashes, three dots.",
+      "examples": "Seventh"
+    },
+    "8": {
+      "hint": "Three dashes, two dots.",
+      "examples": "Eighth"
+    },
+    "9": {
+      "hint": "Four dashes, one dot.",
+      "examples": "Ninth"
+    },
+    "A": {
+      "hint": "A short dot, then a long dash: like saying 'a-BOUT'.",
+      "examples": "Apple|Around|Ago"
+    },
+    "B": {
+      "hint": "One long dash, then three short dots.",
+      "examples": "Banana|Bottle|Beacon"
+    },
+    "C": {
+      "hint": "Dash dot dash dot: a rhythmic, rocking pattern.",
+      "examples": "Coconut|Circle|Compass"
+    },
+    "D": {
+      "hint": "One dash, two dots: 'DAH-dit-dit'.",
+      "examples": "Dog|Delta|Drum"
+    },
+    "E": {
+      "hint": "The shortest, sharpest sound: just one dot.",
+      "examples": "Echo|Egg|Elephant"
+    },
+    "F": {
+      "hint": "Dot dot dash dot: fast and fluttery.",
+      "examples": "Falcon|Forest|Flute"
+    },
+    "G": {
+      "hint": "Two dashes, then a dot: 'GAH-gah-dit'.",
+      "examples": "Garden|Guitar|Galaxy"
+    },
+    "H": {
+      "hint": "Four quick dots in a row: like a giggle.",
+      "examples": "Harbor|Hello|Horizon"
+    },
+    "I": {
+      "hint": "Two short dots: brief and light.",
+      "examples": "Island|Ice|Igloo"
+    },
+    "J": {
+      "hint": "One dot, three dashes: starts short, stays long.",
+      "examples": "Jungle|Jupiter|Journey"
+    },
+    "K": {
+      "hint": "Dash dot dash: 'KAH-dit-DAH'.",
+      "examples": "Kite|Koala|Kettle"
+    },
+    "L": {
+      "hint": "Dot dash dot dot: a lilting little run.",
+      "examples": "Lantern|Lighthouse|Lemon"
+    },
+    "M": {
+      "hint": "Two dashes: 'MAH-dah', slow and heavy.",
+      "examples": "Mountain|Moon|Music"
+    },
+    "N": {
+      "hint": "One dash, one dot: 'NAH-dit'.",
+      "examples": "Nest|North|Nova"
+    },
+    "O": {
+      "hint": "Three long dashes: the roundest, heaviest letter.",
+      "examples": "Ocean|Orbit|Oasis"
+    },
+    "P": {
+      "hint": "Dot dash dash dot: bookended by dots.",
+      "examples": "Puzzle|Planet|Piano"
+    },
+    "Q": {
+      "hint": "Dash dash dot dash: mostly long, one short.",
+      "examples": "Quartz|Quest|Quiet"
+    },
+    "R": {
+      "hint": "Dot dash dot: a little arch shape.",
+      "examples": "River|Rocket|Rainbow"
+    },
+    "S": {
+      "hint": "Three quick dots: 'dit-dit-dit', like a snake hiss.",
+      "examples": "Sunset|Silver|Star"
+    },
+    "T": {
+      "hint": "A single dash: the longest, simplest sound.",
+      "examples": "Tree|Thunder|Torch"
+    },
+    "U": {
+      "hint": "Dot dot dash: two short, one long.",
+      "examples": "Umbrella|Universe|Uphill"
+    },
+    "V": {
+      "hint": "Dot dot dot dash: Beethoven's Fifth Symphony.",
+      "examples": "Valley|Violet|Voyage"
+    },
+    "W": {
+      "hint": "Dot dash dash: starts short, ends long.",
+      "examples": "Waterfall|Wonder|Willow"
+    },
+    "X": {
+      "hint": "Dash dot dot dash: long, short, short, long.",
+      "examples": "Xylophone|Xenon"
+    },
+    "Y": {
+      "hint": "Dash dot dash dash: mostly dashes.",
+      "examples": "Yellow|Yonder|Yoga"
+    },
+    "Z": {
+      "hint": "Dash dash dot dot: heavy start, light end.",
+      "examples": "Zephyr|Zigzag|Zenith"
+    },
+    "fallbackHint": "No mnemonic yet for this symbol."
+  },
+  "aiChat": {
+    "openLabel": "Открыть ИИ-помощника",
+    "closeLabel": "Закрыть ИИ-помощника",
+    "placeholder": "Спросите об азбуке Морзе, тайминге или этом приложении…",
+    "send": "Отправить",
+    "thinking": "Думаю…",
+    "notConfigured": "Добавьте свой API-ключ в Настройки → ИИ-помощник, чтобы начать чат.",
+    "goToSettings": "Перейти в настройки",
+    "limitReached": "Вы достигли сегодняшнего лимита сообщений ({{limit}}). Сброс через {{resetIn}}.",
+    "messagesRemaining": "Осталось {{count}} сообщений сегодня",
+    "error": "Произошла ошибка при обращении к ИИ-провайдеру. Ваш ключ и сообщение не пострадали.",
+    "clearChat": "Очистить разговор",
+    "disclaimer": "Ответы могут быть неточными. Использует ваш собственный API-ключ и квоту.",
+    "title": "AI Assistant"
+  }
+}
