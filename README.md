@@ -23,7 +23,8 @@
 ## Links
 
 
-[Live Demo]([https://mh3nj.github.io/Relay/relay-landing.html](https://relay-woad-theta.vercel.app/))
+[Live Demo]([https://mh3nj.github.io/Relay/relay-landing.html](https://relay-woad-theta.vercel.app/)
+
 [Landing Page](https://mh3nj.github.io/Relay/relay-landing.html)
 
 ---
