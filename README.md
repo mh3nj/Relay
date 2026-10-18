@@ -58,10 +58,42 @@ Feature availability and browser behavior can vary by environment. Audio decodin
 
 ## Screenshots and demo
 
-Media will be added after the owner supplies the final assets. The placeholders below are intentional and are not screenshots or claims of a deployed demo.
-
-- **Application screenshots:** pending capture from the actual running app.
 - **Demo video:** pending owner-provided WebM recording.
+
+<table>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <img src="docs/screenshots/dashboard.png" alt="Relay Dashboard Interface" loading="lazy" style="max-width: 100%; height: auto;" />
+    </td>
+    <td width="50%" align="center" valign="top">
+      <img src="docs/screenshots/encyclopedia.png" alt="Morse Code Encyclopedia" loading="lazy" style="max-width: 100%; height: auto;" />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <img src="docs/screenshots/games.png" alt="Morse Code Learning Games" loading="lazy" style="max-width: 100%; height: auto;" />
+    </td>
+    <td width="50%" align="center" valign="top">
+      <img src="docs/screenshots/learn.png" alt="Interactive Learning Modules" loading="lazy" style="max-width: 100%; height: auto;" />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <img src="docs/screenshots/practice.png" alt="Morse Code Practice Tools" loading="lazy" style="max-width: 100%; height: auto;" />
+    </td>
+    <td width="50%" align="center" valign="top">
+      <img src="docs/screenshots/progress-analytics.png" alt="Progress and Analytics Tracking" loading="lazy" style="max-width: 100%; height: auto;" />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <img src="docs/screenshots/settings.png" alt="App Settings and Preferences" loading="lazy" style="max-width: 100%; height: auto;" />
+    </td>
+    <td width="50%" align="center" valign="top">
+      <img src="docs/screenshots/translator.png" alt="Text to Morse Code Translator" loading="lazy" style="max-width: 100%; height: auto;" />
+    </td>
+  </tr>
+</table>
 
 ## Privacy and data handling
 
