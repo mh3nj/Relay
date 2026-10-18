@@ -58,7 +58,8 @@ Feature availability and browser behavior can vary by environment. Audio decodin
 
 ## Screenshots and demo
 
-- **Demo video:** pending owner-provided WebM recording.
+[relay.webm](https://github.com/user-attachments/assets/7fdf93a5-1998-49e1-8e85-defeb73d13eb)
+
 
 <table>
   <tr>
