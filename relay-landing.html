@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7f2">
+  <meta name="description" content="Relay is an offline-first Morse code learning environment for lessons, practice, games, audio tools, and progress.">
+  <meta property="og:title" content="Relay — Learn Morse. Hear the signal. Build the skill.">
+  <meta property="og:description" content="A thoughtful space to learn Morse code, practise with purpose, and find your rhythm.">
+  <meta property="og:type" content="website">
+  <title>Relay — Learn Morse. Hear the signal. Build the skill.</title>
+  <link rel="icon" href="https://raw.githubusercontent.com/mh3nj/Relay/main/public/icons/Relay-1.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f6f7f2;--paper:#fff;--ink:#18221e;--muted:#65716a;--line:#dfe5dc;--accent:#276b4a;--accent-2:#b9e5a7;--accent-3:#e8f3e1;--warm:#f0eadb;--shadow:0 24px 70px rgba(29,49,36,.10);--radius:28px;--max:1200px}
+    [data-theme="dark"]{--bg:#101713;--paper:#18221c;--ink:#edf4ec;--muted:#a4b1a6;--line:#2b3a30;--accent:#9bd5a5;--accent-2:#315c3e;--accent-3:#1e3023;--warm:#2a2b21;--shadow:0 24px 70px rgba(0,0,0,.28)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:100px}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.7;letter-spacing:0;overflow-x:hidden;transition:background .35s,color .35s}
+    body.fa{font-family:"Vazirmatn",sans-serif;line-height:2.05}
+    body.fa *{letter-spacing:0!important}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    button,a{-webkit-tap-highlight-color:transparent}
+    button:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+    .wrap{width:min(var(--max),calc(100% - 48px));margin-inline:auto}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--accent);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em}
+    .eyebrow:before{content:"";width:25px;height:1px;background:currentColor}
+    body.fa .eyebrow{letter-spacing:0;text-transform:none}
+    .nav-shell{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 84%,transparent);backdrop-filter:blur(18px);border-bottom:1px solid color-mix(in srgb,var(--line) 72%,transparent)}
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;font-family:"Space Grotesk",sans-serif;font-size:1.28rem;font-weight:700;letter-spacing:-.05em}
+    .brand img{width:38px;height:38px;object-fit:contain;border-radius:12px}
+    .nav-links{display:flex;align-items:center;gap:27px;color:var(--muted);font-size:.9rem}
+    .nav-links a{transition:color .2s}.nav-links a:hover{color:var(--accent)}
+    .nav-actions{display:flex;align-items:center;gap:9px}
+    .icon-btn,.lang-btn{height:42px;min-width:42px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--ink);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .25s,border-color .25s,background .25s}
+    .icon-btn:hover,.lang-btn:hover{transform:translateY(-2px);border-color:var(--accent)}
+    .lang-btn{padding:0 15px;font-size:.82rem;font-weight:700}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:11px;border:1px solid transparent;border-radius:999px;padding:14px 21px;font-weight:700;font-size:.92rem;transition:transform .25s,box-shadow .25s,background .25s}
+    .button:hover{transform:translateY(-3px)}
+    .button.primary{background:var(--accent);color:#fff;box-shadow:0 10px 24px color-mix(in srgb,var(--accent) 24%,transparent)}
+    [data-theme="dark"] .button.primary{color:#102016}
+    .button.secondary{border-color:var(--line);background:var(--paper);color:var(--ink)}
+    .button .arrow{font-size:1.1em;transition:transform .25s}.button:hover .arrow{transform:translateX(3px)}
+    body.fa .button:hover .arrow{transform:translateX(-3px)}
+    .hero{position:relative;padding:95px 0 88px;overflow:hidden}
+    .hero:before{content:"";position:absolute;width:650px;height:650px;border-radius:50%;background:radial-gradient(circle,var(--accent-3),transparent 68%);top:-230px;right:-180px;pointer-events:none}
+    body.fa .hero:before{right:auto;left:-180px}
+    .hero-grid{position:relative;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:64px}
+    .hero h1{font-family:"Space Grotesk",sans-serif;font-size:clamp(3.2rem,6.3vw,6.3rem);line-height:.99;letter-spacing:-.075em;margin:23px 0 26px;max-width:700px;font-weight:600}
+    body.fa .hero h1{font-family:"Vazirmatn",sans-serif;font-size:clamp(2.8rem,5.5vw,5.4rem);line-height:1.5;letter-spacing:0;font-weight:800}
+    .hero h1 em{font-style:normal;color:var(--accent);position:relative;white-space:nowrap}
+    .hero-copy{font-size:1.08rem;line-height:1.9;color:var(--muted);max-width:540px;margin:0 0 31px}
+    body.fa .hero-copy{line-height:2.15}
+    .hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+    .hero-meta{display:flex;align-items:center;gap:12px;margin-top:27px;color:var(--muted);font-size:.82rem}
+    .status-dot{width:8px;height:8px;background:#70a879;border-radius:50%;box-shadow:0 0 0 5px color-mix(in srgb,#70a879 17%,transparent)}
+    .signal-stage{min-height:480px;position:relative;display:grid;place-items:center}
+    .signal-card{width:min(100%,480px);aspect-ratio: .92;position:relative;overflow:hidden;border:1px solid color-mix(in srgb,var(--line) 75%,transparent);border-radius:38px;background:linear-gradient(145deg,var(--paper),color-mix(in srgb,var(--accent-3) 65%,var(--paper)));box-shadow:var(--shadow);padding:28px;transform:rotate(2deg);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+    .signal-card:hover{transform:rotate(0) translateY(-5px)}
+    .card-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em}
+    .live-pill{display:flex;align-items:center;gap:7px;padding:6px 10px;border-radius:999px;background:var(--accent-3);color:var(--accent);letter-spacing:0}
+    .live-pill i{width:6px;height:6px;border-radius:50%;background:currentColor;animation:pulse 1.8s infinite}
+    .morse-display{position:absolute;inset:95px 25px 95px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:28px}
+    .morse-word{font-family:"Space Grotesk",sans-serif;font-size:clamp(1.5rem,3vw,2.5rem);font-weight:600;letter-spacing:.16em;color:var(--ink)}
+    .morse-word span{color:var(--accent)}
+    .signal-line{display:flex;align-items:center;justify-content:center;gap:9px;height:45px}
+    .dot{width:12px;height:12px;border-radius:50%;background:var(--accent)}
+    .dash{width:48px;height:12px;border-radius:20px;background:var(--accent)}
+    .signal-caption{font-size:.8rem;color:var(--muted);letter-spacing:.08em}
+    .orbit{position:absolute;border:1px solid color-mix(in srgb,var(--accent) 25%,transparent);border-radius:50%;width:340px;height:340px;animation:orbit 24s linear infinite}
+    .orbit:before,.orbit:after{content:"";position:absolute;width:11px;height:11px;border-radius:50%;background:var(--accent)}
+    .orbit:before{top:35px;left:45px}.orbit:after{bottom:40px;right:26px;width:7px;height:7px;background:#d6a66a}
+    .float-note{position:absolute;z-index:2;padding:14px 17px;border:1px solid var(--line);border-radius:17px;background:var(--paper);box-shadow:0 12px 36px rgba(20,40,25,.09);font-size:.8rem;color:var(--muted);animation:float 5s ease-in-out infinite}
+    .float-note strong{display:block;color:var(--ink);font-size:.95rem;margin-bottom:2px}
+    .note-a{left:-4px;bottom:64px}.note-b{right:-4px;top:70px;animation-delay:-2.2s}
+    body.fa .note-a{left:auto;right:-4px}body.fa .note-b{right:auto;left:-4px}
+    .ticker{border-block:1px solid var(--line);overflow:hidden;padding:18px 0;color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.15em}
+    .ticker-track{display:flex;align-items:center;justify-content:space-around;gap:35px;white-space:nowrap}
+    .ticker b{color:var(--accent);font-weight:700}
+    section.content-section{padding:110px 0}
+    .section-head{max-width:720px;margin-bottom:48px}
+    .section-head h2{font-family:"Space Grotesk",sans-serif;font-size:clamp(2.3rem,4.5vw,4.2rem);line-height:1.08;letter-spacing:-.06em;font-weight:600;margin:17px 0}
+    body.fa .section-head h2{font-family:"Vazirmatn",sans-serif;line-height:1.65;letter-spacing:0;font-weight:800}
+    .section-head p{color:var(--muted);font-size:1.02rem;line-height:1.9;margin:0}
+    body.fa .section-head p{line-height:2.15}
+    .features{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .feature{grid-column:span 4;min-height:260px;padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);position:relative;overflow:hidden;transition:transform .35s,border-color .35s,box-shadow .35s}
+    .feature:hover{transform:translateY(-6px);border-color:color-mix(in srgb,var(--accent) 45%,var(--line));box-shadow:0 20px 45px rgba(28,54,35,.07)}
+    .feature.wide{grid-column:span 6;min-height:230px}
+    .feature-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:15px;background:var(--accent-3);color:var(--accent);font-size:1.3rem;margin-bottom:26px}
+    .feature h3{font-size:1.22rem;line-height:1.35;margin:0 0 10px;font-weight:700}
+    .feature p{color:var(--muted);font-size:.93rem;line-height:1.85;margin:0;max-width:430px}
+    body.fa .feature p{line-height:2.1}
+    .feature .ghost-symbol{position:absolute;right:17px;bottom:-32px;font-size:8rem;line-height:1;color:var(--accent);opacity:.055;font-family:"Space Grotesk",sans-serif;font-weight:700;pointer-events:none}
+    body.fa .feature .ghost-symbol{right:auto;left:17px}
+    .practice-section{background:var(--warm);transition:background .35s}
+    .practice-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:center}
+    .practice-art{min-height:430px;border-radius:32px;background:var(--paper);border:1px solid var(--line);padding:28px;position:relative;overflow:hidden}
+    .practice-art:after{content:"";position:absolute;width:320px;height:320px;border-radius:50%;background:var(--accent-3);right:-110px;bottom:-130px}
+    body.fa .practice-art:after{right:auto;left:-110px}
+    .practice-label{font-size:.78rem;color:var(--muted);font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+    .practice-art h3{font-family:"Space Grotesk",sans-serif;font-size:2rem;line-height:1.1;letter-spacing:-.05em;max-width:280px;margin:15px 0 30px}
+    body.fa .practice-art h3{font-family:"Vazirmatn",sans-serif;line-height:1.7;letter-spacing:0}
+    .waveform{height:115px;display:flex;align-items:center;gap:5px;position:relative;z-index:1}
+    .waveform span{width:5px;border-radius:8px;background:var(--accent);height:var(--h);opacity:var(--o,1);animation:wave 1.8s ease-in-out infinite alternate;animation-delay:var(--d)}
+    .mini-progress{position:absolute;z-index:2;bottom:28px;left:28px;right:28px;padding:17px 18px;border:1px solid var(--line);border-radius:17px;background:var(--paper)}
+    body.fa .mini-progress{left:28px;right:28px}
+    .progress-top{display:flex;justify-content:space-between;font-size:.8rem;color:var(--muted);margin-bottom:10px}
+    .progress-bar{height:6px;background:var(--line);border-radius:9px;overflow:hidden}.progress-bar span{display:block;width:68%;height:100%;background:var(--accent);border-radius:9px}
+    .practice-copy h2{font-family:"Space Grotesk",sans-serif;font-size:clamp(2.4rem,4vw,3.9rem);line-height:1.08;letter-spacing:-.06em;margin:17px 0 20px;font-weight:600}
+    body.fa .practice-copy h2{font-family:"Vazirmatn",sans-serif;line-height:1.65;letter-spacing:0;font-weight:800}
+    .practice-copy>p{color:var(--muted);line-height:1.95;margin-bottom:28px}
+    body.fa .practice-copy>p{line-height:2.15}
+    .steps{display:grid;gap:19px}
+    .step{display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:start}
+    .step-num{width:38px;height:38px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-family:"Space Grotesk",sans-serif;font-size:.85rem;color:var(--accent);background:var(--paper)}
+    .step h3{font-size:1rem;margin:1px 0 3px}.step p{font-size:.9rem;color:var(--muted);margin:0;line-height:1.75}
+    body.fa .step p{line-height:2}
+    .privacy-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .privacy-card{border:1px solid var(--line);border-radius:var(--radius);padding:32px;background:var(--paper)}
+    .privacy-card .big-icon{font-size:1.7rem;color:var(--accent);margin-bottom:20px}
+    .privacy-card h3{font-size:1.3rem;margin:0 0 10px}.privacy-card p{color:var(--muted);line-height:1.9;margin:0}
+    body.fa .privacy-card p{line-height:2.1}
+    .privacy-note{margin-top:20px;padding:19px 22px;border-radius:16px;background:var(--accent-3);color:var(--ink);font-size:.88rem;line-height:1.85}
+    .faq-list{border-top:1px solid var(--line)}
+    .faq-item{border-bottom:1px solid var(--line)}
+    .faq-q{width:100%;padding:25px 0;display:flex;justify-content:space-between;align-items:center;gap:24px;border:0;background:transparent;color:var(--ink);text-align:left;cursor:pointer;font-size:1.05rem;font-weight:700}
+    body.fa .faq-q{text-align:right;line-height:1.9}
+    .faq-plus{flex:0 0 32px;width:32px;height:32px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--accent);transition:transform .35s,background .35s}
+    .faq-item.open .faq-plus{transform:rotate(45deg);background:var(--accent-3)}
+    .faq-answer{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s cubic-bezier(.2,.75,.25,1);opacity:.55}
+    .faq-item.open .faq-answer{grid-template-rows:1fr;opacity:1}
+    .faq-answer-inner{overflow:hidden}
+    .faq-answer p{max-width:820px;margin:0;padding:0 48px 25px 0;color:var(--muted);line-height:1.95}
+    body.fa .faq-answer p{padding:0 0 25px 48px;line-height:2.15}
+    .closing{padding:0 0 100px}
+    .closing-card{position:relative;overflow:hidden;padding:60px;border-radius:36px;background:var(--accent);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:35px}
+    [data-theme="dark"] .closing-card{color:#102016}
+    .closing-card:after{content:"·· ··· ··";position:absolute;right:20px;bottom:-50px;font-family:"Space Grotesk",sans-serif;font-size:11rem;line-height:1;opacity:.09;white-space:nowrap;pointer-events:none}
+    body.fa .closing-card:after{right:auto;left:20px}
+    .closing-card .eyebrow{color:inherit;opacity:.8}
+    .closing-card h2{font-family:"Space Grotesk",sans-serif;font-size:clamp(2.3rem,4vw,4rem);line-height:1.05;letter-spacing:-.06em;margin:16px 0;max-width:650px}
+    body.fa .closing-card h2{font-family:"Vazirmatn",sans-serif;line-height:1.65;letter-spacing:0}
+    .closing-card p{max-width:570px;margin:0;opacity:.82;line-height:1.9}
+    body.fa .closing-card p{line-height:2.1}
+    .closing-card .button{flex-shrink:0;background:#fff;color:#1e3e2b;position:relative;z-index:1}
+    footer{border-top:1px solid var(--line);padding:30px 0 38px;color:var(--muted);font-size:.83rem}
+    .footer-row{display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .footer-brand{display:flex;align-items:center;gap:10px;color:var(--ink);font-weight:700}
+    .footer-brand img{width:28px;height:28px;border-radius:8px}
+    .footer-links{display:flex;flex-wrap:wrap;gap:20px}.footer-links a:hover{color:var(--accent)}
+    .fineprint{font-size:.75rem;line-height:1.7;margin-top:19px;max-width:900px}
+    .reveal{opacity:1;transform:none}
+    .js-ready .reveal{opacity:0;transform:translateY(24px)}
+    .js-ready .reveal.visible{opacity:1;transform:translateY(0);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.75,.25,1)}
+    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.78)}}
+    @keyframes orbit{to{transform:rotate(360deg)}}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+    @keyframes wave{to{transform:scaleY(.58);opacity:.6}}
+    @media(max-width:980px){.nav-links{display:none}.hero-grid,.practice-grid{grid-template-columns:1fr;gap:40px}.hero{padding-top:65px}.hero-copy{max-width:700px}.signal-stage{min-height:460px}.signal-card{max-width:440px}.practice-art{min-height:390px}.feature{grid-column:span 6}.feature.wide{grid-column:span 6}.closing-card{padding:45px}}
+    @media(max-width:620px){.wrap{width:min(100% - 32px,var(--max))}.nav{height:70px}.brand{font-size:1.12rem}.brand img{width:33px;height:33px}.hero{padding:55px 0 50px}.hero h1{font-size:clamp(2.8rem,13vw,4.2rem)}body.fa .hero h1{font-size:clamp(2.4rem,10vw,3.5rem)}.hero-copy{font-size:1rem}.hero-ctas .button{width:100%}.signal-stage{min-height:380px}.signal-card{padding:20px;border-radius:27px;max-width:360px}.morse-display{inset:75px 15px}.orbit{width:270px;height:270px}.float-note{font-size:.72rem;padding:10px 12px}.note-a{left:-3px;bottom:30px}.note-b{right:-3px;top:28px}body.fa .note-a{left:auto;right:-3px}body.fa .note-b{right:auto;left:-3px}.ticker-track{justify-content:flex-start;animation:marquee 28s linear infinite}.ticker{overflow:hidden}.content-section{padding:75px 0!important}.section-head{margin-bottom:30px}.section-head h2{font-size:2.55rem}.features{gap:12px}.feature,.feature.wide{grid-column:span 12;min-height:0;padding:24px}.feature-icon{margin-bottom:18px}.practice-art{min-height:370px;padding:22px}.mini-progress{left:22px;right:22px;bottom:22px}body.fa .mini-progress{left:22px;right:22px}.privacy-grid{grid-template-columns:1fr}.privacy-card{padding:25px}.faq-q{font-size:.98rem;padding:21px 0}.faq-answer p{padding-right:0}body.fa .faq-answer p{padding-left:0}.closing{padding-bottom:70px}.closing-card{padding:32px 25px;align-items:flex-start;flex-direction:column;border-radius:27px}.closing-card h2{font-size:2.65rem}.closing-card .button{width:100%}.footer-row{align-items:flex-start;flex-direction:column}.footer-links{gap:14px}}
+    @keyframes marquee{to{transform:translateX(-35%)}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.js-ready .reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <div class="nav-shell">
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Relay home"><img src="https://raw.githubusercontent.com/mh3nj/Relay/main/public/icons/Relay-1.png" alt=""><span>Relay</span></a>
+      <div class="nav-links">
+        <a href="#features" data-en="Explore" data-fa="امکانات">Explore</a>
+        <a href="#method" data-en="The method" data-fa="روش یادگیری">The method</a>
+        <a href="#privacy" data-en="Privacy" data-fa="حریم خصوصی">Privacy</a>
+        <a href="#faq" data-en="FAQ" data-fa="پرسش‌ها">FAQ</a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle color theme" title="Toggle theme"><span id="themeGlyph">☾</span></button>
+        <button class="lang-btn" id="langToggle" aria-label="Switch language">فا فارسی</button>
+      </div>
+    </nav>
+  </div>
+
+  <main id="top">
+    <header class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <span class="eyebrow reveal" data-en="A quieter way to learn" data-fa="راهی آرام‌تر برای یادگیری">A quieter way to learn</span>
+          <h1 class="reveal" data-en-html="Learn Morse.<br>Hear the signal.<br><em>Build the skill.</em>" data-fa-html="مورس را یاد بگیر.<br>سیگنال را بشنو.<br><em>مهارت بساز.</em>">Learn Morse.<br>Hear the signal.<br><em>Build the skill.</em></h1>
+          <p class="hero-copy reveal" data-en="A thoughtful learning space for Morse code. Move from first signals to confident recognition through guided lessons, focused practice, audio tools, and progress that stays close at hand." data-fa="فضایی سنجیده برای یادگیری کد مورس. از نخستین نشانه‌ها تا تشخیص مطمئن پیش برو؛ با درس‌های مرحله‌ای، تمرین هدفمند، ابزارهای صوتی و روند پیشرفتی که همیشه در دسترس توست.">A thoughtful learning space for Morse code. Move from first signals to confident recognition through guided lessons, focused practice, audio tools, and progress that stays close at hand.</p>
+          <div class="hero-ctas reveal">
+            <a class="button primary" href="https://github.com/mh3nj/Relay" target="_blank" rel="noreferrer"><span data-en="Explore the project" data-fa="مشاهده پروژه">Explore the project</span><span class="arrow">↗</span></a>
+            <a class="button secondary" href="#features"><span data-en="Discover Relay" data-fa="با رِلی آشنا شو">Discover Relay</span><span class="arrow">↓</span></a>
+          </div>
+          <div class="hero-meta reveal"><span class="status-dot"></span><span data-en="Designed for focused practice, with an offline-first approach" data-fa="طراحی‌شده برای تمرین متمرکز، با رویکرد آفلاین‌محور">Designed for focused practice, with an offline-first approach</span></div>
+        </div>
+        <div class="signal-stage reveal" aria-label="Decorative Morse signal illustration">
+          <div class="orbit"></div>
+          <div class="float-note note-a"><strong data-en="One signal at a time" data-fa="هر بار یک نشانه">One signal at a time</strong><span data-en="Small steps. Real progress." data-fa="قدم‌های کوچک، پیشرفت واقعی">Small steps. Real progress.</span></div>
+          <div class="float-note note-b"><strong data-en="Practice with purpose" data-fa="تمرین هدفمند">Practice with purpose</strong><span data-en="Listen · Decode · Repeat" data-fa="گوش کن · رمزگشایی کن · تکرار کن">Listen · Decode · Repeat</span></div>
+          <div class="signal-card">
+            <div class="card-top"><span>RELAY / SIGNAL 001</span><span class="live-pill"><i></i><span data-en="Listening" data-fa="در حال شنیدن">Listening</span></span></div>
+            <div class="morse-display">
+              <div class="morse-word">S<span>·</span> O<span>−</span> S</div>
+              <div class="signal-line" aria-hidden="true"><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dash"></i><i class="dash"></i><i class="dash"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+              <div class="signal-caption" data-en="THREE SHORT · THREE LONG · THREE SHORT" data-fa="سه کوتاه · سه بلند · سه کوتاه">THREE SHORT · THREE LONG · THREE SHORT</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="ticker" aria-hidden="true"><div class="ticker-track wrap">
+      <span>LEARN <b>·</b> LISTEN <b>·</b> RECOGNISE <b>·</b> REPEAT <b>·</b> REMEMBER <b>·</b> </span>
+      <span>LEARN <b>·</b> LISTEN <b>·</b> RECOGNISE <b>·</b> REPEAT <b>·</b> REMEMBER <b>·</b> </span>
+    </div></div>
+
+    <section class="content-section" id="features">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-en="More than translation" data-fa="فراتر از ترجمه">More than translation</span>
+          <h2 data-en-html="A complete practice space,<br>not just a converter." data-fa-html="فضایی کامل برای تمرین،<br>نه فقط یک مبدل ساده.">A complete practice space,<br>not just a converter.</h2>
+          <p data-en="Relay brings the pieces of Morse learning together, so you can build understanding, test yourself, and return to the signals that need more time." data-fa="رِلی بخش‌های مختلف یادگیری مورس را کنار هم می‌آورد تا درک عمیق‌تری بسازی، خودت را بیازمایی و دوباره به نشانه‌هایی برگردی که به تمرین بیشتری نیاز دارند.">Relay brings the pieces of Morse learning together, so you can build understanding, test yourself, and return to the signals that need more time.</p>
+        </div>
+        <div class="features">
+          <article class="feature reveal"><div class="feature-icon">⌁</div><h3 data-en="Learn, step by step" data-fa="یادگیری، قدم‌به‌قدم">Learn, step by step</h3><p data-en="Build familiarity with characters through incremental lessons, Koch-style progression, mnemonic aids, and signal exploration." data-fa="با درس‌های تدریجی، مسیر یادگیری به سبک کُخ، ابزارهای یادسپاری و بررسی نشانه‌ها، به‌مرور با حروف آشنا شو.">Build familiarity with characters through incremental lessons, Koch-style progression, mnemonic aids, and signal exploration.</p><span class="ghost-symbol">01</span></article>
+          <article class="feature reveal"><div class="feature-icon">◉</div><h3 data-en="Practise your way" data-fa="به روش خودت تمرین کن">Practise your way</h3><p data-en="Switch between speed drills, flashcards, endless practice, listening and typing, memory, reading, and translation exercises." data-fa="میان تمرین سرعت، فلش‌کارت، تمرین بی‌پایان، شنیدن و تایپ، حافظه، خواندن و ترجمه جابه‌جا شو.">Switch between speed drills, flashcards, endless practice, listening and typing, memory, reading, and translation exercises.</p><span class="ghost-symbol">02</span></article>
+          <article class="feature reveal"><div class="feature-icon">✳</div><h3 data-en="Make practice playful" data-fa="تمرین را بازی‌وار کن">Make practice playful</h3><p data-en="Turn repetition into a challenge with Morse Invaders, Signal Rush, Decode & Translate, Morse Match, and Emergency Relay." data-fa="با بازی‌های Morse Invaders، Signal Rush، Decode & Translate، Morse Match و Emergency Relay تکرار را به چالش تبدیل کن.">Turn repetition into a challenge with Morse Invaders, Signal Rush, Decode & Translate, Morse Match, and Emergency Relay.</p><span class="ghost-symbol">03</span></article>
+          <article class="feature wide reveal"><div class="feature-icon">♫</div><h3 data-en="Listen closer" data-fa="دقیق‌تر گوش کن">Listen closer</h3><p data-en="Explore audio playback, WAV generation, audio-file decoding, and signal analysis. Results can vary with recording quality and signal conditions." data-fa="پخش صوت، ساخت فایل WAV، رمزگشایی فایل صوتی و تحلیل سیگنال را تجربه کن. نتیجه به کیفیت ضبط و شرایط سیگنال بستگی دارد.">Explore audio playback, WAV generation, audio-file decoding, and signal analysis. Results can vary with recording quality and signal conditions.</p><span class="ghost-symbol">♫</span></article>
+          <article class="feature wide reveal"><div class="feature-icon">↗</div><h3 data-en="See your progress" data-fa="پیشرفتت را ببین">See your progress</h3><p data-en="Keep an eye on XP, levels, streaks, badges, character mastery, review scheduling, mistakes, and words-per-minute trends." data-fa="امتیاز تجربه، سطح‌ها، زنجیره تمرین، نشان‌ها، تسلط بر حروف، زمان‌بندی مرور، اشتباه‌ها و روند سرعت کلمات در دقیقه را دنبال کن.">Keep an eye on XP, levels, streaks, badges, character mastery, review scheduling, mistakes, and words-per-minute trends.</p><span class="ghost-symbol">↗</span></article>
+          <article class="feature reveal"><div class="feature-icon">⌕</div><h3 data-en="A reference within reach" data-fa="مرجع همیشه در دسترس">A reference within reach</h3><p data-en="Look up character details and prosigns in a searchable Morse reference." data-fa="جزئیات حروف و علامت‌های قراردادی مورس را در مرجعی قابل جست‌وجو پیدا کن.">Look up character details and prosigns in a searchable Morse reference.</p><span class="ghost-symbol">06</span></article>
+          <article class="feature reveal"><div class="feature-icon">⇄</div><h3 data-en="Translate and customise" data-fa="ترجمه و شخصی‌سازی">Translate and customise</h3><p data-en="Convert between text and Morse, use custom dictionaries, and export your work with tools designed for your workflow." data-fa="متن را به مورس و مورس را به متن تبدیل کن، از واژه‌نامه‌های دلخواه استفاده کن و خروجی بگیر.">Convert between text and Morse, use custom dictionaries, and export your work with tools designed for your workflow.</p><span class="ghost-symbol">07</span></article>
+          <article class="feature reveal"><div class="feature-icon">☼</div><h3 data-en="Make it yours" data-fa="شخصی‌سازی برای خودت">Make it yours</h3><p data-en="Adjust interface language, light or dark appearance, audio and timing controls, and accessibility preferences." data-fa="زبان رابط، پوسته روشن یا تیره، تنظیمات صدا و زمان‌بندی و گزینه‌های دسترس‌پذیری را تغییر بده.">Adjust interface language, light or dark appearance, audio and timing controls, and accessibility preferences.</p><span class="ghost-symbol">08</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section practice-section" id="method">
+      <div class="wrap practice-grid">
+        <div class="practice-art reveal">
+          <div class="practice-label" data-en="A rhythm that builds" data-fa="ریتمی برای پیشرفت">A rhythm that builds</div>
+          <h3 data-en-html="Listen.<br>Recognise.<br>Come back stronger." data-fa-html="گوش کن.<br>تشخیص بده.<br>قوی‌تر برگرد.">Listen.<br>Recognise.<br>Come back stronger.</h3>
+          <div class="waveform" aria-hidden="true">
+            <span style="--h:18%;--d:-.1s"></span><span style="--h:38%;--d:-.3s"></span><span style="--h:70%;--d:-.5s"></span><span style="--h:32%;--d:-.7s"></span><span style="--h:88%;--d:-.2s"></span><span style="--h:54%;--d:-.9s"></span><span style="--h:24%;--d:-.4s"></span><span style="--h:66%;--d:-.8s"></span><span style="--h:92%;--d:-.6s"></span><span style="--h:44%;--d:-.1s"></span><span style="--h:26%;--d:-.7s"></span><span style="--h:75%;--d:-.3s"></span><span style="--h:48%;--d:-.9s"></span><span style="--h:90%;--d:-.5s"></span><span style="--h:30%;--d:-.2s"></span><span style="--h:58%;--d:-.6s"></span><span style="--h:20%;--d:-.8s"></span><span style="--h:72%;--d:-.4s"></span><span style="--h:42%;--d:-.1s"></span><span style="--h:84%;--d:-.7s"></span><span style="--h:34%;--d:-.3s"></span><span style="--h:60%;--d:-.9s"></span><span style="--h:25%;--d:-.5s"></span><span style="--h:74%;--d:-.2s"></span><span style="--h:46%;--d:-.6s"></span><span style="--h:88%;--d:-.4s"></span><span style="--h:32%;--d:-.8s"></span><span style="--h:64%;--d:-.3s"></span><span style="--h:20%;--d:-.9s"></span><span style="--h:50%;--d:-.1s"></span>
+          </div>
+          <div class="mini-progress"><div class="progress-top"><span data-en="Character mastery" data-fa="تسلط بر حروف">Character mastery</span><strong>68%</strong></div><div class="progress-bar"><span></span></div></div>
+        </div>
+        <div class="practice-copy reveal">
+          <span class="eyebrow" data-en="A repeatable learning loop" data-fa="چرخه‌ای برای یادگیری">A repeatable learning loop</span>
+          <h2 data-en-html="Progress is built<br>one signal at a time." data-fa-html="پیشرفت با هر نشانه<br>ساخته می‌شود.">Progress is built<br>one signal at a time.</h2>
+          <p data-en="Relay is designed around a simple rhythm: learn something new, practise retrieving it, review what felt difficult, then return with a little more confidence. Your progress helps make each session feel connected to the last." data-fa="رِلی بر پایه ریتمی ساده طراحی شده است: چیز تازه‌ای یاد بگیر، بازیابی آن را تمرین کن، بخش‌های دشوار را مرور کن و با کمی اطمینان بیشتر برگرد. پیشرفتت کمک می‌کند هر جلسه ادامه طبیعی جلسه قبل باشد.">Relay is designed around a simple rhythm: learn something new, practise retrieving it, review what felt difficult, then return with a little more confidence. Your progress helps make each session feel connected to the last.</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">01</div><div><h3 data-en="Learn a signal" data-fa="یک نشانه یاد بگیر">Learn a signal</h3><p data-en="Build a foundation through guided, incremental lessons." data-fa="با درس‌های مرحله‌ای، پایه‌ای محکم بساز.">Build a foundation through guided, incremental lessons.</p></div></div>
+            <div class="step"><div class="step-num">02</div><div><h3 data-en="Practise recognition" data-fa="تشخیص را تمرین کن">Practise recognition</h3><p data-en="Train your ear and memory with focused drills and games." data-fa="با تمرین‌های متمرکز و بازی‌ها، گوش و حافظه‌ات را تقویت کن.">Train your ear and memory with focused drills and games.</p></div></div>
+            <div class="step"><div class="step-num">03</div><div><h3 data-en="Review and return" data-fa="مرور کن و برگرد">Review and return</h3><p data-en="Use your history to revisit difficult characters and keep momentum." data-fa="از سابقه‌ات برای مرور حروف دشوار و حفظ روند یادگیری استفاده کن.">Use your history to revisit difficult characters and keep momentum.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="privacy">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-en="Thoughtful by design" data-fa="با طراحی سنجیده">Thoughtful by design</span>
+          <h2 data-en-html="Your practice.<br>Your pace. Your data." data-fa-html="تمرین تو،<br>سرعت تو، داده‌های تو.">Your practice.<br>Your pace. Your data.</h2>
+          <p data-en="Relay is designed to keep core learning independent of a Relay-owned application backend. The supplied app stores learning state primarily in your browser, with tools to export and import a backup." data-fa="رِلی طوری طراحی شده که یادگیری اصلی به سرور اختصاصی رِلی وابسته نباشد. نسخه ارائه‌شده، داده‌های یادگیری را عمدتاً در مرورگر نگه می‌دارد و ابزارهایی برای خروجی گرفتن و بازیابی نسخه پشتیبان دارد.">Relay is designed to keep core learning independent of a Relay-owned application backend. The supplied app stores learning state primarily in your browser, with tools to export and import a backup.</p>
+        </div>
+        <div class="privacy-grid">
+          <article class="privacy-card reveal"><div class="big-icon">⌂</div><h3 data-en="Browser-first learning" data-fa="یادگیری با محوریت مرورگر">Browser-first learning</h3><p data-en="No Relay account is required by the supplied source. Learning data is associated with your browser profile and site origin, not a Relay account. It does not automatically sync across browsers or devices." data-fa="در کد ارائه‌شده نیازی به حساب رِلی نیست. داده‌های یادگیری به پروفایل مرورگر و دامنه سایت وابسته‌اند، نه به حساب رِلی، و به‌صورت خودکار میان مرورگرها یا دستگاه‌ها همگام نمی‌شوند.">No Relay account is required by the supplied source. Learning data is associated with your browser profile and site origin, not a Relay account. It does not automatically sync across browsers or devices.</p></article>
+          <article class="privacy-card reveal"><div class="big-icon">↧</div><h3 data-en="Keep a separate backup" data-fa="نسخه پشتیبان جداگانه داشته باش">Keep a separate backup</h3><p data-en="Export important progress and keep the backup somewhere safe. Clearing browser data, removing a profile, or losing a device may remove local progress. Treat exported files as personal data." data-fa="از پیشرفت مهمت خروجی بگیر و نسخه پشتیبان را در جای امنی نگه دار. پاک کردن داده‌های مرورگر، حذف پروفایل یا از دست رفتن دستگاه ممکن است پیشرفت محلی را از بین ببرد. با فایل‌های پشتیبان مانند داده شخصی رفتار کن.">Export important progress and keep the backup somewhere safe. Clearing browser data, removing a profile, or losing a device may remove local progress. Treat exported files as personal data.</p></article>
+        </div>
+        <div class="privacy-note reveal" data-en="Optional AI assistance is separate from the core learning workflow. When enabled, relevant prompts or request content are sent to the provider you configure. Review that provider’s policies and never send secrets or sensitive information." data-fa="دستیار هوش مصنوعی اختیاری و جدا از روند اصلی یادگیری است. با فعال‌کردن آن، متن مرتبط با درخواست برای ارائه‌دهنده‌ای که تنظیم کرده‌ای فرستاده می‌شود. سیاست‌های آن سرویس را بررسی کن و اطلاعات محرمانه یا حساس را ارسال نکن.">Optional AI assistance is separate from the core learning workflow. When enabled, relevant prompts or request content are sent to the provider you configure. Review that provider’s policies and never send secrets or sensitive information.</div>
+      </div>
+    </section>
+
+    <section class="content-section" id="faq">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-en="A few useful details" data-fa="چند نکته کاربردی">A few useful details</span>
+          <h2 data-en="Before you tune in." data-fa="پیش از شروع">Before you tune in.</h2>
+        </div>
+        <div class="faq-list reveal">
+          <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-en="Is Relay only a Morse code translator?" data-fa="آیا رِلی فقط یک مبدل کد مورس است؟">Is Relay only a Morse code translator?</span><span class="faq-plus">+</span></button><div class="faq-answer"><div class="faq-answer-inner"><p data-en="No. Translation is one part of a broader learning environment that includes structured lessons, practice modes, games, audio tools, a searchable reference, and progress tracking." data-fa="خیر. ترجمه تنها بخشی از محیط یادگیری رِلی است. درس‌های مرحله‌ای، حالت‌های تمرین، بازی‌ها، ابزارهای صوتی، مرجع قابل جست‌وجو و پیگیری پیشرفت نیز در آن قرار دارند.">No. Translation is one part of a broader learning environment that includes structured lessons, practice modes, games, audio tools, a searchable reference, and progress tracking.</p></div></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-en="Can I use Relay offline?" data-fa="آیا می‌توانم آفلاین از رِلی استفاده کنم؟">Can I use Relay offline?</span><span class="faq-plus">+</span></button><div class="faq-answer"><div class="faq-answer-inner"><p data-en="Relay is designed as an installable Progressive Web App with offline-first behavior after its resources have been loaded and cached successfully. Availability can depend on the browser and the deployed build, so test offline reloads on the version you use." data-fa="رِلی به‌عنوان یک وب‌اپلیکیشن پیش‌رونده و با رویکرد آفلاین‌محور طراحی شده است؛ پس از بارگیری و ذخیره موفق منابع، بخشی از امکانات می‌تواند بدون اینترنت در دسترس باشد. این رفتار به مرورگر و نسخه منتشرشده بستگی دارد، بنابراین بارگذاری مجدد در حالت آفلاین را آزمایش کن.">Relay is designed as an installable Progressive Web App with offline-first behavior after its resources have been loaded and cached successfully. Availability can depend on the browser and the deployed build, so test offline reloads on the version you use.</p></div></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-en="Does Relay send my learning data to a server?" data-fa="آیا رِلی داده‌های یادگیری من را به سرور می‌فرستد؟">Does Relay send my learning data to a server?</span><span class="faq-plus">+</span></button><div class="faq-answer"><div class="faq-answer-inner"><p data-en="The supplied source is designed to store application state primarily in browser storage and does not require a Relay account or Relay-owned application backend for core learning. Optional AI features send relevant requests to the provider you configure. Hosting, browser, and third-party services have their own data practices." data-fa="کد ارائه‌شده داده‌های برنامه را عمدتاً در حافظه مرورگر نگه می‌دارد و برای یادگیری اصلی به حساب یا سرور اختصاصی رِلی نیاز ندارد. قابلیت‌های هوش مصنوعی اختیاری، درخواست‌های مرتبط را برای ارائه‌دهنده انتخابی تو می‌فرستند. میزبان سایت، مرورگر و سرویس‌های ثالث سیاست‌های داده خود را دارند.">The supplied source is designed to store application state primarily in browser storage and does not require a Relay account or Relay-owned application backend for core learning. Optional AI features send relevant requests to the provider you configure. Hosting, browser, and third-party services have their own data practices.</p></div></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-en="Is there a live demo available?" data-fa="آیا نسخه آزمایشی آنلاین در دسترس است؟">Is there a live demo available?</span><span class="faq-plus">+</span></button><div class="faq-answer"><div class="faq-answer-inner"><p data-en="The repository does not currently claim a verified live demo. Follow the GitHub repository for project updates and use the setup instructions to run the app locally." data-fa="در حال حاضر مخزن پروژه، نسخه آزمایشی آنلاین تأییدشده‌ای معرفی نمی‌کند. برای اطلاع از به‌روزرسانی‌ها مخزن گیت‌هاب را دنبال کن و برای اجرای برنامه از راهنمای راه‌اندازی استفاده کن.">The repository does not currently claim a verified live demo. Follow the GitHub repository for project updates and use the setup instructions to run the app locally.</p></div></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-en="Can I use Relay commercially?" data-fa="آیا استفاده تجاری از رِلی مجاز است؟">Can I use Relay commercially?</span><span class="faq-plus">+</span></button><div class="faq-answer"><div class="faq-answer-inner"><p data-en="Relay currently uses a custom personal-use and non-commercial sharing license. Commercial use, paid hosting, and commercial redistribution require prior written permission. Read the full license before using or distributing the software." data-fa="رِلی در حال حاضر از مجوز سفارشی برای استفاده شخصی و اشتراک‌گذاری غیرتجاری استفاده می‌کند. استفاده تجاری، میزبانی پولی و توزیع تجاری به اجازه کتبی قبلی نیاز دارند. پیش از استفاده یا توزیع نرم‌افزار، متن کامل مجوز را بخوان.">Relay currently uses a custom personal-use and non-commercial sharing license. Commercial use, paid hosting, and commercial redistribution require prior written permission. Read the full license before using or distributing the software.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="wrap">
+        <div class="closing-card reveal">
+          <div><span class="eyebrow" data-en="The signal is yours" data-fa="سیگنال از آنِ توست">The signal is yours</span><h2 data-en-html="Every clear signal<br>starts with practice." data-fa-html="هر سیگنال روشن،<br>با تمرین آغاز می‌شود.">Every clear signal<br>starts with practice.</h2><p data-en="Explore the project, follow its progress, and help shape a calmer way to learn Morse." data-fa="پروژه را ببین، روند پیشرفتش را دنبال کن و در ساخت راهی آرام‌تر برای یادگیری مورس همراه شو.">Explore the project, follow its progress, and help shape a calmer way to learn Morse.</p></div>
+          <a class="button" href="https://github.com/mh3nj/Relay" target="_blank" rel="noreferrer"><span data-en="Visit Relay on GitHub" data-fa="رفتن به رِلی در گیت‌هاب">Visit Relay on GitHub</span><span class="arrow">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-row">
+        <a class="footer-brand" href="#top"><img src="https://raw.githubusercontent.com/mh3nj/Relay/main/public/icons/Relay-1.png" alt=""><span>Relay</span></a>
+        <div class="footer-links">
+          <a href="https://github.com/mh3nj/Relay" target="_blank" rel="noreferrer" data-en="Repository" data-fa="مخزن پروژه">Repository</a>
+          <a href="https://github.com/mh3nj/Relay/blob/main/docs/PRIVACY.md" target="_blank" rel="noreferrer" data-en="Privacy & data" data-fa="حریم خصوصی و داده‌ها">Privacy & data</a>
+          <a href="https://github.com/mh3nj/Relay/blob/main/LICENSE" target="_blank" rel="noreferrer" data-en="License" data-fa="مجوز">License</a>
+          <a href="https://github.com/mh3nj/Relay/issues" target="_blank" rel="noreferrer" data-en="Feedback" data-fa="بازخورد">Feedback</a>
+        </div>
+      </div>
+      <p class="fineprint" data-en="Relay is source-available under a custom personal-use and non-commercial sharing license, not an OSI-approved open-source license. Commercial use requires prior written permission. This page describes the repository and is not a claim that a live deployment has been verified." data-fa="رِلی با مجوز سفارشی استفاده شخصی و اشتراک‌گذاری غیرتجاری منتشر شده و مجوز متن‌باز تأییدشده توسط OSI ندارد. استفاده تجاری به اجازه کتبی قبلی نیاز دارد. این صفحه معرفی مخزن پروژه است و ادعایی درباره تأیید نسخه آنلاین ندارد.">Relay is source-available under a custom personal-use and non-commercial sharing license, not an OSI-approved open-source license. Commercial use requires prior written permission. This page describes the repository and is not a claim that a live deployment has been verified.</p>
+      <p class="fineprint">© <span id="year"></span> Relay. <span data-en="Built for patient practice, clear signals, and steady progress." data-fa="برای تمرین پیوسته، سیگنال‌های روشن و پیشرفت آرام ساخته شده است.">Built for patient practice, clear signals, and steady progress.</span></p>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const body = document.body;
+      const langButton = document.getElementById('langToggle');
+      const themeButton = document.getElementById('themeToggle');
+      const themeGlyph = document.getElementById('themeGlyph');
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      const setLanguage = (lang) => {
+        const isFa = lang === 'fa';
+        root.lang = lang;
+        root.dir = isFa ? 'rtl' : 'ltr';
+        body.classList.toggle('fa', isFa);
+        langButton.textContent = isFa ? 'EN English' : 'فا فارسی';
+        langButton.setAttribute('aria-label', isFa ? 'Switch to English' : 'تغییر زبان به فارسی');
+        document.querySelectorAll('[data-en][data-fa]').forEach(el => {
+          el.textContent = isFa ? el.dataset.fa : el.dataset.en;
+        });
+        document.querySelectorAll('[data-en-html][data-fa-html]').forEach(el => {
+          el.innerHTML = isFa ? el.dataset.faHtml : el.dataset.enHtml;
+        });
+        document.title = isFa ? 'رِلی | یادگیری مورس، شنیدن سیگنال، ساخت مهارت' : 'Relay — Learn Morse. Hear the signal. Build the skill.';
+        document.querySelector('meta[name="description"]').content = isFa
+          ? 'رِلی محیطی آفلاین‌محور برای یادگیری کد مورس، تمرین، بازی، ابزارهای صوتی و پیگیری پیشرفت است.'
+          : 'Relay is an offline-first Morse code learning environment for lessons, practice, games, audio tools, and progress.';
+        try { localStorage.setItem('relay-landing-language', lang); } catch (_) {}
+      };
+
+      const setTheme = (theme) => {
+        root.dataset.theme = theme;
+        themeGlyph.textContent = theme === 'dark' ? '☀' : '☾';
+        themeButton.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+        document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#101713' : '#f6f7f2';
+        try { localStorage.setItem('relay-landing-theme', theme); } catch (_) {}
+      };
+
+      let lang = 'en';
+      let theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      try {
+        lang = localStorage.getItem('relay-landing-language') || 'en';
+        theme = localStorage.getItem('relay-landing-theme') || theme;
+      } catch (_) {}
+      setLanguage(lang);
+      setTheme(theme);
+      langButton.addEventListener('click', () => setLanguage(root.lang === 'fa' ? 'en' : 'fa'));
+      themeButton.addEventListener('click', () => setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
+
+      document.querySelectorAll('.faq-q').forEach(button => {
+        button.addEventListener('click', () => {
+          const item = button.closest('.faq-item');
+          const opening = !item.classList.contains('open');
+          item.classList.toggle('open', opening);
+          button.setAttribute('aria-expanded', String(opening));
+        });
+      });
+
+      const revealEls = [...document.querySelectorAll('.reveal')];
+      if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        body.classList.add('js-ready');
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -35px 0px' });
+        revealEls.forEach(el => observer.observe(el));
+      }
+    })();
+  </script>
+</body>
+</html>
