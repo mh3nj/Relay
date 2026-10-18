@@ -1,0 +1,701 @@
+{
+  "app": {
+    "name": "Relay",
+    "tagline": "Free & Offline"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "learn": "Learn",
+    "practice": "Practice",
+    "translator": "Translator",
+    "games": "Games",
+    "progress": "Progress",
+    "encyclopedia": "Encyclopedia",
+    "settings": "Settings",
+    "freeForever": "Free Forever"
+  },
+  "common": {
+    "copy": "Copy",
+    "copied": "Copied",
+    "clear": "Clear",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "delete": "Delete",
+    "confirm": "Confirm",
+    "loading": "Loading…",
+    "error": "Error",
+    "success": "Success",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "continue": "Continue",
+    "start": "Start",
+    "stop": "Stop",
+    "play": "Play",
+    "pause": "Pause",
+    "retry": "Retry",
+    "download": "Download",
+    "upload": "Upload",
+    "import": "Import",
+    "export": "Export",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "on": "On",
+    "off": "Off",
+    "comingSoon": "{{feature}} is next up",
+    "characters": "{{count}} characters",
+    "minutes": "{{count}} minutes",
+    "seconds": "{{count}}s",
+    "mainNavigation": "Main navigation",
+    "primaryNavigation": "Primary",
+    "chartRange": "Chart range",
+    "clearTranslation": "Clear translation",
+    "reviewWeakSymbols": "Review all weak symbols",
+    "percent": "{{percent}} percent",
+    "less": "less",
+    "more": "more",
+    "requestFailed": "Request failed.",
+    "rangeWeek": "1W",
+    "rangeMonth": "1M",
+    "rangeAll": "ALL",
+    "daySun": "Sun",
+    "dayMon": "Mon",
+    "dayTue": "Tue",
+    "dayWed": "Wed",
+    "dayThu": "Thu",
+    "dayFri": "Fri",
+    "daySat": "Sat",
+    "eg": "e.g.",
+    "playMorseFor": "Play Morse for {{char}}"
+  },
+  "errorBoundary": {
+    "description": "Relay hit an unexpected error. Your saved progress is untouched. Reloading usually fixes this.",
+    "goHome": "Go to Dashboard"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "description": "Pick up where you left off and see what's changed.",
+    "startLearning": "Start Learning",
+    "streakDays": "{{count}} Day Streak",
+    "greetingMorning": "Good morning, Operator.",
+    "greetingAfternoon": "Good afternoon, Operator.",
+    "greetingEvening": "Good evening, Operator.",
+    "welcomeBack": "Welcome back, Operator.",
+    "continuePrompt": "You're currently working toward the letter '{{char}}'. Keep your streak going.",
+    "continueLesson": "Continue Lesson '{{char}}'",
+    "dailyChallenge": "Daily Challenge",
+    "dailyChallengeGoal": "Get {{target}} correct answers today",
+    "startChallenge": "Start Challenge",
+    "challengeComplete": "Nice work. Today's challenge is done.",
+    "playAGame": "Play a Game",
+    "overallMastery": "Overall Mastery",
+    "needsReview": "Needs Review",
+    "recentBadges": "Recent Badges",
+    "locked": "Locked: {{label}}",
+    "speedProgression": "Speed Progression (WPM)",
+    "noSpeedDataYet": "No timed sessions in this range yet.",
+    "accuracyTooltip": "Accuracy: {{accuracy}}%"
+  },
+  "learn": {
+    "title": "Learn",
+    "description": "Koch-method lessons that add one character at a time, with timing and audio you can replay.",
+    "progress": "Progress",
+    "character": "Character",
+    "signalAnalysis": "Signal Analysis",
+    "oneUnitDuration": "One unit duration.",
+    "unitsWithGap": "{{count}} units, one gap each.",
+    "transmissionPractice": "Transmission Practice",
+    "spaceToKey": "[Space] to key",
+    "ctrlKeyHint": "L-Ctrl = dot, R-Ctrl = dash",
+    "tapToTransmit": "Tap or hold to transmit '{{char}}'",
+    "dot": "Dot",
+    "dash": "Dash",
+    "mnemonic": "Mnemonic",
+    "examples": "Examples",
+    "loadingProgress": "Loading your progress…",
+    "start": "START",
+    "signal": "SIGNAL",
+    "end": "END",
+    "unitTiming": "1 dit = {{ms}}ms @ {{wpm}} WPM",
+    "stopPlayback": "Stop playback",
+    "playAudio": "Play Morse audio",
+    "nextCharacter": "Next Character",
+    "masteryGate": {
+      "progress": "{{correct}}/{{needed}} correct needed to unlock the next character",
+      "readyHint": "Nice work. You can move on whenever you're ready.",
+      "kochExplainer": "Learning order follows the Koch method: it starts with K and M (not A) because they sound maximally different, which builds a stronger ear for timing before adding trickier look-alikes."
+    }
+  },
+  "practice": {
+    "title": "Practice",
+    "description": "Short drills that focus on the symbols you keep missing.",
+    "modes": {
+      "morseTree": {
+        "title": "Morse Tree Explorer",
+        "idle": "Press Start to explore the Morse tree",
+        "path": "Path",
+        "deadEnd": "✕ Dead end, back to root",
+        "hint": "Press the dot key (L-Ctrl, . or 4) or the dash key (R-Ctrl, - or 6) to navigate",
+        "pathEquals": " = {{char}}",
+        "correct": "Correct",
+        "incorrect": "Incorrect",
+        "accuracy": "Accuracy",
+        "streak": "Streak"
+      },
+      "hearAndType": "Hear & Type",
+      "readAndType": "Read & Type",
+      "translateDrill": "Translate Drill",
+      "flashcards": "Flashcards",
+      "speed": "Speed Mode",
+      "endless": "Endless",
+      "memory": "Memory"
+    },
+    "hearAndType": {
+      "instructions": "Listen to the tone, then type the character you heard.",
+      "replay": "Replay",
+      "inputPlaceholder": "Type the character…",
+      "inputPlaceholderShort": "Type",
+      "correct": "Correct!",
+      "incorrect": "Not quite. That was '{{answer}}'"
+    },
+    "readAndType": {
+      "instructions": "Read the Morse code, then type the character it represents.",
+      "inputPlaceholder": "Type the character…",
+      "inputPlaceholderShort": "Type"
+    },
+    "translateDrill": {
+      "instructions": "Send the Morse code for the character shown, using . and - keys.",
+      "spaceToKey": "Type . and - directly, or use L-Ctrl / R-Ctrl"
+    },
+    "endless": {
+      "instructions": "Listen and type at your own pace. No timer, no pressure. Stop whenever you like.",
+      "stop": "Stop Session",
+      "summary": "Session summary"
+    },
+    "memory": {
+      "instructions": "Watch the sequence, then reproduce it in order.",
+      "watchPrompt": "Watching…",
+      "yourTurn": "Your turn. Type the sequence you saw",
+      "sequenceLength": "Sequence: {{length}}",
+      "bestLength": "Best: {{length}}",
+      "roundFailed": "That's not quite right. Best sequence: {{length}}",
+      "startRound": "Start"
+    },
+    "flashcards": {
+      "instructions": "Flip the card to check your answer.",
+      "showAnswer": "Show Answer",
+      "iKnewIt": "I knew it",
+      "didNotKnow": "Didn't know it"
+    },
+    "speed": {
+      "instructions": "Type each character as fast as you can before time runs out.",
+      "timeLeft": "Time left",
+      "wpm": "WPM",
+      "accuracy": "Accuracy",
+      "streak": "Streak",
+      "sessionOver": "Session complete!",
+      "startSession": "Start Session",
+      "playAgain": "Play Again"
+    },
+    "session": {
+      "correct": "Correct",
+      "attempts": "Attempts",
+      "bestStreak": "Best Streak",
+      "endSession": "End Session"
+    },
+    "focusedFilter": {
+      "label": "Focused practice: {{chars}}",
+      "clear": "Clear filter"
+    }
+  },
+  "games": {
+    "title": "Games",
+    "description": "Five small games for when you want to practice without a lesson.",
+    "notPlayedYet": "Not played yet",
+    "best": "Best: {{score}}",
+    "play": "Play",
+    "score": "Score",
+    "topWpm": "Top WPM",
+    "destroyed": "Destroyed",
+    "rounds": "Rounds",
+    "newHighScore": "New high score!",
+    "accuracy": "Accuracy",
+    "bestCombo": "Best Combo",
+    "combo": "{{count}}x combo!",
+    "efficiency": "Efficiency",
+    "morseInvaders": {
+      "title": "Morse Invaders",
+      "cardDescription": "Letters fall from the top. Type their dot/dash code before they land.",
+      "instructions": "Letters fall from the top. Type their Morse code (dot/dash) before they land. Three misses and it's game over.",
+      "hint": "Tap the buttons, press . / -, or use L-Ctrl / R-Ctrl",
+      "bestScore": "Best score: {{score}}",
+      "destroyedLabel": "Destroyed",
+      "dash": "Dash",
+      "dot": "Dot",
+      "difficulty": {
+        "easy": "Easy (slow fall)",
+        "medium": "Medium (normal)",
+        "hard": "Hard (fast fall)"
+      }
+    },
+    "signalRush": {
+      "title": "Signal Rush",
+      "cardDescription": "Listen and type as fast as you can. Speed climbs with every correct answer.",
+      "instructions": "Listen and type as fast as you can. Speed ramps up with every correct answer. Three misses ends the run.",
+      "speedLabel": "Speed: {{wpm}} WPM",
+      "bestScore": "Best score: {{score}}",
+      "difficulty": {
+        "easy": "Easy (gentle ramp)",
+        "medium": "Medium (normal)",
+        "hard": "Hard (aggressive ramp)"
+      }
+    },
+    "decodeTranslate": {
+      "title": "Decode & Translate",
+      "cardDescription": "Hear a full word in Morse. Type the decoded word before time runs out.",
+      "instructions": "Listen to the Morse sequence, then type the word it spells. Time shrinks with every correct answer.",
+      "replay": "Replay",
+      "inputPlaceholder": "Type the word…",
+      "correctWord": "{{word}}, correct!",
+      "incorrectWord": "That was '{{word}}'",
+      "difficulty": {
+        "easy": "Easy (3-letter words)",
+        "medium": "Medium (5-letter words)",
+        "hard": "Hard (sentences & punctuation)"
+      },
+      "round": "Round {{n}}",
+      "bestScore": "Best score: {{score}}"
+    },
+    "morseMatch": {
+      "title": "Morse Match",
+      "cardDescription": "Flip cards to match each letter with its Morse code. Pure visual memory.",
+      "instructions": "Flip two cards at a time to find matching letter/Morse pairs. All pairs found = round won.",
+      "pairsFound": "Pairs: {{count}}/{{total}}",
+      "flips": "Flips: {{count}}",
+      "timeBonus": "Time Bonus",
+      "youWon": "All pairs found!",
+      "difficulty": {
+        "easy": "Easy (4×4)",
+        "hard": "Hard (6×6)"
+      },
+      "bestScore": "Best score: {{score}}"
+    },
+    "emergencyRelay": {
+      "title": "Emergency Relay",
+      "cardDescription": "Respond to distress signals under a shrinking timer. Pressure builds with every mistake.",
+      "instructions": "A distress signal flashes. Send the correct Morse code before the timer runs out. Mistakes speed up the clock.",
+      "timer": "{{ms}}ms",
+      "lifeLost": "Too slow!",
+      "bestScore": "Best score: {{score}}",
+      "difficulty": {
+        "easy": "Easy (SOS + letters)",
+        "hard": "Hard (punctuation included)"
+      }
+    }
+  },
+  "progress": {
+    "title": "Progress Analytics",
+    "description": "See what you've mastered and what still needs work.",
+    "exportReport": "Export Report",
+    "mastery": "Mastery",
+    "practiceTime": "Practice Time",
+    "currentStreak": "Current Streak",
+    "performanceTrends": "Performance Trends",
+    "trendEmptyState": "Complete a Speed Mode or Games session to start tracking your trend.",
+    "characterMastery": "Character Mastery",
+    "mastered": "Mastered",
+    "learning": "Learning",
+    "notPracticedYet": "Not practiced yet",
+    "accuracyLabel": "Acc: {{percent}}% ({{attempts}} attempts)",
+    "confusingPairs": "Confusing Pairs",
+    "noMixups": "No mix-ups logged yet. Keep practicing and this fills in automatically.",
+    "mixupCount": "{{count}} mix-up",
+    "mixupCount_other": "{{count}} mix-ups",
+    "focusedPractice": "Focused Practice",
+    "wpmLabel": "WPM",
+    "vs": "vs",
+    "level": "Level {{level}}",
+    "xpProgress": "{{current}} / {{total}} XP",
+    "activityHeatmap": "Activity",
+    "activeDaysThisMonth": "{{count}} active days this month",
+    "masteryLabel": "{{percent}}% mastery",
+    "dueForReview": "Due for Review",
+    "dueForReviewEmpty": "Nothing due right now. Keep practicing to keep it that way.",
+    "reviewNow": "Review Now",
+    "badgesTitle": "Badges",
+    "badges": {
+      "firstLesson": "First Lesson",
+      "halfway": "Halfway There",
+      "fullAlphabet": "Full Alphabet",
+      "wpm10": "10 WPM Peak",
+      "wpm20": "20 WPM Peak",
+      "perfectEar": "Perfect Ear",
+      "sharpShooter": "Sharp Shooter",
+      "streak3": "3 Day Streak",
+      "streak7": "7 Day Streak",
+      "streak30": "30 Day Streak",
+      "gameExplorer": "Game Explorer",
+      "level5": "Level 5",
+      "level10": "Level 10"
+    }
+  },
+  "encyclopedia": {
+    "title": "Encyclopedia",
+    "description": "Every character, with its code, timing, and a little history.",
+    "searchPlaceholder": "Search characters or phonetics…",
+    "categories": {
+      "all": "All",
+      "letter": "Alphabet",
+      "number": "Numbers",
+      "punctuation": "Punctuation",
+      "prosign": "Prosigns"
+    },
+    "noResults": "No characters match your search.",
+    "prosignsTitle": "Prosigns & Special Signals",
+    "abbreviationsTitle": "Common Abbreviations",
+    "historyTitle": "A Brief History",
+    "historyText": "Morse code was developed in the 1830s and 40s by Samuel Morse and Alfred Vail for the electric telegraph. The original American Morse code was later refined into the International Morse code used today, standardizing timing and adding support for accented letters. Long after telegraphy faded, the code lived on in amateur radio, aviation, and maritime signaling, still prized because a simple on/off signal travels through noise that would drown out a voice."
+  },
+  "translator": {
+    "title": "Translator",
+    "description": "Translate text to Morse and back, or decode an audio recording. Works offline.",
+    "plainText": "Plain Text",
+    "morseCode": "Morse Code",
+    "textPlaceholder": "Type text to translate...",
+    "morsePlaceholder": ".. --- ...",
+    "swapDirection": "Swap translation direction",
+    "decodeAudio": "Decode Audio",
+    "decodeAudioDescription": "Upload a recording of Morse code and it'll be decoded to text, entirely on this device.",
+    "clickToUpload": "Click to upload",
+    "orDragAndDrop": "or drag and drop",
+    "fileSizeLimit": "Audio files up to 10MB",
+    "decoding": "Decoding…",
+    "decoded": "Decoded, {{confidence}}% confidence",
+    "unrecognizedSequences": "Unrecognized sequences: {{sequences}}",
+    "useThisText": "Use this text",
+    "fileTooLarge": "File is too large. Please keep it under 10MB.",
+    "notAudioFile": "That doesn't look like an audio file.",
+    "noSignalDetected": "No Morse signal was detected in this recording.",
+    "decodeFailed": "Couldn't decode this file. It may be corrupted or an unsupported format.",
+    "speedWpm": "Speed (WPM)",
+    "toneHz": "Tone (Hz)",
+    "exportTxt": "Export TXT",
+    "exportJson": "Export JSON",
+    "downloadWav": "Download WAV",
+    "referencePdf": "Reference PDF",
+    "typeToSeeSignal": "Type something to see the signal.",
+    "script": {
+      "title": "Script / Language",
+      "default": "Default (ITU)",
+      "fa": "Persian (فارسی)",
+      "ar": "Arabic (العربية)",
+      "tr": "Turkish (Türkçe)",
+      "fr": "French (Français)",
+      "de": "German (Deutsch)",
+      "es": "Spanish (Español)",
+      "ru": "Russian (Русский)",
+      "ko": "Korean (한국어)",
+      "ja": "Japanese (日本語)",
+      "zh": "Chinese (中文)",
+      "el": "Greek (Ελληνικά)",
+      "he": "Hebrew (עברית)"
+    },
+    "dictionary": {
+      "title": "Dictionary",
+      "default": "Default Alphabet",
+      "new": "New Dictionary",
+      "namePlaceholder": "Dictionary name",
+      "duplicate": "Duplicate",
+      "rename": "Rename",
+      "delete": "Delete",
+      "deleteConfirm": "Delete this dictionary? This can't be undone.",
+      "export": "Export",
+      "import": "Import",
+      "importFailed": "That file isn't a valid dictionary export.",
+      "editorTitle": "Edit Dictionary",
+      "character": "Character",
+      "code": "Morse Code",
+      "addEntry": "Add Character",
+      "conflictWarning": "'{{code}}' is already used by '{{other}}', so decoding this will be ambiguous.",
+      "invalidCode": "Only dots and dashes are allowed.",
+      "noEntries": "No custom characters yet. Add one below.",
+      "removeEntry": "Remove"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "description": "Themes, audio, timing, backups, and the AI assistant.",
+    "sections": {
+      "language": "Language",
+      "backup": "Data & Backup",
+      "aiAssistant": "AI Assistant",
+      "appearance": "Appearance",
+      "audio": "Audio & Timing",
+      "accessibility": "Accessibility",
+      "shortcuts": "Keyboard Shortcuts"
+    },
+    "language": {
+      "description": "Choose the app's display language. Most screens are translated, but a few strings may still show in English.",
+      "placeholderBadge": "Machine Translation"
+    },
+    "backup": {
+      "description": "Everything you do is stored only on this device. Back it up regularly so you don't lose progress.",
+      "autoBackup": "Automatic local backup",
+      "autoBackupDescription": "Silently snapshot your progress to this device on an interval, without downloading a file each time.",
+      "interval": "Backup interval",
+      "lastBackup": "Last automatic backup: {{time}}",
+      "neverBackedUp": "No automatic backup yet",
+      "downloadNow": "Download Backup Now",
+      "saveToFolder": "Save to Synced Folder",
+      "saveToFolderDescription": "Pick a folder synced with Google Drive, Dropbox, or iCloud, and Relay will write your backup there directly. No account needed.",
+      "saveToFolderUnsupported": "Your browser doesn't support saving directly to a folder. Use \"Download Backup Now\" instead, then move the file into your synced folder.",
+      "restoreFromFile": "Restore From File",
+      "restoreWarning": "Restoring will overwrite your current progress.",
+      "restoreSuccess": "Progress restored successfully.",
+      "restoreFailed": "That file doesn't look like a valid Relay backup.",
+      "factoryReset": "Factory Reset",
+      "factoryResetWarning": "This permanently deletes all progress, stats, and settings on this device. This cannot be undone.",
+      "factoryResetConfirm": "Yes, delete everything",
+      "resetFailed": "Something went wrong and your data wasn't reset. Nothing was deleted."
+    },
+    "ai": {
+      "description": "Ask questions about Morse code, timing, or how the app works, right inside Relay. This uses your own API key and never sends anything except your chat messages.",
+      "provider": "Provider",
+      "apiKey": "API Key",
+      "apiKeyPlaceholder": "Paste your API key",
+      "apiKeyHelp": "Stored only in this browser's local storage. Never included in backups or exports. Never sent anywhere except the provider you select.",
+      "showKey": "Show key",
+      "hideKey": "Hide key",
+      "clearKey": "Remove key",
+      "costWarning": "You are responsible for all charges from your API provider. We recommend setting a spending limit or budget alert in your provider's dashboard before using this feature.",
+      "dailyLimit": "Daily message limit",
+      "dailyLimitHelp": "A hard cap to prevent runaway costs. Resets every 24 hours.",
+      "maxTokens": "Max response length",
+      "enable": "Enable AI Assistant",
+      "notConfigured": "Add an API key to enable the assistant.",
+      "providerOpenAI": "OpenAI",
+      "providerAnthropic": "Anthropic",
+      "providerCustom": "Custom (OpenAI-compatible)",
+      "endpointUrl": "Endpoint URL",
+      "endpointPlaceholder": "https://your-provider.example.com/v1/chat/completions"
+    },
+    "appearance": {
+      "themeLabel": "Theme",
+      "themes": {
+        "dark": "Default Dark",
+        "light": "Default Light",
+        "midnight": "Midnight",
+        "ocean": "Ocean",
+        "forest": "Forest",
+        "coffee": "Coffee",
+        "frost": "Frost",
+        "sunrise": "Sunrise"
+      },
+      "installTitle": "Install Relay",
+      "installDescription": "Install the app for a full-screen, offline-capable experience with its own icon.",
+      "install": "Install App",
+      "installed": "Already installed",
+      "installUnsupported": "Your browser doesn't support one-tap install here. Look for \"Add to Home Screen\" or \"Install\" in your browser's menu instead."
+    },
+    "audioSettings": {
+      "title": "Default Speed & Tone",
+      "description": "These defaults apply the next time you open Learn, Practice, or a game. Translator keeps its own per-session controls.",
+      "wpm": "Default Speed (WPM)",
+      "farnsworth": "Farnsworth Spacing",
+      "farnsworthOff": "Off (match character speed)",
+      "farnsworthHelp": "Slows the spacing between letters/words while keeping each letter's own timing fast, a classic technique for learning at high character speed.",
+      "frequency": "Tone (Hz)",
+      "volume": "Volume",
+      "reset": "Reset to Defaults"
+    },
+    "accessibility": {
+      "highContrast": "High Contrast",
+      "highContrastHelp": "Strengthens borders and dividers for easier visual separation.",
+      "textSize": "Text Size",
+      "textSizes": {
+        "small": "Small",
+        "default": "Default",
+        "large": "Large"
+      },
+      "reducedMotion": "Reduced Motion",
+      "reducedMotionAuto": "Follow system setting",
+      "reducedMotionOn": "Always reduce motion",
+      "reducedMotionOff": "Always allow motion"
+    },
+    "shortcuts": {
+      "title": "Keyboard Shortcuts",
+      "context": "Context",
+      "action": "Action",
+      "key": "Key",
+      "learnTransmit": "Hold to transmit Morse for the current character",
+      "morseInvadersDot": "Send a dot",
+      "morseInvadersDash": "Send a dash",
+      "spaceKey": "Space",
+      "dotKey": ". or 4",
+      "dashKey": "- or 6"
+    }
+  },
+  "mnemonics": {
+    "0": {
+      "hint": "Five dashes: the longest number.",
+      "examples": "Zero"
+    },
+    "1": {
+      "hint": "One dot, four dashes.",
+      "examples": "First"
+    },
+    "2": {
+      "hint": "Two dots, three dashes.",
+      "examples": "Second"
+    },
+    "3": {
+      "hint": "Three dots, two dashes.",
+      "examples": "Third"
+    },
+    "4": {
+      "hint": "Four dots, one dash.",
+      "examples": "Fourth"
+    },
+    "5": {
+      "hint": "Five dots: all short.",
+      "examples": "Fifth"
+    },
+    "6": {
+      "hint": "One dash, four dots.",
+      "examples": "Sixth"
+    },
+    "7": {
+      "hint": "Two dashes, three dots.",
+      "examples": "Seventh"
+    },
+    "8": {
+      "hint": "Three dashes, two dots.",
+      "examples": "Eighth"
+    },
+    "9": {
+      "hint": "Four dashes, one dot.",
+      "examples": "Ninth"
+    },
+    "A": {
+      "hint": "A short dot, then a long dash: like saying 'a-BOUT'.",
+      "examples": "Apple|Around|Ago"
+    },
+    "B": {
+      "hint": "One long dash, then three short dots.",
+      "examples": "Banana|Bottle|Beacon"
+    },
+    "C": {
+      "hint": "Dash dot dash dot: a rhythmic, rocking pattern.",
+      "examples": "Coconut|Circle|Compass"
+    },
+    "D": {
+      "hint": "One dash, two dots: 'DAH-dit-dit'.",
+      "examples": "Dog|Delta|Drum"
+    },
+    "E": {
+      "hint": "The shortest, sharpest sound: just one dot.",
+      "examples": "Echo|Egg|Elephant"
+    },
+    "F": {
+      "hint": "Dot dot dash dot: fast and fluttery.",
+      "examples": "Falcon|Forest|Flute"
+    },
+    "G": {
+      "hint": "Two dashes, then a dot: 'GAH-gah-dit'.",
+      "examples": "Garden|Guitar|Galaxy"
+    },
+    "H": {
+      "hint": "Four quick dots in a row: like a giggle.",
+      "examples": "Harbor|Hello|Horizon"
+    },
+    "I": {
+      "hint": "Two short dots: brief and light.",
+      "examples": "Island|Ice|Igloo"
+    },
+    "J": {
+      "hint": "One dot, three dashes: starts short, stays long.",
+      "examples": "Jungle|Jupiter|Journey"
+    },
+    "K": {
+      "hint": "Dash dot dash: 'KAH-dit-DAH'.",
+      "examples": "Kite|Koala|Kettle"
+    },
+    "L": {
+      "hint": "Dot dash dot dot: a lilting little run.",
+      "examples": "Lantern|Lighthouse|Lemon"
+    },
+    "M": {
+      "hint": "Two dashes: 'MAH-dah', slow and heavy.",
+      "examples": "Mountain|Moon|Music"
+    },
+    "N": {
+      "hint": "One dash, one dot: 'NAH-dit'.",
+      "examples": "Nest|North|Nova"
+    },
+    "O": {
+      "hint": "Three long dashes: the roundest, heaviest letter.",
+      "examples": "Ocean|Orbit|Oasis"
+    },
+    "P": {
+      "hint": "Dot dash dash dot: bookended by dots.",
+      "examples": "Puzzle|Planet|Piano"
+    },
+    "Q": {
+      "hint": "Dash dash dot dash: mostly long, one short.",
+      "examples": "Quartz|Quest|Quiet"
+    },
+    "R": {
+      "hint": "Dot dash dot: a little arch shape.",
+      "examples": "River|Rocket|Rainbow"
+    },
+    "S": {
+      "hint": "Three quick dots: 'dit-dit-dit', like a snake hiss.",
+      "examples": "Sunset|Silver|Star"
+    },
+    "T": {
+      "hint": "A single dash: the longest, simplest sound.",
+      "examples": "Tree|Thunder|Torch"
+    },
+    "U": {
+      "hint": "Dot dot dash: two short, one long.",
+      "examples": "Umbrella|Universe|Uphill"
+    },
+    "V": {
+      "hint": "Dot dot dot dash: Beethoven's Fifth Symphony.",
+      "examples": "Valley|Violet|Voyage"
+    },
+    "W": {
+      "hint": "Dot dash dash: starts short, ends long.",
+      "examples": "Waterfall|Wonder|Willow"
+    },
+    "X": {
+      "hint": "Dash dot dot dash: long, short, short, long.",
+      "examples": "Xylophone|Xenon"
+    },
+    "Y": {
+      "hint": "Dash dot dash dash: mostly dashes.",
+      "examples": "Yellow|Yonder|Yoga"
+    },
+    "Z": {
+      "hint": "Dash dash dot dot: heavy start, light end.",
+      "examples": "Zephyr|Zigzag|Zenith"
+    },
+    "fallbackHint": "No mnemonic yet for this symbol."
+  },
+  "aiChat": {
+    "title": "AI Assistant",
+    "openLabel": "Open AI assistant",
+    "closeLabel": "Close AI assistant",
+    "placeholder": "Ask about Morse code, timing, or this app…",
+    "send": "Send",
+    "thinking": "Thinking…",
+    "notConfigured": "Add your API key in Settings → AI Assistant to start chatting.",
+    "goToSettings": "Go to Settings",
+    "limitReached": "You've reached today's message limit ({{limit}}). This resets in {{resetIn}}.",
+    "messagesRemaining": "{{count}} messages left today",
+    "error": "Something went wrong reaching the AI provider. Your key and message were not affected.",
+    "clearChat": "Clear conversation",
+    "disclaimer": "Answers may be inaccurate. Uses your own API key and quota."
+  }
+}
