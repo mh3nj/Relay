@@ -1,0 +1,701 @@
+{
+  "app": {
+    "name": "Relay",
+    "tagline": "免费且离线"
+  },
+  "nav": {
+    "dashboard": "仪表盘",
+    "learn": "学习",
+    "practice": "练习",
+    "translator": "翻译器",
+    "games": "游戏",
+    "progress": "进度",
+    "encyclopedia": "百科",
+    "settings": "设置",
+    "freeForever": "永久免费"
+  },
+  "common": {
+    "copy": "复制",
+    "copied": "已复制",
+    "clear": "清除",
+    "save": "保存",
+    "cancel": "取消",
+    "close": "关闭",
+    "delete": "删除",
+    "confirm": "确认",
+    "loading": "加载中…",
+    "error": "错误",
+    "success": "成功",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "continue": "继续",
+    "start": "开始",
+    "stop": "停止",
+    "play": "播放",
+    "pause": "暂停",
+    "retry": "重试",
+    "download": "下载",
+    "upload": "上传",
+    "import": "导入",
+    "export": "导出",
+    "enabled": "已启用",
+    "disabled": "已禁用",
+    "on": "开",
+    "off": "关",
+    "comingSoon": "{{feature}}即将上线",
+    "characters": "{{count}}个字符",
+    "minutes": "{{count}}分钟",
+    "seconds": "{{count}}秒",
+    "mainNavigation": "主导航",
+    "primaryNavigation": "主要",
+    "chartRange": "图表范围",
+    "clearTranslation": "清除翻译",
+    "reviewWeakSymbols": "复习所有薄弱符号",
+    "percent": "{{percent}} percent",
+    "less": "less",
+    "more": "more",
+    "requestFailed": "Request failed.",
+    "rangeWeek": "1W",
+    "rangeMonth": "1M",
+    "rangeAll": "ALL",
+    "daySun": "Sun",
+    "dayMon": "Mon",
+    "dayTue": "Tue",
+    "dayWed": "Wed",
+    "dayThu": "Thu",
+    "dayFri": "Fri",
+    "daySat": "Sat",
+    "eg": "e.g.",
+    "playMorseFor": "Play Morse for {{char}}"
+  },
+  "errorBoundary": {
+    "description": "Relay遇到了意外错误。您已保存的进度未受影响。重新加载通常可以解决此问题。",
+    "goHome": "前往仪表盘"
+  },
+  "dashboard": {
+    "title": "仪表盘",
+    "description": "从上次停下的地方继续，看看有什么变化。",
+    "startLearning": "开始学习",
+    "streakDays": "连续{{count}}天",
+    "welcomeBack": "欢迎回来，操作员。",
+    "continuePrompt": "您当前正在学习字母'{{char}}'。保持连续学习的势头。",
+    "continueLesson": "继续课程'{{char}}'",
+    "dailyChallenge": "每日挑战",
+    "dailyChallengeGoal": "今天答对{{target}}题",
+    "startChallenge": "开始挑战",
+    "overallMastery": "总体掌握度",
+    "needsReview": "需要复习",
+    "recentBadges": "最近获得的徽章",
+    "locked": "未解锁：{{label}}",
+    "speedProgression": "速度进度（WPM）",
+    "accuracyTooltip": "Accuracy: {{accuracy}}%",
+    "greetingMorning": "早上好，操作员。",
+    "greetingAfternoon": "下午好，操作员。",
+    "greetingEvening": "晚上好，操作员。",
+    "challengeComplete": "做得好。今天的挑战已完成。",
+    "noSpeedDataYet": "该时间段内还没有计时练习。",
+    "playAGame": "玩一局游戏"
+  },
+  "learn": {
+    "title": "学习",
+    "description": "科赫方法课程，每次只增加一个字符，配有可重播的时序和音频。",
+    "progress": "进度",
+    "character": "字符",
+    "signalAnalysis": "信号分析",
+    "oneUnitDuration": "一个单位时长。",
+    "unitsWithGap": "{{count}}个单位，各有一个间隔。",
+    "transmissionPractice": "发送练习",
+    "spaceToKey": "按[空格]键发送",
+    "ctrlKeyHint": "或左Ctrl=点，右Ctrl=划",
+    "tapToTransmit": "轻敲或按住空格键发送'{{char}}'",
+    "mnemonic": "助记",
+    "examples": "示例",
+    "loadingProgress": "正在加载您的进度…",
+    "start": "开始",
+    "signal": "信号",
+    "end": "结束",
+    "unitTiming": "1个点 = {{ms}}毫秒 @ {{wpm}} WPM",
+    "stopPlayback": "停止播放",
+    "playAudio": "播放摩斯音频",
+    "nextCharacter": "下一个字符",
+    "masteryGate": {
+      "progress": "需答对{{correct}}/{{needed}}个才能解锁下一个字符",
+      "readyHint": "做得好。准备好后即可继续。",
+      "kochExplainer": "学习顺序遵循Koch教学法：从K和M开始（而非A），因为它们的音质差异最大，这样能在加入更易混淆的字符前，先培养更强的耳朵辨音能力。"
+    },
+    "dot": "Dot",
+    "dash": "Dash"
+  },
+  "practice": {
+    "title": "练习",
+    "description": "针对你总是记不住的符号进行短练习。",
+    "modes": {
+      "hearAndType": "听打模式",
+      "readAndType": "看打模式",
+      "translateDrill": "翻译训练",
+      "flashcards": "闪卡",
+      "speed": "速度模式",
+      "endless": "无尽模式",
+      "memory": "记忆模式",
+      "morseTree": {
+        "title": "摩尔斯树浏览器",
+        "idle": "点击“开始”探索摩尔斯树",
+        "path": "路径",
+        "deadEnd": "✕ 死胡同，返回根节点",
+        "hint": "按点键（L-Ctrl、. 或 4）或划键（R-Ctrl、- 或 6）导航",
+        "pathEquals": " = {{char}}",
+        "correct": "正确",
+        "incorrect": "错误",
+        "accuracy": "准确率",
+        "streak": "连续答对"
+      }
+    },
+    "hearAndType": {
+      "instructions": "听声音，然后输入您听到的字符。",
+      "replay": "重播",
+      "inputPlaceholder": "输入字符…",
+      "correct": "正确！",
+      "incorrect": "不对。应该是'{{answer}}'",
+      "inputPlaceholderShort": "Type"
+    },
+    "readAndType": {
+      "instructions": "阅读摩斯电码，然后输入它代表的字符。",
+      "inputPlaceholder": "输入字符…",
+      "inputPlaceholderShort": "Type"
+    },
+    "translateDrill": {
+      "instructions": "使用.和-键发送所示字符的摩斯电码。",
+      "spaceToKey": "直接输入.和-，或使用左Ctrl/右Ctrl"
+    },
+    "endless": {
+      "instructions": "按照自己的节奏听打。没有计时器，没有压力。随时可以停止。",
+      "stop": "结束练习",
+      "summary": "练习总结"
+    },
+    "memory": {
+      "instructions": "观看序列，然后按顺序复现。",
+      "watchPrompt": "正在观看…",
+      "yourTurn": "轮到您了。输入您看到的序列",
+      "sequenceLength": "序列：{{length}}",
+      "bestLength": "最佳：{{length}}",
+      "roundFailed": "不太对。最佳序列：{{length}}",
+      "startRound": "开始"
+    },
+    "flashcards": {
+      "instructions": "翻转卡片检查您的答案。",
+      "showAnswer": "显示答案",
+      "iKnewIt": "我知道",
+      "didNotKnow": "不知道"
+    },
+    "speed": {
+      "instructions": "在时间结束前尽可能快地输入每个字符。",
+      "timeLeft": "剩余时间",
+      "wpm": "WPM",
+      "accuracy": "准确率",
+      "streak": "连续答对",
+      "sessionOver": "练习结束！",
+      "startSession": "开始练习",
+      "playAgain": "再玩一次"
+    },
+    "session": {
+      "correct": "正确",
+      "attempts": "尝试次数",
+      "endSession": "结束练习",
+      "bestStreak": "最佳连续答对"
+    },
+    "focusedFilter": {
+      "label": "聚焦练习：{{chars}}",
+      "clear": "清除筛选"
+    }
+  },
+  "games": {
+    "title": "游戏",
+    "description": "五个小游戏，不想上课时也能练一练。",
+    "notPlayedYet": "尚未游玩",
+    "best": "最佳：{{score}}",
+    "play": "开始",
+    "score": "得分",
+    "topWpm": "最高WPM",
+    "destroyed": "已击毁",
+    "rounds": "回合",
+    "newHighScore": "新纪录！",
+    "morseInvaders": {
+      "title": "摩斯入侵者",
+      "cardDescription": "字母从顶部落下。在它们落地前输入其点划代码。",
+      "instructions": "字母从顶部落下。在它们落地前输入其摩斯电码（点/划）。漏掉三个即游戏结束。",
+      "hint": "点击按钮，按./-键，或使用左Ctrl/右Ctrl",
+      "bestScore": "最高分：{{score}}",
+      "destroyedLabel": "已击毁",
+      "dash": "划",
+      "dot": "点",
+      "difficulty": {
+        "easy": "简单（缓慢下落）",
+        "medium": "中等（普通）",
+        "hard": "困难（快速下落）"
+      }
+    },
+    "signalRush": {
+      "title": "信号冲刺",
+      "cardDescription": "边听边输入，越快越好。每答对一题速度就会提升。",
+      "instructions": "边听边输入，越快越好。每答对一题速度就会提升。答错三次即结束。",
+      "speedLabel": "速度：{{wpm}} WPM",
+      "bestScore": "最高分：{{score}}",
+      "difficulty": {
+        "easy": "简单（平缓加速）",
+        "medium": "中等（普通）",
+        "hard": "困难（快速加速）"
+      }
+    },
+    "decodeTranslate": {
+      "title": "解码与翻译",
+      "cardDescription": "用摩斯电码听一个完整单词。在时间耗尽前输入解码出的单词。",
+      "instructions": "听摩斯电码序列，然后输入它拼出的单词。每答对一次，时间就会缩短。",
+      "replay": "重播",
+      "inputPlaceholder": "输入单词…",
+      "correctWord": "{{word}}，正确！",
+      "incorrectWord": "答案是“{{word}}”",
+      "difficulty": {
+        "easy": "简单（3 个字母的单词）",
+        "medium": "中等（5 个字母的单词）",
+        "hard": "困难（句子和标点）"
+      },
+      "round": "第 {{n}} 回合",
+      "bestScore": "最高分：{{score}}"
+    },
+    "morseMatch": {
+      "title": "摩斯配对",
+      "cardDescription": "翻开卡片，把每个字母与它的摩斯电码配对。纯粹靠视觉记忆。",
+      "instructions": "每次翻开两张卡片，找出字母与摩斯电码的配对。全部配对成功即可赢下本回合。",
+      "pairsFound": "配对：{{count}}/{{total}}",
+      "flips": "翻牌：{{count}}",
+      "timeBonus": "时间奖励",
+      "youWon": "全部配对成功！",
+      "difficulty": {
+        "easy": "简单（4×4）",
+        "hard": "困难（6×6）"
+      },
+      "bestScore": "最高分：{{score}}"
+    },
+    "emergencyRelay": {
+      "title": "紧急接应",
+      "cardDescription": "在不断缩短的计时器下回应求救信号。每次失误都会增加压力。",
+      "instructions": "求救信号会闪烁。在计时结束前发送正确的摩斯电码。失误会让时钟加速。",
+      "timer": "{{ms}}ms",
+      "lifeLost": "太慢了！",
+      "bestScore": "最高分：{{score}}",
+      "difficulty": {
+        "easy": "简单（SOS + 字母）",
+        "hard": "困难（含标点）"
+      }
+    },
+    "accuracy": "准确率",
+    "bestCombo": "最佳连击",
+    "combo": "{{count}}连击！",
+    "efficiency": "效率"
+  },
+  "progress": {
+    "title": "进度分析",
+    "description": "看看你已经掌握了什么，还有什么需要加强。",
+    "exportReport": "导出报告",
+    "mastery": "掌握度",
+    "practiceTime": "练习时间",
+    "currentStreak": "当前连续天数",
+    "performanceTrends": "表现趋势",
+    "trendEmptyState": "完成一次速度模式或游戏练习后即可开始追踪趋势。",
+    "characterMastery": "字符掌握度",
+    "mastered": "已掌握",
+    "learning": "学习中",
+    "notPracticedYet": "尚未练习",
+    "accuracyLabel": "正确率：{{percent}}%（尝试{{attempts}}次）",
+    "confusingPairs": "易混淆组合",
+    "noMixups": "尚未记录混淆。继续练习，这里会自动填充。",
+    "mixupCount": "{{count}}次混淆",
+    "mixupCount_other": "{{count}}次混淆",
+    "focusedPractice": "聚焦练习",
+    "wpmLabel": "WPM",
+    "vs": "对比",
+    "level": "等级{{level}}",
+    "xpProgress": "{{current}} / {{total}} 经验值",
+    "activityHeatmap": "活动",
+    "dueForReview": "待复习",
+    "dueForReviewEmpty": "目前没有待复习的内容。继续练习以保持状态。",
+    "reviewNow": "立即复习",
+    "badgesTitle": "徽章",
+    "badges": {
+      "firstLesson": "第一课",
+      "halfway": "完成一半",
+      "fullAlphabet": "完整字母表",
+      "wpm10": "达到10 WPM",
+      "wpm20": "达到20 WPM",
+      "perfectEar": "完美耳朵",
+      "sharpShooter": "神射手",
+      "streak3": "连续3天",
+      "streak7": "连续7天",
+      "streak30": "连续30天",
+      "gameExplorer": "游戏探索者",
+      "level5": "达到5级",
+      "level10": "达到10级"
+    },
+    "activeDaysThisMonth": "{{count}} active days this month",
+    "masteryLabel": "{{percent}}% mastery"
+  },
+  "encyclopedia": {
+    "title": "百科",
+    "description": "每个字符都有电码、时序和一点历史。",
+    "searchPlaceholder": "搜索字符或发音…",
+    "categories": {
+      "all": "全部",
+      "letter": "字母",
+      "number": "数字",
+      "punctuation": "标点",
+      "prosign": "过程符号"
+    },
+    "noResults": "没有找到匹配的字符。",
+    "prosignsTitle": "过程符号与特殊信号",
+    "abbreviationsTitle": "常用缩写",
+    "historyTitle": "简要历史",
+    "historyText": "摩斯电码于19世纪30至40年代由塞缪尔·摩斯和阿尔弗雷德·维尔为电报通信而发明。最初的美国摩斯电码后来被改进为今天使用的国际摩斯电码，标准化了时序并增加了对带变音符号字母的支持。在电报淡出历史舞台很久之后，摩斯电码仍在业余无线电、航空和海事信号中延续使用，因其简单开/关信号在噪音中仍能远距离传输的价值而备受珍视。"
+  },
+  "translator": {
+    "title": "翻译器",
+    "description": "在文本和摩斯电码之间互译，或解码音频录音。离线可用。",
+    "plainText": "纯文本",
+    "morseCode": "摩斯电码",
+    "textPlaceholder": "输入文字进行翻译…",
+    "morsePlaceholder": ".. --- ...",
+    "swapDirection": "交换翻译方向",
+    "decodeAudio": "解码音频",
+    "decodeAudioDescription": "上传摩斯电码录音，它将在此设备上完全解码为文本。",
+    "clickToUpload": "点击上传",
+    "orDragAndDrop": "或拖放文件",
+    "fileSizeLimit": "音频文件最大10MB",
+    "decoding": "正在解码…",
+    "decoded": "解码完成，置信度{{confidence}}%",
+    "unrecognizedSequences": "无法识别的序列：{{sequences}}",
+    "useThisText": "使用此文本",
+    "fileTooLarge": "文件过大。请保持在10MB以内。",
+    "notAudioFile": "这似乎不是音频文件。",
+    "noSignalDetected": "在此录音中未检测到摩斯信号。",
+    "decodeFailed": "无法解码此文件。文件可能已损坏或格式不受支持。",
+    "speedWpm": "速度（WPM）",
+    "toneHz": "音调（Hz）",
+    "exportTxt": "导出TXT",
+    "exportJson": "导出JSON",
+    "downloadWav": "下载WAV",
+    "referencePdf": "参考PDF",
+    "typeToSeeSignal": "输入内容即可查看信号。",
+    "dictionary": {
+      "title": "词典",
+      "default": "默认字母表",
+      "new": "新建词典",
+      "namePlaceholder": "词典名称",
+      "duplicate": "复制",
+      "rename": "重命名",
+      "delete": "删除",
+      "deleteConfirm": "删除此词典？此操作无法撤销。",
+      "export": "导出",
+      "import": "导入",
+      "importFailed": "该文件不是有效的词典导出文件。",
+      "editorTitle": "编辑词典",
+      "character": "字符",
+      "code": "摩斯电码",
+      "addEntry": "添加字符",
+      "conflictWarning": "'{{code}}'已被'{{other}}'使用，解码时会产生歧义。",
+      "invalidCode": "只允许使用点和划。",
+      "noEntries": "暂无自定义字符。请在下方添加。",
+      "removeEntry": "移除"
+    },
+    "script": {
+      "title": "Script / Language",
+      "default": "Default (ITU)",
+      "fa": "Persian (فارسی)",
+      "ar": "Arabic (العربية)",
+      "tr": "Turkish (Türkçe)",
+      "fr": "French (Français)",
+      "de": "German (Deutsch)",
+      "es": "Spanish (Español)",
+      "ru": "Russian (Русский)",
+      "ko": "Korean (한국어)",
+      "ja": "Japanese (日本語)",
+      "zh": "Chinese (中文)",
+      "el": "Greek (Ελληνικά)",
+      "he": "Hebrew (עברית)"
+    }
+  },
+  "settings": {
+    "title": "设置",
+    "description": "主题、音频、时序、备份和 AI 助手。",
+    "sections": {
+      "language": "语言",
+      "backup": "数据与备份",
+      "aiAssistant": "AI助手",
+      "appearance": "外观",
+      "audio": "音频与时序",
+      "accessibility": "辅助功能",
+      "shortcuts": "键盘快捷键"
+    },
+    "language": {
+      "description": "选择应用的显示语言。大部分内容已翻译，部分文字可能仍显示英文。",
+      "placeholderBadge": "占位"
+    },
+    "backup": {
+      "description": "您的所有数据仅存储在此设备上。请定期备份以免丢失进度。",
+      "autoBackup": "自动本地备份",
+      "autoBackupDescription": "按间隔自动在此设备上静默保存进度快照，无需每次都下载文件。",
+      "interval": "备份间隔",
+      "lastBackup": "上次自动备份：{{time}}",
+      "neverBackedUp": "尚无自动备份",
+      "downloadNow": "立即下载备份",
+      "saveToFolder": "保存到同步文件夹",
+      "saveToFolderDescription": "选择一个与Google Drive、Dropbox或iCloud同步的文件夹，Relay将直接在此写入备份。无需账户。",
+      "saveToFolderUnsupported": "您的浏览器不支持直接保存到文件夹。请使用\"立即下载备份\"，然后将文件移动到同步文件夹中。",
+      "restoreFromFile": "从文件恢复",
+      "restoreWarning": "恢复将覆盖您当前的进度。",
+      "restoreSuccess": "进度已成功恢复。",
+      "restoreFailed": "该文件似乎不是有效的Relay备份文件。",
+      "factoryReset": "恢复出厂设置",
+      "factoryResetWarning": "此操作将永久删除此设备上的所有进度、统计数据和设置。此操作无法撤销。",
+      "factoryResetConfirm": "是的，删除所有数据",
+      "resetFailed": "出了点问题，您的数据未被重置。没有删除任何内容。"
+    },
+    "ai": {
+      "description": "在Relay内直接提问关于摩斯电码、时序或应用使用的问题。这使用您自己的API密钥，除您的聊天消息外不会发送任何内容。",
+      "provider": "提供商",
+      "apiKey": "API密钥",
+      "apiKeyPlaceholder": "粘贴您的API密钥",
+      "apiKeyHelp": "仅存储在此浏览器的本地存储中。绝不会包含在备份或导出中。除您选择的提供商外，绝不会发送到任何地方。",
+      "showKey": "显示密钥",
+      "hideKey": "隐藏密钥",
+      "clearKey": "移除密钥",
+      "costWarning": "您需自行承担API提供商的所有费用。我们建议在使用此功能前，在提供商的控制面板中设置消费限额或预算提醒。",
+      "dailyLimit": "每日消息限制",
+      "dailyLimitHelp": "防止费用失控的硬性上限。每24小时重置一次。",
+      "maxTokens": "最大回复长度",
+      "enable": "启用AI助手",
+      "notConfigured": "添加API密钥以启用助手。",
+      "providerOpenAI": "OpenAI",
+      "providerAnthropic": "Anthropic",
+      "providerCustom": "Custom (OpenAI-compatible)",
+      "endpointUrl": "Endpoint URL",
+      "endpointPlaceholder": "https://your-provider.example.com/v1/chat/completions"
+    },
+    "appearance": {
+      "themeLabel": "主题",
+      "themes": {
+        "dark": "默认暗色",
+        "light": "默认亮色",
+        "midnight": "午夜",
+        "ocean": "海洋",
+        "forest": "森林",
+        "coffee": "咖啡",
+        "frost": "霜白",
+        "sunrise": "日出"
+      },
+      "installTitle": "安装Relay",
+      "installDescription": "安装应用以获得全屏、可离线使用的体验，并配有独立图标。",
+      "install": "安装应用",
+      "installed": "已安装",
+      "installUnsupported": "您的浏览器不支持一键安装。请在浏览器菜单中寻找\"添加到主屏幕\"或\"安装\"选项。"
+    },
+    "audioSettings": {
+      "title": "默认速度与音调",
+      "description": "这些默认设置将在您下次打开学习、练习或游戏时生效。翻译器保留其自己的独立控制。",
+      "wpm": "默认速度（WPM）",
+      "farnsworth": "Farnsworth间隔",
+      "farnsworthOff": "关闭（与字符速度匹配）",
+      "farnsworthHelp": "减慢字母和单词之间的间隔，同时保持每个字母本身的快速节奏。这是高速学习时常用的经典方法。",
+      "frequency": "音调（Hz）",
+      "volume": "音量",
+      "reset": "恢复默认设置"
+    },
+    "accessibility": {
+      "highContrast": "高对比度",
+      "highContrastHelp": "增强边框和分隔线，便于视觉区分。",
+      "textSize": "文字大小",
+      "textSizes": {
+        "small": "小",
+        "default": "默认",
+        "large": "大"
+      },
+      "reducedMotion": "减少动效",
+      "reducedMotionAuto": "跟随系统设置",
+      "reducedMotionOn": "始终减少动效",
+      "reducedMotionOff": "始终允许动效"
+    },
+    "shortcuts": {
+      "title": "键盘快捷键",
+      "context": "场景",
+      "action": "操作",
+      "key": "按键",
+      "learnTransmit": "按住发送当前字符的摩斯电码",
+      "morseInvadersDot": "发送点",
+      "morseInvadersDash": "发送划",
+      "spaceKey": "空格键",
+      "dotKey": ". 或 4",
+      "dashKey": "- 或 6"
+    }
+  },
+  "mnemonics": {
+    "0": {
+      "hint": "Five dashes: the longest number.",
+      "examples": "Zero"
+    },
+    "1": {
+      "hint": "One dot, four dashes.",
+      "examples": "First"
+    },
+    "2": {
+      "hint": "Two dots, three dashes.",
+      "examples": "Second"
+    },
+    "3": {
+      "hint": "Three dots, two dashes.",
+      "examples": "Third"
+    },
+    "4": {
+      "hint": "Four dots, one dash.",
+      "examples": "Fourth"
+    },
+    "5": {
+      "hint": "Five dots: all short.",
+      "examples": "Fifth"
+    },
+    "6": {
+      "hint": "One dash, four dots.",
+      "examples": "Sixth"
+    },
+    "7": {
+      "hint": "Two dashes, three dots.",
+      "examples": "Seventh"
+    },
+    "8": {
+      "hint": "Three dashes, two dots.",
+      "examples": "Eighth"
+    },
+    "9": {
+      "hint": "Four dashes, one dot.",
+      "examples": "Ninth"
+    },
+    "A": {
+      "hint": "A short dot, then a long dash: like saying 'a-BOUT'.",
+      "examples": "Apple|Around|Ago"
+    },
+    "B": {
+      "hint": "One long dash, then three short dots.",
+      "examples": "Banana|Bottle|Beacon"
+    },
+    "C": {
+      "hint": "Dash dot dash dot: a rhythmic, rocking pattern.",
+      "examples": "Coconut|Circle|Compass"
+    },
+    "D": {
+      "hint": "One dash, two dots: 'DAH-dit-dit'.",
+      "examples": "Dog|Delta|Drum"
+    },
+    "E": {
+      "hint": "The shortest, sharpest sound: just one dot.",
+      "examples": "Echo|Egg|Elephant"
+    },
+    "F": {
+      "hint": "Dot dot dash dot: fast and fluttery.",
+      "examples": "Falcon|Forest|Flute"
+    },
+    "G": {
+      "hint": "Two dashes, then a dot: 'GAH-gah-dit'.",
+      "examples": "Garden|Guitar|Galaxy"
+    },
+    "H": {
+      "hint": "Four quick dots in a row: like a giggle.",
+      "examples": "Harbor|Hello|Horizon"
+    },
+    "I": {
+      "hint": "Two short dots: brief and light.",
+      "examples": "Island|Ice|Igloo"
+    },
+    "J": {
+      "hint": "One dot, three dashes: starts short, stays long.",
+      "examples": "Jungle|Jupiter|Journey"
+    },
+    "K": {
+      "hint": "Dash dot dash: 'KAH-dit-DAH'.",
+      "examples": "Kite|Koala|Kettle"
+    },
+    "L": {
+      "hint": "Dot dash dot dot: a lilting little run.",
+      "examples": "Lantern|Lighthouse|Lemon"
+    },
+    "M": {
+      "hint": "Two dashes: 'MAH-dah', slow and heavy.",
+      "examples": "Mountain|Moon|Music"
+    },
+    "N": {
+      "hint": "One dash, one dot: 'NAH-dit'.",
+      "examples": "Nest|North|Nova"
+    },
+    "O": {
+      "hint": "Three long dashes: the roundest, heaviest letter.",
+      "examples": "Ocean|Orbit|Oasis"
+    },
+    "P": {
+      "hint": "Dot dash dash dot: bookended by dots.",
+      "examples": "Puzzle|Planet|Piano"
+    },
+    "Q": {
+      "hint": "Dash dash dot dash: mostly long, one short.",
+      "examples": "Quartz|Quest|Quiet"
+    },
+    "R": {
+      "hint": "Dot dash dot: a little arch shape.",
+      "examples": "River|Rocket|Rainbow"
+    },
+    "S": {
+      "hint": "Three quick dots: 'dit-dit-dit', like a snake hiss.",
+      "examples": "Sunset|Silver|Star"
+    },
+    "T": {
+      "hint": "A single dash: the longest, simplest sound.",
+      "examples": "Tree|Thunder|Torch"
+    },
+    "U": {
+      "hint": "Dot dot dash: two short, one long.",
+      "examples": "Umbrella|Universe|Uphill"
+    },
+    "V": {
+      "hint": "Dot dot dot dash: Beethoven's Fifth Symphony.",
+      "examples": "Valley|Violet|Voyage"
+    },
+    "W": {
+      "hint": "Dot dash dash: starts short, ends long.",
+      "examples": "Waterfall|Wonder|Willow"
+    },
+    "X": {
+      "hint": "Dash dot dot dash: long, short, short, long.",
+      "examples": "Xylophone|Xenon"
+    },
+    "Y": {
+      "hint": "Dash dot dash dash: mostly dashes.",
+      "examples": "Yellow|Yonder|Yoga"
+    },
+    "Z": {
+      "hint": "Dash dash dot dot: heavy start, light end.",
+      "examples": "Zephyr|Zigzag|Zenith"
+    },
+    "fallbackHint": "No mnemonic yet for this symbol."
+  },
+  "aiChat": {
+    "openLabel": "打开AI助手",
+    "closeLabel": "关闭AI助手",
+    "placeholder": "询问关于摩斯电码、时序或本应用的问题…",
+    "send": "发送",
+    "thinking": "思考中…",
+    "notConfigured": "在设置→AI助手中添加您的API密钥即可开始聊天。",
+    "goToSettings": "前往设置",
+    "limitReached": "您已达到今日消息上限（{{limit}}条）。将在{{resetIn}}后重置。",
+    "messagesRemaining": "今日剩余{{count}}条消息",
+    "error": "连接AI提供商时出现问题。您的密钥和消息未受影响。",
+    "clearChat": "清空对话",
+    "disclaimer": "答案可能不准确。使用您自己的API密钥和配额。",
+    "title": "AI Assistant"
+  }
+}
