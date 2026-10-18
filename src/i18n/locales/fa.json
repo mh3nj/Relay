@@ -1,0 +1,701 @@
+{
+  "app": {
+    "name": "Relay",
+    "tagline": "رایگان و بی‌نیاز از اینترنت"
+  },
+  "nav": {
+    "dashboard": "داشبورد",
+    "learn": "یادگیری",
+    "practice": "تمرین",
+    "translator": "مترجم",
+    "games": "بازی‌ها",
+    "progress": "پیشرفت",
+    "encyclopedia": "دانشنامه",
+    "settings": "تنظیمات",
+    "freeForever": "تا ابد رایگان"
+  },
+  "common": {
+    "copy": "کپی",
+    "copied": "کپی شد",
+    "clear": "پاک کردن",
+    "save": "ذخیره",
+    "cancel": "لغو",
+    "close": "بستن",
+    "delete": "حذف",
+    "confirm": "تأیید",
+    "loading": "در حال بارگذاری…",
+    "error": "خطا",
+    "success": "موفقیت",
+    "back": "بازگشت",
+    "next": "بعدی",
+    "previous": "قبلی",
+    "continue": "ادامه",
+    "start": "شروع",
+    "stop": "توقف",
+    "play": "پخش",
+    "pause": "مکث",
+    "retry": "تلاش مجدد",
+    "download": "دانلود",
+    "upload": "آپلود",
+    "import": "وارد کردن",
+    "export": "خروجی گرفتن",
+    "enabled": "فعال",
+    "disabled": "غیرفعال",
+    "on": "روشن",
+    "off": "خاموش",
+    "comingSoon": "{{feature}} به زودی",
+    "characters": "{{count}} کاراکتر",
+    "minutes": "{{count}} دقیقه",
+    "seconds": "{{count}} ثانیه",
+    "mainNavigation": "ناوبری اصلی",
+    "primaryNavigation": "اصلی",
+    "chartRange": "محدوده نمودار",
+    "clearTranslation": "پاک کردن ترجمه",
+    "reviewWeakSymbols": "مرور همه نمادهای ضعیف",
+    "percent": "{{percent}} percent",
+    "less": "less",
+    "more": "more",
+    "requestFailed": "Request failed.",
+    "rangeWeek": "1W",
+    "rangeMonth": "1M",
+    "rangeAll": "ALL",
+    "daySun": "Sun",
+    "dayMon": "Mon",
+    "dayTue": "Tue",
+    "dayWed": "Wed",
+    "dayThu": "Thu",
+    "dayFri": "Fri",
+    "daySat": "Sat",
+    "eg": "e.g.",
+    "playMorseFor": "Play Morse for {{char}}"
+  },
+  "errorBoundary": {
+    "description": "Relay با خطای غیرمنتظره‌ای مواجه شد. پیشرفت ذخیره‌شده شما آسیبی ندیده است. بارگذاری مجدد معمولاً این مشکل را برطرف می‌کند.",
+    "goHome": "رفتن به داشبورد"
+  },
+  "dashboard": {
+    "title": "داشبورد",
+    "description": "از همان‌جا که بودی ادامه بده و ببین چه چیزی تغییر کرده.",
+    "startLearning": "شروع یادگیری",
+    "streakDays": "{{count}} روز پیاپی",
+    "welcomeBack": "خوش آمدی، اپراتور.",
+    "continuePrompt": "در حال حاضر روی حرف '{{char}}' کار می‌کنی. روندت را ادامه بده.",
+    "continueLesson": "ادامه درس '{{char}}'",
+    "dailyChallenge": "چالش روزانه",
+    "dailyChallengeGoal": "امروز {{target}} پاسخ درست بده",
+    "startChallenge": "شروع چالش",
+    "overallMastery": "تسلط کلی",
+    "needsReview": "نیاز به مرور",
+    "recentBadges": "نشان‌های اخیر",
+    "locked": "قفل شده: {{label}}",
+    "speedProgression": "پیشرفت سرعت (WPM)",
+    "accuracyTooltip": "Accuracy: {{accuracy}}%",
+    "greetingMorning": "صبح بخیر، اپراتور.",
+    "greetingAfternoon": "ظهر بخیر، اپراتور.",
+    "greetingEvening": "عصر بخیر، اپراتور.",
+    "challengeComplete": "آفرین. چالش امروز تمام شد.",
+    "noSpeedDataYet": "هنوز در این بازه جلسهٔ زمان‌دار ثبت نشده.",
+    "playAGame": "یک بازی کن"
+  },
+  "learn": {
+    "title": "یادگیری",
+    "description": "درس‌های روش کخ که هر بار یک حرف اضافه می‌کنند، با زمان‌بندی و صدایی که می‌توانی دوباره پخش کنی.",
+    "progress": "پیشرفت",
+    "character": "کاراکتر",
+    "signalAnalysis": "تحلیل سیگنال",
+    "oneUnitDuration": "مدت یک واحد.",
+    "unitsWithGap": "{{count}} واحد، هرکدام با یک فاصله.",
+    "transmissionPractice": "تمرین ارسال",
+    "spaceToKey": "[Space] برای ارسال",
+    "ctrlKeyHint": "یا Ctrl-چپ = نقطه، Ctrl-راست = خط تیره",
+    "tapToTransmit": "برای ارسال '{{char}}' فاصله را فشار دهید یا نگه دارید",
+    "mnemonic": "یادآور",
+    "examples": "مثال‌ها",
+    "loadingProgress": "در حال بارگذاری پیشرفت شما…",
+    "start": "شروع",
+    "signal": "سیگنال",
+    "end": "پایان",
+    "unitTiming": "1 دیت = {{ms}}ms با {{wpm}} WPM",
+    "stopPlayback": "توقف پخش",
+    "playAudio": "پخش صدای مورس",
+    "nextCharacter": "کاراکتر بعدی",
+    "masteryGate": {
+      "progress": "{{correct}}/{{needed}} پاسخ درست برای باز کردن کاراکتر بعدی",
+      "readyHint": "کار عالی. هر وقت آماده بودی می‌توانی ادامه دهی.",
+      "kochExplainer": "ترتیب یادگیری از روش کخ پیروی می‌کند: با K و M شروع می‌شود (نه A) چون از نظر صوتی حداکثر تفاوت را دارند، که گوش بهتری برای زمان‌بندی می‌سازد قبل از اضافه شدن حروف مشابه و پیچیده‌تر."
+    },
+    "dot": "Dot",
+    "dash": "Dash"
+  },
+  "practice": {
+    "title": "تمرین",
+    "description": "تمرین‌های کوتاه که روی نمادهایی تمرکز می‌کنند که مرتب اشتباه می‌کنی.",
+    "modes": {
+      "hearAndType": "بشنو و تایپ کن",
+      "readAndType": "بخوان و تایپ کن",
+      "translateDrill": "تمرین ترجمه",
+      "flashcards": "فلش‌کارت",
+      "speed": "حالت سرعت",
+      "endless": "بی‌پایان",
+      "memory": "حافظه",
+      "morseTree": {
+        "title": "کاوشگر درخت مورس",
+        "idle": "برای کاوش درخت مورس شروع را بزن",
+        "path": "مسیر",
+        "deadEnd": "✕ بن‌بست: بازگشت به ریشه",
+        "hint": "برای حرکت کلید نقطه (L-Ctrl، . یا 4) یا کلید خط تیره (R-Ctrl، - یا 6) را بزن",
+        "pathEquals": " = {{char}}",
+        "correct": "درست",
+        "incorrect": "نادرست",
+        "accuracy": "دقت",
+        "streak": "روند پیاپی"
+      }
+    },
+    "hearAndType": {
+      "instructions": "به صدا گوش کن، سپس کاراکتری را که شنیده‌ای تایپ کن.",
+      "replay": "پخش مجدد",
+      "inputPlaceholder": "کاراکتر را تایپ کن…",
+      "correct": "درست!",
+      "incorrect": "کمی اشتباه. جواب '{{answer}}' بود",
+      "inputPlaceholderShort": "Type"
+    },
+    "readAndType": {
+      "instructions": "کد مورس را بخوان، سپس کاراکتری را که نشان می‌دهد تایپ کن.",
+      "inputPlaceholder": "کاراکتر را تایپ کن…",
+      "inputPlaceholderShort": "Type"
+    },
+    "translateDrill": {
+      "instructions": "کد مورس کاراکتر نشان داده شده را با استفاده از کلیدهای . و - ارسال کن.",
+      "spaceToKey": "مستقیماً . و - را تایپ کن، یا از Ctrl-چپ / Ctrl-راست استفاده کن"
+    },
+    "endless": {
+      "instructions": "با سرعت خودت گوش کن و تایپ کن. بدون تایمر، بدون فشار. هر وقت خواستی متوقف شو.",
+      "stop": "پایان جلسه",
+      "summary": "خلاصه جلسه"
+    },
+    "memory": {
+      "instructions": "دنباله را تماشا کن، سپس آن را به ترتیب درست بازتولید کن.",
+      "watchPrompt": "در حال تماشا…",
+      "yourTurn": "نوبت توست. دنباله‌ای را که دیدی تایپ کن",
+      "sequenceLength": "دنباله: {{length}}",
+      "bestLength": "بهترین: {{length}}",
+      "roundFailed": "کاملاً درست نیست. بهترین دنباله: {{length}}",
+      "startRound": "شروع"
+    },
+    "flashcards": {
+      "instructions": "کارت را برگردان تا پاسخ خود را بررسی کنی.",
+      "showAnswer": "نمایش پاسخ",
+      "iKnewIt": "می‌دانستم",
+      "didNotKnow": "نمی‌دانستم"
+    },
+    "speed": {
+      "instructions": "هر کاراکتر را تا جایی که می‌توانی سریع تایپ کن قبل از اینکه زمان تمام شود.",
+      "timeLeft": "زمان باقی‌مانده",
+      "wpm": "WPM",
+      "accuracy": "دقت",
+      "streak": "روند پیاپی",
+      "sessionOver": "جلسه کامل شد!",
+      "startSession": "شروع جلسه",
+      "playAgain": "دوباره بازی کن"
+    },
+    "session": {
+      "correct": "درست",
+      "attempts": "تلاش‌ها",
+      "endSession": "پایان جلسه",
+      "bestStreak": "بهترین روند پیاپی"
+    },
+    "focusedFilter": {
+      "label": "تمرین متمرکز: {{chars}}",
+      "clear": "پاک کردن فیلتر"
+    }
+  },
+  "games": {
+    "title": "بازی‌ها",
+    "description": "پنج بازی کوچک برای وقتی که می‌خواهی بدون درس تمرین کنی.",
+    "notPlayedYet": "هنوز بازی نکرده",
+    "best": "بهترین: {{score}}",
+    "play": "بازی",
+    "score": "امتیاز",
+    "topWpm": "بیشترین WPM",
+    "destroyed": "نابود شده",
+    "rounds": "دورها",
+    "newHighScore": "رکورد جدید!",
+    "morseInvaders": {
+      "title": "غارتگران مورس",
+      "cardDescription": "حروف از بالا سقوط می‌کنند. کد نقطه/خط تیره آن‌ها را قبل از فرود تایپ کن.",
+      "instructions": "حروف از بالا سقوط می‌کنند. کد مورس آن‌ها را تایپ کن (نقطه/خط تیره) قبل از اینکه فرود بیایند. سه اشتباه و بازی تمام می‌شود.",
+      "hint": "دکمه‌ها را لمس کن، . / - را تایپ کن، یا از Ctrl-چپ / Ctrl-راست استفاده کن",
+      "bestScore": "بهترین امتیاز: {{score}}",
+      "destroyedLabel": "نابود شده",
+      "dash": "خط تیره",
+      "dot": "نقطه",
+      "difficulty": {
+        "easy": "آسان (سقوط آهسته)",
+        "medium": "متوسط (معمولی)",
+        "hard": "سخت (سقوط سریع)"
+      }
+    },
+    "signalRush": {
+      "title": "هجوم سیگنال",
+      "cardDescription": "گوش کن و تا جایی که می‌توانی سریع تایپ کن. سرعت با هر پاسخ درست افزایش می‌یابد.",
+      "instructions": "گوش کن و تا جایی که می‌توانی سریع تایپ کن. سرعت با هر پاسخ درست افزایش می‌یابد. سه اشتباه به روند پایان می‌دهد.",
+      "speedLabel": "سرعت: {{wpm}} WPM",
+      "bestScore": "بهترین امتیاز: {{score}}",
+      "difficulty": {
+        "easy": "آسان (شیب ملایم)",
+        "medium": "متوسط (معمولی)",
+        "hard": "سخت (شیب تند)"
+      }
+    },
+    "decodeTranslate": {
+      "title": "رمزگشایی و ترجمه",
+      "cardDescription": "یک واژهٔ کامل را با مورس بشنوید. واژهٔ رمزگشایی‌شده را پیش از پایان زمان بنویسید.",
+      "instructions": "به دنبالهٔ مورس گوش دهید، سپس واژه‌ای را که می‌سازد بنویسید. با هر پاسخ درست، زمان کمتر می‌شود.",
+      "replay": "پخش دوباره",
+      "inputPlaceholder": "واژه را بنویسید…",
+      "correctWord": "{{word}}، درست است!",
+      "incorrectWord": "واژه این بود: '{{word}}'",
+      "difficulty": {
+        "easy": "آسان (واژه‌های ۳ حرفی)",
+        "medium": "متوسط (واژه‌های ۵ حرفی)",
+        "hard": "سخت (جمله‌ها و نشانه‌گذاری)"
+      },
+      "round": "دور {{n}}",
+      "bestScore": "بهترین امتیاز: {{score}}"
+    },
+    "morseMatch": {
+      "title": "تطبیق مورس",
+      "cardDescription": "کارت‌ها را برگردانید و هر حرف را با کد مورسش جفت کنید. حافظهٔ دیداری محض.",
+      "instructions": "هر بار دو کارت را برگردانید تا جفت‌های حرف/مورس همسان را پیدا کنید. پیدا کردن همهٔ جفت‌ها = برد در دور.",
+      "pairsFound": "جفت‌ها: {{count}}/{{total}}",
+      "flips": "برگرداندن‌ها: {{count}}",
+      "timeBonus": "پاداش زمان",
+      "youWon": "همهٔ جفت‌ها پیدا شد!",
+      "difficulty": {
+        "easy": "آسان (۴×۴)",
+        "hard": "سخت (۶×۶)"
+      },
+      "bestScore": "بهترین امتیاز: {{score}}"
+    },
+    "emergencyRelay": {
+      "title": "امداد اضطراری",
+      "cardDescription": "به سیگنال‌های اضطراری زیر یک زمان‌سنج کاهنده پاسخ دهید. با هر اشتباه فشار بیشتر می‌شود.",
+      "instructions": "یک سیگنال اضطراری چشمک می‌زند. پیش از تمام‌شدن زمان، کد مورس درست را بفرستید. اشتباه‌ها ساعت را تندتر می‌کنند.",
+      "timer": "{{ms}}ms",
+      "lifeLost": "بسیار کند بود!",
+      "bestScore": "بهترین امتیاز: {{score}}",
+      "difficulty": {
+        "easy": "آسان (SOS + حروف)",
+        "hard": "سخت (شامل نشانه‌گذاری)"
+      }
+    },
+    "accuracy": "دقت",
+    "bestCombo": "بهترین کمبو",
+    "combo": "کمبو {{count}}x!",
+    "efficiency": "بازدهی"
+  },
+  "progress": {
+    "title": "تحلیل پیشرفت",
+    "description": "ببین چه چیزهایی را یاد گرفته‌ای و چه چیزهایی هنوز کار دارد.",
+    "exportReport": "خروجی گزارش",
+    "mastery": "تسلط",
+    "practiceTime": "زمان تمرین",
+    "currentStreak": "روند پیاپی فعلی",
+    "performanceTrends": "روند عملکرد",
+    "trendEmptyState": "یک جلسه در حالت سرعت یا بازی‌ها کامل کن تا روند خود را دنبال کنی.",
+    "characterMastery": "تسلط بر کاراکترها",
+    "mastered": "مسلط شده",
+    "learning": "در حال یادگیری",
+    "notPracticedYet": "هنوز تمرین نشده",
+    "accuracyLabel": "دقت: {{percent}}% ({{attempts}} تلاش)",
+    "confusingPairs": "جفت‌های گیج‌کننده",
+    "noMixups": "هنوز هیچ اشتباهی ثبت نشده. به تمرین ادامه بده و این به طور خودکار پر می‌شود.",
+    "mixupCount": "{{count}} اشتباه",
+    "mixupCount_other": "{{count}} اشتباه",
+    "focusedPractice": "تمرین متمرکز",
+    "wpmLabel": "WPM",
+    "vs": "در مقابل",
+    "level": "سطح {{level}}",
+    "xpProgress": "{{current}} / {{total}} XP",
+    "activityHeatmap": "فعالیت",
+    "dueForReview": "نیاز به مرور",
+    "dueForReviewEmpty": "در حال حاضر چیزی برای مرور نیست. به تمرین ادامه بده تا همینطور بماند.",
+    "reviewNow": "همین حالا مرور کن",
+    "badgesTitle": "نشان‌ها",
+    "badges": {
+      "firstLesson": "اولین درس",
+      "halfway": "نیمه راه",
+      "fullAlphabet": "الفبای کامل",
+      "wpm10": "اوج 10 WPM",
+      "wpm20": "اوج 20 WPM",
+      "perfectEar": "گوش کامل",
+      "sharpShooter": "تیرانداز دقیق",
+      "streak3": "3 روز پیاپی",
+      "streak7": "7 روز پیاپی",
+      "streak30": "30 روز پیاپی",
+      "gameExplorer": "کاوشگر بازی",
+      "level5": "سطح 5",
+      "level10": "سطح 10"
+    },
+    "activeDaysThisMonth": "{{count}} active days this month",
+    "masteryLabel": "{{percent}}% mastery"
+  },
+  "encyclopedia": {
+    "title": "دانشنامه",
+    "description": "هر حرف با کد، زمان‌بندی و کمی از تاریخچه‌اش.",
+    "searchPlaceholder": "جستجوی کاراکترها یا آواشناسی…",
+    "categories": {
+      "all": "همه",
+      "letter": "الفبا",
+      "number": "اعداد",
+      "punctuation": "علائم نگارشی",
+      "prosign": "پروساین‌ها"
+    },
+    "noResults": "هیچ کاراکتری با جستجوی شما مطابقت ندارد.",
+    "prosignsTitle": "پروساین‌ها و سیگنال‌های ویژه",
+    "abbreviationsTitle": "اختصارات رایج",
+    "historyTitle": "تاریخچه مختصر",
+    "historyText": "کد مورس در دهه‌های 1830 و 1840 توسط ساموئل مورس و آلفرد ویل برای استفاده در تلگراف الکتریکی توسعه یافت. کد مورس آمریکایی اصلی بعداً به کد مورس بین‌المللی که امروزه استفاده می‌شود، اصلاح شد و زمان‌بندی را استاندارد کرده و پشتیبانی از حروف دارای اعراب را اضافه کرد. مدت‌ها پس از محو شدن تلگراف، این کد در رادیوی آماتور، هوانوردی و سیگنال‌دهی دریایی زنده ماند، به دلیل اینکه یک سیگنال ساده روشن/خاموش چقدر می‌تواند در نویزی که صدا را غرق می‌کند، حمل شود."
+  },
+  "translator": {
+    "title": "مترجم",
+    "description": "متن را به مورس و برعکس ترجمه کن، یا یک فایل صوتی را رمزگشایی کن. آفلاین کار می‌کند.",
+    "plainText": "متن ساده",
+    "morseCode": "کد مورس",
+    "textPlaceholder": "متن را برای ترجمه تایپ کن...",
+    "morsePlaceholder": ".. --- ...",
+    "swapDirection": "تغییر جهت ترجمه",
+    "decodeAudio": "رمزگشایی صدا",
+    "decodeAudioDescription": "یک ضبط از کد مورس آپلود کن و به متن تبدیل می‌شود، کاملاً روی این دستگاه.",
+    "clickToUpload": "برای آپلود کلیک کن",
+    "orDragAndDrop": "یا بکش و رها کن",
+    "fileSizeLimit": "فایل‌های صوتی تا 10 مگابایت",
+    "decoding": "در حال رمزگشایی…",
+    "decoded": "رمزگشایی شد، اطمینان {{confidence}}%",
+    "unrecognizedSequences": "دنباله‌های ناشناخته: {{sequences}}",
+    "useThisText": "استفاده از این متن",
+    "fileTooLarge": "فایل بیش از حد بزرگ است. لطفاً زیر 10 مگابایت نگه دارید.",
+    "notAudioFile": "این شبیه یک فایل صوتی نیست.",
+    "noSignalDetected": "در این ضبط هیچ سیگنال مورسی تشخیص داده نشد.",
+    "decodeFailed": "نمی‌توان این فایل را رمزگشایی کرد. ممکن است خراب باشد یا فرمت پشتیبانی‌نشده‌ای داشته باشد.",
+    "speedWpm": "سرعت (WPM)",
+    "toneHz": "تن (هرتز)",
+    "exportTxt": "خروجی TXT",
+    "exportJson": "خروجی JSON",
+    "downloadWav": "دانلود WAV",
+    "referencePdf": "PDF مرجع",
+    "typeToSeeSignal": "چیزی بنویس تا سیگنال را ببینی.",
+    "dictionary": {
+      "title": "فرهنگ لغت",
+      "default": "الفبای پیش‌فرض",
+      "new": "فرهنگ لغت جدید",
+      "namePlaceholder": "نام فرهنگ لغت",
+      "duplicate": "تکثیر",
+      "rename": "تغییر نام",
+      "delete": "حذف",
+      "deleteConfirm": "این فرهنگ لغت حذف شود؟ این عمل قابل بازگشت نیست.",
+      "export": "خروجی",
+      "import": "ورودی",
+      "importFailed": "این فایل یک خروجی معتبر فرهنگ لغت نیست.",
+      "editorTitle": "ویرایش فرهنگ لغت",
+      "character": "کاراکتر",
+      "code": "کد مورس",
+      "addEntry": "افزودن کاراکتر",
+      "conflictWarning": "'{{code}}' قبلاً توسط '{{other}}' استفاده شده است، رمزگشایی مبهم خواهد بود.",
+      "invalidCode": "فقط نقطه و خط تیره مجاز است.",
+      "noEntries": "هنوز هیچ کاراکتر سفارشی‌ای وجود ندارد. یکی را در زیر اضافه کن.",
+      "removeEntry": "حذف"
+    },
+    "script": {
+      "title": "Script / Language",
+      "default": "Default (ITU)",
+      "fa": "Persian (فارسی)",
+      "ar": "Arabic (العربية)",
+      "tr": "Turkish (Türkçe)",
+      "fr": "French (Français)",
+      "de": "German (Deutsch)",
+      "es": "Spanish (Español)",
+      "ru": "Russian (Русский)",
+      "ko": "Korean (한국어)",
+      "ja": "Japanese (日本語)",
+      "zh": "Chinese (中文)",
+      "el": "Greek (Ελληνικά)",
+      "he": "Hebrew (עברית)"
+    }
+  },
+  "settings": {
+    "title": "تنظیمات",
+    "description": "پوسته‌ها، صدا، زمان‌بندی، پشتیبان‌گیری و دستیار هوش مصنوعی.",
+    "sections": {
+      "language": "زبان",
+      "backup": "داده و پشتیبان‌گیری",
+      "aiAssistant": "دستیار هوش مصنوعی",
+      "appearance": "ظاهر",
+      "audio": "صدا و زمان‌بندی",
+      "accessibility": "دسترس‌پذیری",
+      "shortcuts": "میانبرهای صفحه کلید"
+    },
+    "language": {
+      "description": "زبان نمایش را انتخاب کنید. بیشتر بخش‌ها ترجمه شده‌اند، اما ممکن است بعضی متن‌ها هنوز انگلیسی بمانند.",
+      "placeholderBadge": "محل‌نما"
+    },
+    "backup": {
+      "description": "همه کارهایی که انجام می‌دهی فقط روی این دستگاه ذخیره می‌شود. به طور منظم از آن پشتیبان بگیر تا پیشرفتت را از دست ندهی.",
+      "autoBackup": "پشتیبان‌گیری خودکار محلی",
+      "autoBackupDescription": "بی‌صدا در یک بازه زمانی از پیشرفتت روی این دستگاه عکس بگیر، بدون اینکه هر بار فایلی دانلود کنی.",
+      "interval": "بازه پشتیبان‌گیری",
+      "lastBackup": "آخرین پشتیبان‌گیری خودکار: {{time}}",
+      "neverBackedUp": "هنوز پشتیبان‌گیری خودکاری انجام نشده",
+      "downloadNow": "همین حالا پشتیبان بگیر",
+      "saveToFolder": "ذخیره در پوشه همگام‌سازی شده",
+      "saveToFolderDescription": "یک پوشه همگام‌سازی شده با Google Drive، Dropbox یا iCloud انتخاب کن، و Relay پشتیبان تو را مستقیماً آنجا می‌نویسد. بدون نیاز به حساب کاربری.",
+      "saveToFolderUnsupported": "مرورگر تو از ذخیره مستقیم در یک پوشه پشتیبانی نمی‌کند. به جای آن از «همین حالا پشتیبان بگیر» استفاده کن، سپس فایل را به پوشه همگام‌سازی شده خود منتقل کن.",
+      "restoreFromFile": "بازیابی از فایل",
+      "restoreWarning": "بازیابی پیشرفت فعلی تو را بازنویسی خواهد کرد.",
+      "restoreSuccess": "پیشرفت با موفقیت بازیابی شد.",
+      "restoreFailed": "این فایل شبیه یک پشتیبان معتبر Relay نیست.",
+      "factoryReset": "بازنشانی به تنظیمات کارخانه",
+      "factoryResetWarning": "این کار تمام پیشرفت، آمار و تنظیمات را روی این دستگاه برای همیشه حذف می‌کند. این عمل قابل بازگشت نیست.",
+      "factoryResetConfirm": "بله، همه چیز را حذف کن",
+      "resetFailed": "مشکلی پیش آمد و داده‌هایت بازنشانی نشد. هیچ چیزی حذف نشد."
+    },
+    "ai": {
+      "description": "سوالاتی درباره کد مورس، زمان‌بندی یا نحوه کار برنامه بپرس، درست داخل Relay. این از کلید API خودت استفاده می‌کند و هرگز چیزی جز پیام‌های چت تو ارسال نمی‌کند.",
+      "provider": "ارائه‌دهنده",
+      "apiKey": "کلید API",
+      "apiKeyPlaceholder": "کلید API خود را بچسبان",
+      "apiKeyHelp": "فقط در ذخیره‌سازی محلی این مرورگر ذخیره می‌شود. هرگز در پشتیبان‌گیری یا خروجی‌ها گنجانده نمی‌شود. هرگز به جایی جز ارائه‌دهنده انتخابی تو ارسال نمی‌شود.",
+      "showKey": "نمایش کلید",
+      "hideKey": "مخفی کردن کلید",
+      "clearKey": "حذف کلید",
+      "costWarning": "تو مسئول تمام هزینه‌های ارائه‌دهنده API خود هستی. توصیه می‌کنیم قبل از استفاده از این ویژگی، یک محدودیت هزینه یا هشدار بودجه در داشبورد ارائه‌دهنده خود تنظیم کنی.",
+      "dailyLimit": "محدودیت پیام روزانه",
+      "dailyLimitHelp": "سقف سخت برای جلوگیری از هزینه‌های کنترل‌نشده. هر 24 ساعت بازنشانی می‌شود.",
+      "maxTokens": "حداکثر طول پاسخ",
+      "enable": "فعال‌سازی دستیار هوش مصنوعی",
+      "notConfigured": "برای فعال‌سازی دستیار، یک کلید API اضافه کن.",
+      "providerOpenAI": "OpenAI",
+      "providerAnthropic": "Anthropic",
+      "providerCustom": "Custom (OpenAI-compatible)",
+      "endpointUrl": "Endpoint URL",
+      "endpointPlaceholder": "https://your-provider.example.com/v1/chat/completions"
+    },
+    "appearance": {
+      "themeLabel": "پوسته",
+      "themes": {
+        "dark": "تیره پیش‌فرض",
+        "light": "روشن پیش‌فرض",
+        "midnight": "نیمه‌شب",
+        "ocean": "اقیانوس",
+        "forest": "جنگل",
+        "coffee": "قهوه",
+        "frost": "یخبندان",
+        "sunrise": "طلوع آفتاب"
+      },
+      "installTitle": "نصب Relay",
+      "installDescription": "برنامه را برای تجربه تمام‌صفحه و قابل استفاده بدون اینترنت با آیکون مخصوص خود نصب کن.",
+      "install": "نصب برنامه",
+      "installed": "قبلاً نصب شده",
+      "installUnsupported": "مرورگر تو از نصب یک‌کلیکی در اینجا پشتیبانی نمی‌کند. به جای آن در منوی مرورگر خود به دنبال «افزودن به صفحه اصلی» یا «نصب» بگرد."
+    },
+    "audioSettings": {
+      "title": "سرعت و تن پیش‌فرض",
+      "description": "این مقادیر پیش‌فرض دفعه بعدی که یادگیری، تمرین یا یک بازی را باز می‌کنی اعمال می‌شوند. مترجم کنترل‌های جلسه خود را حفظ می‌کند.",
+      "wpm": "سرعت پیش‌فرض (WPM)",
+      "farnsworth": "فاصله فارنسورث",
+      "farnsworthOff": "خاموش (مطابق با سرعت کاراکتر)",
+      "farnsworthHelp": "فاصله بین حروف و کلمات را کند می‌کند و در همان حال زمان‌بندی هر حرف را سریع نگه می‌دارد؛ تکنیکی کلاسیک برای یادگیری با سرعت بالای کاراکتر.",
+      "frequency": "تن (هرتز)",
+      "volume": "صدا",
+      "reset": "بازنشانی به پیش‌فرض"
+    },
+    "accessibility": {
+      "highContrast": "کنتراست بالا",
+      "highContrastHelp": "مرزها و جداکننده‌ها را برای جداسازی بصری بهتر تقویت می‌کند.",
+      "textSize": "اندازه متن",
+      "textSizes": {
+        "small": "کوچک",
+        "default": "پیش‌فرض",
+        "large": "بزرگ"
+      },
+      "reducedMotion": "حرکت کاهش‌یافته",
+      "reducedMotionAuto": "دنبال کردن تنظیمات سیستم",
+      "reducedMotionOn": "همیشه حرکت را کاهش بده",
+      "reducedMotionOff": "همیشه اجازه حرکت بده"
+    },
+    "shortcuts": {
+      "title": "میانبرهای صفحه کلید",
+      "context": "زمینه",
+      "action": "عمل",
+      "key": "کلید",
+      "learnTransmit": "برای ارسال مورس کاراکتر فعلی نگه دار",
+      "morseInvadersDot": "ارسال نقطه",
+      "morseInvadersDash": "ارسال خط تیره",
+      "spaceKey": "فاصله",
+      "dotKey": ". یا 4",
+      "dashKey": "- یا 6"
+    }
+  },
+  "mnemonics": {
+    "0": {
+      "hint": "Five dashes: the longest number.",
+      "examples": "Zero"
+    },
+    "1": {
+      "hint": "One dot, four dashes.",
+      "examples": "First"
+    },
+    "2": {
+      "hint": "Two dots, three dashes.",
+      "examples": "Second"
+    },
+    "3": {
+      "hint": "Three dots, two dashes.",
+      "examples": "Third"
+    },
+    "4": {
+      "hint": "Four dots, one dash.",
+      "examples": "Fourth"
+    },
+    "5": {
+      "hint": "Five dots: all short.",
+      "examples": "Fifth"
+    },
+    "6": {
+      "hint": "One dash, four dots.",
+      "examples": "Sixth"
+    },
+    "7": {
+      "hint": "Two dashes, three dots.",
+      "examples": "Seventh"
+    },
+    "8": {
+      "hint": "Three dashes, two dots.",
+      "examples": "Eighth"
+    },
+    "9": {
+      "hint": "Four dashes, one dot.",
+      "examples": "Ninth"
+    },
+    "A": {
+      "hint": "A short dot, then a long dash: like saying 'a-BOUT'.",
+      "examples": "Apple|Around|Ago"
+    },
+    "B": {
+      "hint": "One long dash, then three short dots.",
+      "examples": "Banana|Bottle|Beacon"
+    },
+    "C": {
+      "hint": "Dash dot dash dot: a rhythmic, rocking pattern.",
+      "examples": "Coconut|Circle|Compass"
+    },
+    "D": {
+      "hint": "One dash, two dots: 'DAH-dit-dit'.",
+      "examples": "Dog|Delta|Drum"
+    },
+    "E": {
+      "hint": "The shortest, sharpest sound: just one dot.",
+      "examples": "Echo|Egg|Elephant"
+    },
+    "F": {
+      "hint": "Dot dot dash dot: fast and fluttery.",
+      "examples": "Falcon|Forest|Flute"
+    },
+    "G": {
+      "hint": "Two dashes, then a dot: 'GAH-gah-dit'.",
+      "examples": "Garden|Guitar|Galaxy"
+    },
+    "H": {
+      "hint": "Four quick dots in a row: like a giggle.",
+      "examples": "Harbor|Hello|Horizon"
+    },
+    "I": {
+      "hint": "Two short dots: brief and light.",
+      "examples": "Island|Ice|Igloo"
+    },
+    "J": {
+      "hint": "One dot, three dashes: starts short, stays long.",
+      "examples": "Jungle|Jupiter|Journey"
+    },
+    "K": {
+      "hint": "Dash dot dash: 'KAH-dit-DAH'.",
+      "examples": "Kite|Koala|Kettle"
+    },
+    "L": {
+      "hint": "Dot dash dot dot: a lilting little run.",
+      "examples": "Lantern|Lighthouse|Lemon"
+    },
+    "M": {
+      "hint": "Two dashes: 'MAH-dah', slow and heavy.",
+      "examples": "Mountain|Moon|Music"
+    },
+    "N": {
+      "hint": "One dash, one dot: 'NAH-dit'.",
+      "examples": "Nest|North|Nova"
+    },
+    "O": {
+      "hint": "Three long dashes: the roundest, heaviest letter.",
+      "examples": "Ocean|Orbit|Oasis"
+    },
+    "P": {
+      "hint": "Dot dash dash dot: bookended by dots.",
+      "examples": "Puzzle|Planet|Piano"
+    },
+    "Q": {
+      "hint": "Dash dash dot dash: mostly long, one short.",
+      "examples": "Quartz|Quest|Quiet"
+    },
+    "R": {
+      "hint": "Dot dash dot: a little arch shape.",
+      "examples": "River|Rocket|Rainbow"
+    },
+    "S": {
+      "hint": "Three quick dots: 'dit-dit-dit', like a snake hiss.",
+      "examples": "Sunset|Silver|Star"
+    },
+    "T": {
+      "hint": "A single dash: the longest, simplest sound.",
+      "examples": "Tree|Thunder|Torch"
+    },
+    "U": {
+      "hint": "Dot dot dash: two short, one long.",
+      "examples": "Umbrella|Universe|Uphill"
+    },
+    "V": {
+      "hint": "Dot dot dot dash: Beethoven's Fifth Symphony.",
+      "examples": "Valley|Violet|Voyage"
+    },
+    "W": {
+      "hint": "Dot dash dash: starts short, ends long.",
+      "examples": "Waterfall|Wonder|Willow"
+    },
+    "X": {
+      "hint": "Dash dot dot dash: long, short, short, long.",
+      "examples": "Xylophone|Xenon"
+    },
+    "Y": {
+      "hint": "Dash dot dash dash: mostly dashes.",
+      "examples": "Yellow|Yonder|Yoga"
+    },
+    "Z": {
+      "hint": "Dash dash dot dot: heavy start, light end.",
+      "examples": "Zephyr|Zigzag|Zenith"
+    },
+    "fallbackHint": "No mnemonic yet for this symbol."
+  },
+  "aiChat": {
+    "openLabel": "باز کردن دستیار هوش مصنوعی",
+    "closeLabel": "بستن دستیار هوش مصنوعی",
+    "placeholder": "درباره کد مورس، زمان‌بندی یا این برنامه بپرس…",
+    "send": "ارسال",
+    "thinking": "در حال فکر کردن…",
+    "notConfigured": "کلید API خود را در تنظیمات → دستیار هوش مصنوعی اضافه کن تا چت شروع شود.",
+    "goToSettings": "رفتن به تنظیمات",
+    "limitReached": "به محدودیت پیام امروز رسیده‌ای ({{limit}}). این در {{resetIn}} بازنشانی می‌شود.",
+    "messagesRemaining": "{{count}} پیام امروز باقی مانده",
+    "error": "هنگام ارتباط با ارائه‌دهنده هوش مصنوعی خطایی رخ داد. کلید و پیام تو آسیبی ندیدند.",
+    "clearChat": "پاک کردن گفتگو",
+    "disclaimer": "پاسخ‌ها ممکن است نادقیق باشند. از کلید API و سهمیه خودت استفاده می‌کند.",
+    "title": "AI Assistant"
+  }
+}
