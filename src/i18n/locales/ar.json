@@ -1,0 +1,701 @@
+{
+  "app": {
+    "name": "Relay",
+    "tagline": "مجاني ودون اتصال"
+  },
+  "nav": {
+    "dashboard": "لوحة التحكم",
+    "learn": "تعلّم",
+    "practice": "تمرّن",
+    "translator": "مترجم",
+    "games": "ألعاب",
+    "progress": "التقدّم",
+    "encyclopedia": "الموسوعة",
+    "settings": "الإعدادات",
+    "freeForever": "مجاني للأبد"
+  },
+  "common": {
+    "copy": "نسخ",
+    "copied": "تم النسخ",
+    "clear": "مسح",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "close": "إغلاق",
+    "delete": "حذف",
+    "confirm": "تأكيد",
+    "loading": "جارٍ التحميل…",
+    "error": "خطأ",
+    "success": "نجاح",
+    "back": "رجوع",
+    "next": "التالي",
+    "previous": "السابق",
+    "continue": "متابعة",
+    "start": "بدء",
+    "stop": "إيقاف",
+    "play": "تشغيل",
+    "pause": "إيقاف مؤقت",
+    "retry": "إعادة المحاولة",
+    "download": "تنزيل",
+    "upload": "رفع",
+    "import": "استيراد",
+    "export": "تصدير",
+    "enabled": "ممكّن",
+    "disabled": "معطّل",
+    "on": "تشغيل",
+    "off": "إيقاف",
+    "comingSoon": "{{feature}} قادم قريباً",
+    "characters": "{{count}} حرفاً",
+    "minutes": "{{count}} دقائق",
+    "seconds": "{{count}}ث",
+    "mainNavigation": "التنقل الرئيسي",
+    "primaryNavigation": "أساسي",
+    "chartRange": "نطاق الرسم البياني",
+    "clearTranslation": "مسح الترجمة",
+    "reviewWeakSymbols": "مراجعة جميع الرموز الضعيفة",
+    "percent": "{{percent}} percent",
+    "less": "less",
+    "more": "more",
+    "requestFailed": "Request failed.",
+    "rangeWeek": "1W",
+    "rangeMonth": "1M",
+    "rangeAll": "ALL",
+    "daySun": "Sun",
+    "dayMon": "Mon",
+    "dayTue": "Tue",
+    "dayWed": "Wed",
+    "dayThu": "Thu",
+    "dayFri": "Fri",
+    "daySat": "Sat",
+    "eg": "e.g.",
+    "playMorseFor": "Play Morse for {{char}}"
+  },
+  "errorBoundary": {
+    "description": "واجه Relay خطأً غير متوقع. تقدمك المحفوظ لم يتأثر. إعادة التحميل عادةً ما تحل المشكلة.",
+    "goHome": "اذهب إلى لوحة التحكم"
+  },
+  "dashboard": {
+    "title": "لوحة التحكم",
+    "description": "تابع من حيث توقفت وشاهد ما الذي تغيّر.",
+    "startLearning": "ابدأ التعلّم",
+    "streakDays": "سلسلة {{count}} أيام",
+    "welcomeBack": "مرحباً بعودتك أيها المشغل.",
+    "continuePrompt": "أنت تعمل حالياً على حرف '{{char}}'. حافظ على استمراريتك.",
+    "continueLesson": "متابعة الدرس '{{char}}'",
+    "dailyChallenge": "التحدي اليومي",
+    "dailyChallengeGoal": "احصل على {{target}} إجابة صحيحة اليوم",
+    "startChallenge": "ابدأ التحدي",
+    "overallMastery": "الإتقان الكلي",
+    "needsReview": "بحاجة للمراجعة",
+    "recentBadges": "الشارات الأخيرة",
+    "locked": "مقفول: {{label}}",
+    "speedProgression": "التقدّم في السرعة (WPM)",
+    "accuracyTooltip": "Accuracy: {{accuracy}}%",
+    "greetingMorning": "صباح الخير أيها المشغل.",
+    "greetingAfternoon": "طاب يومك أيها المشغل.",
+    "greetingEvening": "مساء الخير أيها المشغل.",
+    "challengeComplete": "أحسنت. أنجزت تحدي اليوم.",
+    "noSpeedDataYet": "لا توجد جلسات موقوتة في هذه الفترة بعد.",
+    "playAGame": "العب لعبة"
+  },
+  "learn": {
+    "title": "تعلّم",
+    "description": "دروس بطريقة كوخ تضيف حرفاً واحداً في كل مرة، مع توقيت وصوت يمكنك إعادة تشغيله.",
+    "progress": "التقدّم",
+    "character": "الحرف",
+    "signalAnalysis": "تحليل الإشارة",
+    "oneUnitDuration": "مدة وحدة واحدة.",
+    "unitsWithGap": "{{count}} وحدة، مع فجوة بين كل منها.",
+    "transmissionPractice": "تمرين الإرسال",
+    "spaceToKey": "[مسافة] للإرسال",
+    "ctrlKeyHint": "أو Ctrl-يسار = نقطة، Ctrl-يمين = شرطة",
+    "tapToTransmit": "اضغط أو استمر في الضغط على المسافة لإرسال '{{char}}'",
+    "mnemonic": "تذكرة",
+    "examples": "أمثلة",
+    "loadingProgress": "جارٍ تحميل تقدّمك…",
+    "start": "البداية",
+    "signal": "الإشارة",
+    "end": "النهاية",
+    "unitTiming": "1 نبضة = {{ms}}مللي ثانية عند {{wpm}} كلمة/دقيقة",
+    "stopPlayback": "إيقاف التشغيل",
+    "playAudio": "تشغيل صوت مورس",
+    "nextCharacter": "الحرف التالي",
+    "masteryGate": {
+      "progress": "{{correct}}/{{needed}} إجابة صحيحة لفتح الحرف التالي",
+      "readyHint": "عمل رائع. يمكنك الانتقال متى كنت مستعداً.",
+      "kochExplainer": "ترتيب التعلّم يتبع طريقة كوخ: يبدأ بـ K و M (وليس A) لأنهما يختلفان صوتياً بشكل كبير، مما يبني أذناً أفضل للتوقيت قبل إضافة الأحرف المتشابهة الأكثر صعوبة."
+    },
+    "dot": "Dot",
+    "dash": "Dash"
+  },
+  "practice": {
+    "title": "تمرّن",
+    "description": "تمارين قصيرة تركّز على الرموز التي تخطئ فيها كثيراً.",
+    "modes": {
+      "hearAndType": "اسمع واكتب",
+      "readAndType": "اقرأ واكتب",
+      "translateDrill": "تمرين الترجمة",
+      "flashcards": "بطاقات تعليمية",
+      "speed": "وضع السرعة",
+      "endless": "لا نهائي",
+      "memory": "ذاكرة",
+      "morseTree": {
+        "title": "مستكشف شجرة مورس",
+        "idle": "اضغط ابدأ لاستكشاف شجرة مورس",
+        "path": "المسار",
+        "deadEnd": "✕ نهاية الطريق: العودة إلى الجذر",
+        "hint": "اضغط مفتاح النقطة (L-Ctrl أو . أو 4) أو مفتاح الشرطة (R-Ctrl أو - أو 6) للتنقل",
+        "pathEquals": " = {{char}}",
+        "correct": "صحيح",
+        "incorrect": "خطأ",
+        "accuracy": "الدقة",
+        "streak": "السلسلة"
+      }
+    },
+    "hearAndType": {
+      "instructions": "استمع إلى النغمة، ثم اكتب الحرف الذي سمعته.",
+      "replay": "إعادة",
+      "inputPlaceholder": "اكتب الحرف…",
+      "correct": "صحيح!",
+      "incorrect": "ليس تماماً. كان '{{answer}}'",
+      "inputPlaceholderShort": "Type"
+    },
+    "readAndType": {
+      "instructions": "اقرأ شفرة مورس، ثم اكتب الحرف الذي تمثله.",
+      "inputPlaceholder": "اكتب الحرف…",
+      "inputPlaceholderShort": "Type"
+    },
+    "translateDrill": {
+      "instructions": "أرسل شفرة مورس للحرف المعروض باستخدام مفتاحي . و -.",
+      "spaceToKey": "اكتب . و - مباشرةً، أو استخدم Ctrl-يسار / Ctrl-يمين"
+    },
+    "endless": {
+      "instructions": "استمع واكتب بسرعتك الخاصة. لا مؤقت، لا ضغط. توقف متى شئت.",
+      "stop": "إنهاء الجلسة",
+      "summary": "ملخص الجلسة"
+    },
+    "memory": {
+      "instructions": "شاهد التسلسل، ثم أعد إنتاجه بالترتيب الصحيح.",
+      "watchPrompt": "مشاهدة…",
+      "yourTurn": "دورك. اكتب التسلسل الذي رأيته",
+      "sequenceLength": "التسلسل: {{length}}",
+      "bestLength": "الأفضل: {{length}}",
+      "roundFailed": "هذا ليس صحيحاً تماماً. أفضل تسلسل: {{length}}",
+      "startRound": "ابدأ"
+    },
+    "flashcards": {
+      "instructions": "اقلب البطاقة للتحقق من إجابتك.",
+      "showAnswer": "إظهار الإجابة",
+      "iKnewIt": "عرفتها",
+      "didNotKnow": "لم أعرفها"
+    },
+    "speed": {
+      "instructions": "اكتب كل حرف بأسرع ما يمكنك قبل نفاد الوقت.",
+      "timeLeft": "الوقت المتبقي",
+      "wpm": "كلمة/دقيقة",
+      "accuracy": "الدقة",
+      "streak": "السلسلة",
+      "sessionOver": "الجلسة مكتملة!",
+      "startSession": "بدء الجلسة",
+      "playAgain": "العب مرة أخرى"
+    },
+    "session": {
+      "correct": "صحيح",
+      "attempts": "محاولات",
+      "endSession": "إنهاء الجلسة",
+      "bestStreak": "أفضل سلسلة"
+    },
+    "focusedFilter": {
+      "label": "تمرين مركّز: {{chars}}",
+      "clear": "مسح الفلتر"
+    }
+  },
+  "games": {
+    "title": "ألعاب",
+    "description": "خمس ألعاب صغيرة للتمرّن من دون درس.",
+    "notPlayedYet": "لم تُلعب بعد",
+    "best": "الأفضل: {{score}}",
+    "play": "العب",
+    "score": "النتيجة",
+    "topWpm": "أعلى WPM",
+    "destroyed": "مُدمّر",
+    "rounds": "الجولات",
+    "newHighScore": "رقم قياسي جديد!",
+    "morseInvaders": {
+      "title": "غزاة المورس",
+      "cardDescription": "أحرف تسقط من الأعلى. اكتب رمز النقاط/الشرطات قبل أن تهبط.",
+      "instructions": "أحرف تسقط من الأعلى. اكتب شفرة مورس الخاصة بها (نقطة/شرطة) قبل أن تهبط. ثلاث أخطاء ونهاية اللعبة.",
+      "hint": "اضغط على الأزرار، اكتب . / -، أو استخدم Ctrl-يسار / Ctrl-يمين",
+      "bestScore": "أفضل نتيجة: {{score}}",
+      "destroyedLabel": "مُدمّر",
+      "dash": "شرطة",
+      "dot": "نقطة",
+      "difficulty": {
+        "easy": "سهل (سقوط بطيء)",
+        "medium": "متوسط (عادي)",
+        "hard": "صعب (سقوط سريع)"
+      }
+    },
+    "signalRush": {
+      "title": "اندفاع الإشارة",
+      "cardDescription": "استمع واكتب بأسرع ما يمكنك. تزداد السرعة مع كل إجابة صحيحة.",
+      "instructions": "استمع واكتب بأسرع ما يمكنك. تزداد السرعة مع كل إجابة صحيحة. ثلاث أخطاء تنهي الجولة.",
+      "speedLabel": "السرعة: {{wpm}} WPM",
+      "bestScore": "أفضل نتيجة: {{score}}",
+      "difficulty": {
+        "easy": "سهل (تسارع لطيف)",
+        "medium": "متوسط (عادي)",
+        "hard": "صعب (تسارع حاد)"
+      }
+    },
+    "decodeTranslate": {
+      "title": "فكّ وترجم",
+      "cardDescription": "اسمع كلمة كاملة بالمورس. واكتب الكلمة المفكوكة قبل نفاد الوقت.",
+      "instructions": "استمع إلى تسلسل المورس، ثم اكتب الكلمة التي يتهجّاها. يقلّ الوقت مع كل إجابة صحيحة.",
+      "replay": "إعادة",
+      "inputPlaceholder": "اكتب الكلمة…",
+      "correctWord": "{{word}}، صحيح!",
+      "incorrectWord": "كانت '{{word}}'",
+      "difficulty": {
+        "easy": "سهل (كلمات من 3 أحرف)",
+        "medium": "متوسط (كلمات من 5 أحرف)",
+        "hard": "صعب (جُمل وعلامات ترقيم)"
+      },
+      "round": "الجولة {{n}}",
+      "bestScore": "أفضل نتيجة: {{score}}"
+    },
+    "morseMatch": {
+      "title": "مطابقة المورس",
+      "cardDescription": "اقلب البطاقات لمطابقة كل حرف مع شيفرة مورس الخاصة به. ذاكرة بصرية خالصة.",
+      "instructions": "اقلب بطاقتين في كل مرة لإيجاد أزواج الحرف/المورس المتطابقة. إيجاد كل الأزواج = الفوز بالجولة.",
+      "pairsFound": "الأزواج: {{count}}/{{total}}",
+      "flips": "القلبات: {{count}}",
+      "timeBonus": "مكافأة الوقت",
+      "youWon": "تم إيجاد كل الأزواج!",
+      "difficulty": {
+        "easy": "سهل (4×4)",
+        "hard": "صعب (6×6)"
+      },
+      "bestScore": "أفضل نتيجة: {{score}}"
+    },
+    "emergencyRelay": {
+      "title": "تتابع الطوارئ",
+      "cardDescription": "استجب لإشارات الاستغاثة تحت مؤقّت متقلّص. يزداد الضغط مع كل خطأ.",
+      "instructions": "تومض إشارة استغاثة. أرسل شيفرة المورس الصحيحة قبل نفاد المؤقّت. الأخطاء تسرّع الساعة.",
+      "timer": "{{ms}}ms",
+      "lifeLost": "بطيء جدًا!",
+      "bestScore": "أفضل نتيجة: {{score}}",
+      "difficulty": {
+        "easy": "سهل (SOS + حروف)",
+        "hard": "صعب (يشمل علامات الترقيم)"
+      }
+    },
+    "accuracy": "الدقة",
+    "bestCombo": "أفضل كومبو",
+    "combo": "كومبو {{count}}x!",
+    "efficiency": "الكفاءة"
+  },
+  "progress": {
+    "title": "تحليلات التقدّم",
+    "description": "شاهد ما أتقنته وما يحتاج إلى مزيد من العمل.",
+    "exportReport": "تصدير التقرير",
+    "mastery": "الإتقان",
+    "practiceTime": "وقت التمرين",
+    "currentStreak": "السلسلة الحالية",
+    "performanceTrends": "اتجاهات الأداء",
+    "trendEmptyState": "أكمل جلسة في وضع السرعة أو الألعاب لبدء تتبع اتجاهك.",
+    "characterMastery": "إتقان الأحرف",
+    "mastered": "مُتقَن",
+    "learning": "قيد التعلّم",
+    "notPracticedYet": "لم يُتمرّن بعد",
+    "accuracyLabel": "الدقة: {{percent}}% ({{attempts}} محاولات)",
+    "confusingPairs": "أزواج متشابهة",
+    "noMixups": "لم يتم تسجيل أي أخطاء بعد. استمر في التمرين وسيتم ملء هذا تلقائياً.",
+    "mixupCount": "{{count}} خلط",
+    "mixupCount_other": "{{count}} أخطاء خلط",
+    "focusedPractice": "تمرين مركّز",
+    "wpmLabel": "كلمة/دقيقة",
+    "vs": "مقابل",
+    "level": "المستوى {{level}}",
+    "xpProgress": "{{current}} / {{total}} نقاط خبرة",
+    "activityHeatmap": "النشاط",
+    "dueForReview": "بحاجة للمراجعة",
+    "dueForReviewEmpty": "لا شيء مستحق حالياً. استمر في التمرين للحفاظ على ذلك.",
+    "reviewNow": "راجع الآن",
+    "badgesTitle": "الشارات",
+    "badges": {
+      "firstLesson": "الدرس الأول",
+      "halfway": "في منتصف الطريق",
+      "fullAlphabet": "الأبجدية كاملة",
+      "wpm10": "ذروة 10 WPM",
+      "wpm20": "ذروة 20 WPM",
+      "perfectEar": "أذن مثالية",
+      "sharpShooter": "قناص",
+      "streak3": "سلسلة 3 أيام",
+      "streak7": "سلسلة 7 أيام",
+      "streak30": "سلسلة 30 يوماً",
+      "gameExplorer": "مستكشف الألعاب",
+      "level5": "المستوى 5",
+      "level10": "المستوى 10"
+    },
+    "activeDaysThisMonth": "{{count}} active days this month",
+    "masteryLabel": "{{percent}}% mastery"
+  },
+  "encyclopedia": {
+    "title": "الموسوعة",
+    "description": "كل حرف مع شفرته وتوقيته وقليل من تاريخه.",
+    "searchPlaceholder": "ابحث عن أحرف أو صوتيات…",
+    "categories": {
+      "all": "الكل",
+      "letter": "أبجدية",
+      "number": "أرقام",
+      "punctuation": "علامات ترقيم",
+      "prosign": "إشارات خاصة"
+    },
+    "noResults": "لا توجد أحرف تطابق بحثك.",
+    "prosignsTitle": "الإشارات الخاصة",
+    "abbreviationsTitle": "اختصارات شائعة",
+    "historyTitle": "نبذة تاريخية",
+    "historyText": "طُوّرت شفرة مورس في ثلاثينيات وأربعينيات القرن التاسع عشر بواسطة صامويل مورس وألفريد فيال لاستخدامها في التلغراف الكهربائي. تم لاحقاً تحسين شفرة مورس الأمريكية الأصلية إلى شفرة مورس الدولية المستخدمة اليوم، مع توحيد التوقيت وإضافة دعم للأحرف المنقوطة. بعد فترة طويلة من تلاشي التلغراف، استمرت الشفرة في الحياة في الراديو الهاوي والطيران والإشارات البحرية، مقدرةً لمدى قدرة إشارة بسيطة (تشغيل/إيقاف) على الانتقال عبر الضوضاء التي قد تطغى على الصوت."
+  },
+  "translator": {
+    "title": "مترجم",
+    "description": "ترجم النص إلى مورس والعكس، أو فكّ تشفير تسجيل صوتي. يعمل دون اتصال.",
+    "plainText": "نص عادي",
+    "morseCode": "شفرة مورس",
+    "textPlaceholder": "اكتب نصاً للترجمة...",
+    "morsePlaceholder": ".. --- ...",
+    "swapDirection": "تبديل اتجاه الترجمة",
+    "decodeAudio": "فك تشفير الصوت",
+    "decodeAudioDescription": "حمّل تسجيلاً لشفرة مورس وسيتم فك تشفيره إلى نص، بالكامل على هذا الجهاز.",
+    "clickToUpload": "انقر للرفع",
+    "orDragAndDrop": "أو اسحب وأفلت",
+    "fileSizeLimit": "ملفات صوتية حتى 10 ميجابايت",
+    "decoding": "جارٍ فك التشفير…",
+    "decoded": "تم فك التشفير بثقة {{confidence}}%",
+    "unrecognizedSequences": "تسلسلات غير معروفة: {{sequences}}",
+    "useThisText": "استخدم هذا النص",
+    "fileTooLarge": "الملف كبير جداً. يُرجى الحفاظ على حجم أقل من 10 ميجابايت.",
+    "notAudioFile": "هذا لا يبدو كملف صوتي.",
+    "noSignalDetected": "لم يتم اكتشاف إشارة مورس في هذا التسجيل.",
+    "decodeFailed": "تعذّر فك تشفير هذا الملف. قد يكون تالفاً أو بتنسيق غير مدعوم.",
+    "speedWpm": "السرعة (كلمة/دقيقة)",
+    "toneHz": "التردد (هرتز)",
+    "exportTxt": "تصدير TXT",
+    "exportJson": "تصدير JSON",
+    "downloadWav": "تنزيل WAV",
+    "referencePdf": "PDF مرجعي",
+    "typeToSeeSignal": "اكتب شيئاً لرؤية الإشارة.",
+    "dictionary": {
+      "title": "القاموس",
+      "default": "الأبجدية الافتراضية",
+      "new": "قاموس جديد",
+      "namePlaceholder": "اسم القاموس",
+      "duplicate": "نسخ",
+      "rename": "إعادة تسمية",
+      "delete": "حذف",
+      "deleteConfirm": "حذف هذا القاموس؟ لا يمكن التراجع عن هذا.",
+      "export": "تصدير",
+      "import": "استيراد",
+      "importFailed": "هذا الملف ليس تصدير قاموس صالحاً.",
+      "editorTitle": "تحرير القاموس",
+      "character": "الحرف",
+      "code": "شفرة مورس",
+      "addEntry": "إضافة حرف",
+      "conflictWarning": "'{{code}}' مستخدم بالفعل بواسطة '{{other}}'، سيكون فك التشفير غامضاً.",
+      "invalidCode": "يُسمح فقط بالنقاط والشرطات.",
+      "noEntries": "لا توجد أحرف مخصصة بعد. أضف واحداً أدناه.",
+      "removeEntry": "إزالة"
+    },
+    "script": {
+      "title": "Script / Language",
+      "default": "Default (ITU)",
+      "fa": "Persian (فارسی)",
+      "ar": "Arabic (العربية)",
+      "tr": "Turkish (Türkçe)",
+      "fr": "French (Français)",
+      "de": "German (Deutsch)",
+      "es": "Spanish (Español)",
+      "ru": "Russian (Русский)",
+      "ko": "Korean (한국어)",
+      "ja": "Japanese (日本語)",
+      "zh": "Chinese (中文)",
+      "el": "Greek (Ελληνικά)",
+      "he": "Hebrew (עברית)"
+    }
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "description": "السمات والصوت والتوقيت والنسخ الاحتياطي والمساعد الذكي.",
+    "sections": {
+      "language": "اللغة",
+      "backup": "البيانات والنسخ الاحتياطي",
+      "aiAssistant": "المساعد الذكي",
+      "appearance": "المظهر",
+      "audio": "الصوت والتوقيت",
+      "accessibility": "إمكانية الوصول",
+      "shortcuts": "اختصارات لوحة المفاتيح"
+    },
+    "language": {
+      "description": "اختر لغة العرض. معظم الأقسام مترجمة، لكن بعض النصوص قد تظهر بالإنجليزية حتى تكتمل الترجمة.",
+      "placeholderBadge": "عنصر نائب"
+    },
+    "backup": {
+      "description": "كل ما تفعله يُخزّن فقط على هذا الجهاز. قم بنسخه احتياطياً بانتظام حتى لا تفقد تقدّمك.",
+      "autoBackup": "نسخ احتياطي محلي تلقائي",
+      "autoBackupDescription": "التقط لقطة صامتة لتقدّمك على هذا الجهاز بفاصل زمني، دون تنزيل ملف في كل مرة.",
+      "interval": "فاصل النسخ الاحتياطي",
+      "lastBackup": "آخر نسخ احتياطي تلقائي: {{time}}",
+      "neverBackedUp": "لا يوجد نسخ احتياطي تلقائي بعد",
+      "downloadNow": "تنزيل النسخ الاحتياطي الآن",
+      "saveToFolder": "حفظ في مجلد متزامن",
+      "saveToFolderDescription": "اختر مجلداً متزامناً مع Google Drive أو Dropbox أو iCloud، وسيقوم Relay بكتابة نسختك الاحتياطية هناك مباشرة. لا حاجة لحساب.",
+      "saveToFolderUnsupported": "متصفحك لا يدعم الحفظ مباشرة في مجلد. استخدم «تنزيل النسخ الاحتياطي الآن» بدلاً من ذلك، ثم انقل الملف إلى مجلدك المتزامن.",
+      "restoreFromFile": "استعادة من ملف",
+      "restoreWarning": "الاستعادة ستستبدل تقدّمك الحالي.",
+      "restoreSuccess": "تمت استعادة التقدّم بنجاح.",
+      "restoreFailed": "هذا الملف لا يبدو كنسخة احتياطية صالحة لـ Relay.",
+      "factoryReset": "إعادة ضبط المصنع",
+      "factoryResetWarning": "سيؤدي هذا إلى حذف جميع التقدّم والإحصائيات والإعدادات على هذا الجهاز بشكل دائم. لا يمكن التراجع عن هذا.",
+      "factoryResetConfirm": "نعم، احذف كل شيء",
+      "resetFailed": "حدث خطأ ما ولم تتم إعادة تعيين بياناتك. لم يتم حذف أي شيء."
+    },
+    "ai": {
+      "description": "اطرح أسئلة حول شفرة مورس أو التوقيت أو كيفية عمل التطبيق، داخل Relay مباشرةً. يستخدم مفتاح API الخاص بك ولا يرسل أبداً أي شيء باستثناء رسائل الدردشة الخاصة بك.",
+      "provider": "المزوّد",
+      "apiKey": "مفتاح API",
+      "apiKeyPlaceholder": "الصق مفتاح API الخاص بك",
+      "apiKeyHelp": "مخزّن فقط في التخزين المحلي لهذا المتصفح. لا يُدرج أبداً في النسخ الاحتياطية أو التصدير. لا يُرسل أبداً إلى أي مكان باستثناء المزوّد الذي تختاره.",
+      "showKey": "إظهار المفتاح",
+      "hideKey": "إخفاء المفتاح",
+      "clearKey": "إزالة المفتاح",
+      "costWarning": "أنت مسؤول عن جميع الرسوم من مزوّد API الخاص بك. نوصي بتعيين حد إنفاق أو تنبيه ميزانية في لوحة تحكم المزوّد الخاص بك قبل استخدام هذه الميزة.",
+      "dailyLimit": "الحد اليومي للرسائل",
+      "dailyLimitHelp": "حد أقصى لمنع التكاليف الجامحة. يُعاد تعيينه كل 24 ساعة.",
+      "maxTokens": "الحد الأقصى لطول الرد",
+      "enable": "تفعيل المساعد الذكي",
+      "notConfigured": "أضف مفتاح API لتفعيل المساعد.",
+      "providerOpenAI": "OpenAI",
+      "providerAnthropic": "Anthropic",
+      "providerCustom": "Custom (OpenAI-compatible)",
+      "endpointUrl": "Endpoint URL",
+      "endpointPlaceholder": "https://your-provider.example.com/v1/chat/completions"
+    },
+    "appearance": {
+      "themeLabel": "السمة",
+      "themes": {
+        "dark": "داكن افتراضي",
+        "light": "فاتح افتراضي",
+        "midnight": "منتصف الليل",
+        "ocean": "محيط",
+        "forest": "غابة",
+        "coffee": "قهوة",
+        "frost": "صقيع",
+        "sunrise": "شروق الشمس"
+      },
+      "installTitle": "تثبيت Relay",
+      "installDescription": "قم بتثبيت التطبيق لتجربة كاملة الشاشة وقابلة للعمل دون اتصال مع أيقونة خاصة.",
+      "install": "تثبيت التطبيق",
+      "installed": "مثبّت بالفعل",
+      "installUnsupported": "متصفحك لا يدعم التثبيت بنقرة واحدة هنا. ابحث عن «إضافة إلى الشاشة الرئيسية» أو «تثبيت» في قائمة المتصفح بدلاً من ذلك."
+    },
+    "audioSettings": {
+      "title": "السرعة والنغمة الافتراضية",
+      "description": "تُطبّق هذه الإعدادات الافتراضية في المرة التالية التي تفتح فيها التعلّم أو التمرين أو لعبة. المترجم يحتفظ بعناصر التحكم الخاصة بجلساته.",
+      "wpm": "السرعة الافتراضية (كلمة/دقيقة)",
+      "farnsworth": "تباعد فارنسوورث",
+      "farnsworthOff": "إيقاف (مطابقة سرعة الحرف)",
+      "farnsworthHelp": "يبطّئ التباعد بين الأحرف والكلمات مع إبقاء سرعة كل حرف عالية، وهي تقنية كلاسيكية للتعلّم بسرعة حرف عالية.",
+      "frequency": "التردد (هرتز)",
+      "volume": "مستوى الصوت",
+      "reset": "إعادة التعيين إلى الافتراضي"
+    },
+    "accessibility": {
+      "highContrast": "تباين عالٍ",
+      "highContrastHelp": "يقوّي الحدود والفواصل لسهولة الفصل البصري.",
+      "textSize": "حجم الخط",
+      "textSizes": {
+        "small": "صغير",
+        "default": "افتراضي",
+        "large": "كبير"
+      },
+      "reducedMotion": "تقليل الحركة",
+      "reducedMotionAuto": "اتبع إعدادات النظام",
+      "reducedMotionOn": "تقليل الحركة دائماً",
+      "reducedMotionOff": "السماح بالحركة دائماً"
+    },
+    "shortcuts": {
+      "title": "اختصارات لوحة المفاتيح",
+      "context": "السياق",
+      "action": "الإجراء",
+      "key": "المفتاح",
+      "learnTransmit": "استمر في الضغط لإرسال مورس للحرف الحالي",
+      "morseInvadersDot": "إرسال نقطة",
+      "morseInvadersDash": "إرسال شرطة",
+      "spaceKey": "مسافة",
+      "dotKey": ". أو 4",
+      "dashKey": "- أو 6"
+    }
+  },
+  "mnemonics": {
+    "0": {
+      "hint": "Five dashes: the longest number.",
+      "examples": "Zero"
+    },
+    "1": {
+      "hint": "One dot, four dashes.",
+      "examples": "First"
+    },
+    "2": {
+      "hint": "Two dots, three dashes.",
+      "examples": "Second"
+    },
+    "3": {
+      "hint": "Three dots, two dashes.",
+      "examples": "Third"
+    },
+    "4": {
+      "hint": "Four dots, one dash.",
+      "examples": "Fourth"
+    },
+    "5": {
+      "hint": "Five dots: all short.",
+      "examples": "Fifth"
+    },
+    "6": {
+      "hint": "One dash, four dots.",
+      "examples": "Sixth"
+    },
+    "7": {
+      "hint": "Two dashes, three dots.",
+      "examples": "Seventh"
+    },
+    "8": {
+      "hint": "Three dashes, two dots.",
+      "examples": "Eighth"
+    },
+    "9": {
+      "hint": "Four dashes, one dot.",
+      "examples": "Ninth"
+    },
+    "A": {
+      "hint": "A short dot, then a long dash: like saying 'a-BOUT'.",
+      "examples": "Apple|Around|Ago"
+    },
+    "B": {
+      "hint": "One long dash, then three short dots.",
+      "examples": "Banana|Bottle|Beacon"
+    },
+    "C": {
+      "hint": "Dash dot dash dot: a rhythmic, rocking pattern.",
+      "examples": "Coconut|Circle|Compass"
+    },
+    "D": {
+      "hint": "One dash, two dots: 'DAH-dit-dit'.",
+      "examples": "Dog|Delta|Drum"
+    },
+    "E": {
+      "hint": "The shortest, sharpest sound: just one dot.",
+      "examples": "Echo|Egg|Elephant"
+    },
+    "F": {
+      "hint": "Dot dot dash dot: fast and fluttery.",
+      "examples": "Falcon|Forest|Flute"
+    },
+    "G": {
+      "hint": "Two dashes, then a dot: 'GAH-gah-dit'.",
+      "examples": "Garden|Guitar|Galaxy"
+    },
+    "H": {
+      "hint": "Four quick dots in a row: like a giggle.",
+      "examples": "Harbor|Hello|Horizon"
+    },
+    "I": {
+      "hint": "Two short dots: brief and light.",
+      "examples": "Island|Ice|Igloo"
+    },
+    "J": {
+      "hint": "One dot, three dashes: starts short, stays long.",
+      "examples": "Jungle|Jupiter|Journey"
+    },
+    "K": {
+      "hint": "Dash dot dash: 'KAH-dit-DAH'.",
+      "examples": "Kite|Koala|Kettle"
+    },
+    "L": {
+      "hint": "Dot dash dot dot: a lilting little run.",
+      "examples": "Lantern|Lighthouse|Lemon"
+    },
+    "M": {
+      "hint": "Two dashes: 'MAH-dah', slow and heavy.",
+      "examples": "Mountain|Moon|Music"
+    },
+    "N": {
+      "hint": "One dash, one dot: 'NAH-dit'.",
+      "examples": "Nest|North|Nova"
+    },
+    "O": {
+      "hint": "Three long dashes: the roundest, heaviest letter.",
+      "examples": "Ocean|Orbit|Oasis"
+    },
+    "P": {
+      "hint": "Dot dash dash dot: bookended by dots.",
+      "examples": "Puzzle|Planet|Piano"
+    },
+    "Q": {
+      "hint": "Dash dash dot dash: mostly long, one short.",
+      "examples": "Quartz|Quest|Quiet"
+    },
+    "R": {
+      "hint": "Dot dash dot: a little arch shape.",
+      "examples": "River|Rocket|Rainbow"
+    },
+    "S": {
+      "hint": "Three quick dots: 'dit-dit-dit', like a snake hiss.",
+      "examples": "Sunset|Silver|Star"
+    },
+    "T": {
+      "hint": "A single dash: the longest, simplest sound.",
+      "examples": "Tree|Thunder|Torch"
+    },
+    "U": {
+      "hint": "Dot dot dash: two short, one long.",
+      "examples": "Umbrella|Universe|Uphill"
+    },
+    "V": {
+      "hint": "Dot dot dot dash: Beethoven's Fifth Symphony.",
+      "examples": "Valley|Violet|Voyage"
+    },
+    "W": {
+      "hint": "Dot dash dash: starts short, ends long.",
+      "examples": "Waterfall|Wonder|Willow"
+    },
+    "X": {
+      "hint": "Dash dot dot dash: long, short, short, long.",
+      "examples": "Xylophone|Xenon"
+    },
+    "Y": {
+      "hint": "Dash dot dash dash: mostly dashes.",
+      "examples": "Yellow|Yonder|Yoga"
+    },
+    "Z": {
+      "hint": "Dash dash dot dot: heavy start, light end.",
+      "examples": "Zephyr|Zigzag|Zenith"
+    },
+    "fallbackHint": "No mnemonic yet for this symbol."
+  },
+  "aiChat": {
+    "openLabel": "فتح المساعد الذكي",
+    "closeLabel": "إغلاق المساعد الذكي",
+    "placeholder": "اسأل عن شفرة مورس أو التوقيت أو هذا التطبيق…",
+    "send": "إرسال",
+    "thinking": "يفكّر…",
+    "notConfigured": "أضف مفتاح API الخاص بك في الإعدادات → المساعد الذكي لبدء الدردشة.",
+    "goToSettings": "اذهب إلى الإعدادات",
+    "limitReached": "لقد وصلت إلى حد الرسائل اليومي ({{limit}}). يتم إعادة التعيين في {{resetIn}}.",
+    "messagesRemaining": "{{count}} رسالة متبقية اليوم",
+    "error": "حدث خطأ أثناء الاتصال بمزوّد الذكاء الاصطناعي. مفتاحك ورسالتك لم يتأثرا.",
+    "clearChat": "مسح المحادثة",
+    "disclaimer": "قد تكون الإجابات غير دقيقة. يستخدم مفتاح API الخاص بك وحصتك.",
+    "title": "AI Assistant"
+  }
+}
