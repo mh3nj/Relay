@@ -1,0 +1,701 @@
+{
+  "app": {
+    "name": "Relay",
+    "tagline": "Kostenlos & Offline"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "learn": "Lernen",
+    "practice": "Üben",
+    "translator": "Übersetzer",
+    "games": "Spiele",
+    "progress": "Fortschritt",
+    "encyclopedia": "Enzyklopädie",
+    "settings": "Einstellungen",
+    "freeForever": "Für immer kostenlos"
+  },
+  "common": {
+    "copy": "Kopieren",
+    "copied": "Kopiert",
+    "clear": "Löschen",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "close": "Schließen",
+    "delete": "Löschen",
+    "confirm": "Bestätigen",
+    "loading": "Laden…",
+    "error": "Fehler",
+    "success": "Erfolg",
+    "back": "Zurück",
+    "next": "Weiter",
+    "previous": "Vorherige",
+    "continue": "Fortfahren",
+    "start": "Start",
+    "stop": "Stopp",
+    "play": "Abspielen",
+    "pause": "Pause",
+    "retry": "Wiederholen",
+    "download": "Herunterladen",
+    "upload": "Hochladen",
+    "import": "Importieren",
+    "export": "Exportieren",
+    "enabled": "Aktiviert",
+    "disabled": "Deaktiviert",
+    "on": "Ein",
+    "off": "Aus",
+    "comingSoon": "{{feature}} kommt als Nächstes",
+    "characters": "{{count}} Zeichen",
+    "minutes": "{{count}} Minuten",
+    "seconds": "{{count}}s",
+    "mainNavigation": "Hauptnavigation",
+    "primaryNavigation": "Primär",
+    "chartRange": "Diagrammbereich",
+    "clearTranslation": "Übersetzung löschen",
+    "reviewWeakSymbols": "Alle schwachen Symbole überprüfen",
+    "percent": "{{percent}} percent",
+    "less": "less",
+    "more": "more",
+    "requestFailed": "Request failed.",
+    "rangeWeek": "1W",
+    "rangeMonth": "1M",
+    "rangeAll": "ALL",
+    "daySun": "Sun",
+    "dayMon": "Mon",
+    "dayTue": "Tue",
+    "dayWed": "Wed",
+    "dayThu": "Thu",
+    "dayFri": "Fri",
+    "daySat": "Sat",
+    "eg": "e.g.",
+    "playMorseFor": "Play Morse for {{char}}"
+  },
+  "errorBoundary": {
+    "description": "Relay ist auf einen unerwarteten Fehler gestoßen. Dein gespeicherter Fortschritt ist nicht betroffen. Ein Neuladen behebt das Problem normalerweise.",
+    "goHome": "Zur Startseite"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "description": "Mach dort weiter, wo du aufgehört hast, und sieh, was sich verändert hat.",
+    "startLearning": "Lernen starten",
+    "streakDays": "{{count}} Tage Serie",
+    "welcomeBack": "Willkommen zurück, Operator.",
+    "continuePrompt": "Du arbeitest gerade am Buchstaben '{{char}}'. Bleib dran.",
+    "continueLesson": "Lektion '{{char}}' fortsetzen",
+    "dailyChallenge": "Tägliche Herausforderung",
+    "dailyChallengeGoal": "Heute {{target}} richtige Antworten schaffen",
+    "startChallenge": "Herausforderung starten",
+    "overallMastery": "Gesamtbeherrschung",
+    "needsReview": "Wiederholung nötig",
+    "recentBadges": "Letzte Abzeichen",
+    "locked": "Gesperrt: {{label}}",
+    "speedProgression": "Geschwindigkeitsentwicklung (WPM)",
+    "accuracyTooltip": "Accuracy: {{accuracy}}%",
+    "greetingMorning": "Guten Morgen, Operator.",
+    "greetingAfternoon": "Guten Tag, Operator.",
+    "greetingEvening": "Guten Abend, Operator.",
+    "challengeComplete": "Gut gemacht. Die heutige Herausforderung ist geschafft.",
+    "noSpeedDataYet": "In diesem Zeitraum gibt es noch keine Zeitsitzungen.",
+    "playAGame": "Ein Spiel spielen"
+  },
+  "learn": {
+    "title": "Lernen",
+    "description": "Koch-Lektionen, die jeweils einen Buchstaben ergänzen, mit Timing und Audio zum Nachhören.",
+    "progress": "Fortschritt",
+    "character": "Zeichen",
+    "signalAnalysis": "Signalanalyse",
+    "oneUnitDuration": "Eine Einheitsdauer.",
+    "unitsWithGap": "{{count}} Einheiten, je eine Pause.",
+    "transmissionPractice": "Übertragungsübung",
+    "spaceToKey": "[Leertaste] zum Tasten",
+    "ctrlKeyHint": "oder L-Strg = Punkt, R-Strg = Strich",
+    "tapToTransmit": "Tippe oder halte die Leertaste, um '{{char}}' zu senden",
+    "mnemonic": "Merkhilfe",
+    "examples": "Beispiele",
+    "loadingProgress": "Lade deinen Fortschritt…",
+    "start": "START",
+    "signal": "SIGNAL",
+    "end": "ENDE",
+    "unitTiming": "1 dit = {{ms}}ms bei {{wpm}} WPM",
+    "stopPlayback": "Wiedergabe stoppen",
+    "playAudio": "Morse-Audio abspielen",
+    "nextCharacter": "Nächstes Zeichen",
+    "masteryGate": {
+      "progress": "{{correct}}/{{needed}} richtig, um das nächste Zeichen freizuschalten",
+      "readyHint": "Gut gemacht. Du kannst weitermachen, wann immer du bereit bist.",
+      "kochExplainer": "Die Lernreihenfolge folgt der Koch-Methode: Sie beginnt mit K und M (nicht A), weil sie sich maximal unterschiedlich anhören, was ein besseres Gehör für das Timing aufbaut, bevor kniffligere Ähnlichkeiten hinzukommen."
+    },
+    "dot": "Dot",
+    "dash": "Dash"
+  },
+  "practice": {
+    "title": "Üben",
+    "description": "Kurze Übungen zu den Zeichen, die du immer wieder verwechselst.",
+    "modes": {
+      "hearAndType": "Hören & Tippen",
+      "readAndType": "Lesen & Tippen",
+      "translateDrill": "Übersetzungsübung",
+      "flashcards": "Karteikarten",
+      "speed": "Geschwindigkeitsmodus",
+      "endless": "Endlos",
+      "memory": "Gedächtnis",
+      "morseTree": {
+        "title": "Morsebaum-Explorer",
+        "idle": "Drücke Start, um den Morsebaum zu erkunden",
+        "path": "Pfad",
+        "deadEnd": "✕ Sackgasse: zurück zur Wurzel",
+        "hint": "Zum Navigieren die Punkt-Taste (L-Strg, . oder 4) oder die Strich-Taste (R-Strg, - oder 6) drücken",
+        "pathEquals": " = {{char}}",
+        "correct": "Richtig",
+        "incorrect": "Falsch",
+        "accuracy": "Genauigkeit",
+        "streak": "Serie"
+      }
+    },
+    "hearAndType": {
+      "instructions": "Höre den Ton und tippe das Zeichen, das du gehört hast.",
+      "replay": "Wiederholen",
+      "inputPlaceholder": "Tippe das Zeichen…",
+      "correct": "Richtig!",
+      "incorrect": "Nicht ganz. Das war '{{answer}}'",
+      "inputPlaceholderShort": "Type"
+    },
+    "readAndType": {
+      "instructions": "Lies den Morsecode und tippe das dargestellte Zeichen.",
+      "inputPlaceholder": "Tippe das Zeichen…",
+      "inputPlaceholderShort": "Type"
+    },
+    "translateDrill": {
+      "instructions": "Sende den Morsecode für das angezeigte Zeichen mit . und - Tasten.",
+      "spaceToKey": "Tippe . und - direkt oder verwende L-Strg / R-Strg"
+    },
+    "endless": {
+      "instructions": "Höre zu und tippe in deinem eigenen Tempo. Kein Timer, kein Druck. Höre auf, wann immer du möchtest.",
+      "stop": "Sitzung beenden",
+      "summary": "Sitzungszusammenfassung"
+    },
+    "memory": {
+      "instructions": "Sieh dir die Sequenz an und gib sie in der richtigen Reihenfolge wieder.",
+      "watchPrompt": "Beobachten…",
+      "yourTurn": "Du bist dran. Tippe die gesehene Sequenz",
+      "sequenceLength": "Sequenz: {{length}}",
+      "bestLength": "Beste: {{length}}",
+      "roundFailed": "Das ist nicht ganz richtig. Beste Sequenz: {{length}}",
+      "startRound": "Start"
+    },
+    "flashcards": {
+      "instructions": "Drehe die Karte um, um deine Antwort zu überprüfen.",
+      "showAnswer": "Antwort anzeigen",
+      "iKnewIt": "Wusste ich",
+      "didNotKnow": "Nicht gewusst"
+    },
+    "speed": {
+      "instructions": "Tippe jedes Zeichen so schnell wie möglich, bevor die Zeit abläuft.",
+      "timeLeft": "Verbleibende Zeit",
+      "wpm": "WPM",
+      "accuracy": "Genauigkeit",
+      "streak": "Serie",
+      "sessionOver": "Sitzung abgeschlossen!",
+      "startSession": "Sitzung starten",
+      "playAgain": "Noch einmal spielen"
+    },
+    "session": {
+      "correct": "Richtig",
+      "attempts": "Versuche",
+      "endSession": "Sitzung beenden",
+      "bestStreak": "Beste Serie"
+    },
+    "focusedFilter": {
+      "label": "Fokussiertes Üben: {{chars}}",
+      "clear": "Filter löschen"
+    }
+  },
+  "games": {
+    "title": "Spiele",
+    "description": "Fünf kleine Spiele für zwischendurch, ganz ohne Lektion.",
+    "notPlayedYet": "Noch nicht gespielt",
+    "best": "Beste: {{score}}",
+    "play": "Spielen",
+    "score": "Punktzahl",
+    "topWpm": "Höchste WPM",
+    "destroyed": "Zerstört",
+    "rounds": "Runden",
+    "newHighScore": "Neuer Highscore!",
+    "morseInvaders": {
+      "title": "Morse-Invasoren",
+      "cardDescription": "Buchstaben fallen von oben. Tippe ihren Punkt/Strich-Code, bevor sie landen.",
+      "instructions": "Buchstaben fallen von oben. Tippe ihren Morsecode (Punkt/Strich), bevor sie landen. Drei Fehler und das Spiel ist aus.",
+      "hint": "Tippe auf die Tasten, drücke . / -, oder verwende L-Strg / R-Strg",
+      "bestScore": "Beste Punktzahl: {{score}}",
+      "destroyedLabel": "Zerstört",
+      "dash": "Strich",
+      "dot": "Punkt",
+      "difficulty": {
+        "easy": "Einfach (langsames Fallen)",
+        "medium": "Mittel (normal)",
+        "hard": "Schwer (schnelles Fallen)"
+      }
+    },
+    "signalRush": {
+      "title": "Signalrausch",
+      "cardDescription": "Höre zu und tippe so schnell du kannst. Die Geschwindigkeit steigt mit jeder richtigen Antwort.",
+      "instructions": "Höre zu und tippe so schnell du kannst. Die Geschwindigkeit erhöht sich mit jeder richtigen Antwort. Drei Fehler beenden den Lauf.",
+      "speedLabel": "Geschwindigkeit: {{wpm}} WPM",
+      "bestScore": "Beste Punktzahl: {{score}}",
+      "difficulty": {
+        "easy": "Einfach (sanfte Steigerung)",
+        "medium": "Mittel (normal)",
+        "hard": "Schwer (starke Steigerung)"
+      }
+    },
+    "decodeTranslate": {
+      "title": "Entschlüsseln & Übersetzen",
+      "cardDescription": "Höre ein ganzes Wort in Morsecode. Tippe das entschlüsselte Wort, bevor die Zeit abläuft.",
+      "instructions": "Höre die Morsecode-Folge und tippe dann das Wort, das sie ergibt. Mit jeder richtigen Antwort wird die Zeit knapper.",
+      "replay": "Nochmal anhören",
+      "inputPlaceholder": "Wort eingeben…",
+      "correctWord": "{{word}}, richtig!",
+      "incorrectWord": "Das war „{{word}}“",
+      "difficulty": {
+        "easy": "Einfach (3-Buchstaben-Wörter)",
+        "medium": "Mittel (5-Buchstaben-Wörter)",
+        "hard": "Schwer (Sätze & Satzzeichen)"
+      },
+      "round": "Runde {{n}}",
+      "bestScore": "Bestwert: {{score}}"
+    },
+    "morseMatch": {
+      "title": "Morse-Paare",
+      "cardDescription": "Decke Karten auf und finde zu jedem Buchstaben seinen Morsecode. Reines visuelles Gedächtnis.",
+      "instructions": "Decke jeweils zwei Karten auf, um passende Buchstaben/Morse-Paare zu finden. Alle Paare gefunden = Runde gewonnen.",
+      "pairsFound": "Paare: {{count}}/{{total}}",
+      "flips": "Aufdeckungen: {{count}}",
+      "timeBonus": "Zeitbonus",
+      "youWon": "Alle Paare gefunden!",
+      "difficulty": {
+        "easy": "Einfach (4×4)",
+        "hard": "Schwer (6×6)"
+      },
+      "bestScore": "Bestwert: {{score}}"
+    },
+    "emergencyRelay": {
+      "title": "Notruf-Staffel",
+      "cardDescription": "Reagiere auf Notrufsignale unter einem schrumpfenden Timer. Mit jedem Fehler steigt der Druck.",
+      "instructions": "Ein Notrufsignal blinkt auf. Sende den richtigen Morsecode, bevor der Timer abläuft. Fehler beschleunigen die Uhr.",
+      "timer": "{{ms}}ms",
+      "lifeLost": "Zu langsam!",
+      "bestScore": "Bestwert: {{score}}",
+      "difficulty": {
+        "easy": "Einfach (SOS + Buchstaben)",
+        "hard": "Schwer (mit Satzzeichen)"
+      }
+    },
+    "accuracy": "Genauigkeit",
+    "bestCombo": "Beste Combo",
+    "combo": "{{count}}x Combo!",
+    "efficiency": "Effizienz"
+  },
+  "progress": {
+    "title": "Fortschrittsanalyse",
+    "description": "Sieh, was du schon beherrschst und was noch Arbeit braucht.",
+    "exportReport": "Bericht exportieren",
+    "mastery": "Meisterschaft",
+    "practiceTime": "Übungszeit",
+    "currentStreak": "Aktuelle Serie",
+    "performanceTrends": "Leistungstrends",
+    "trendEmptyState": "Absolviere eine Geschwindigkeits- oder Spielesitzung, um deinen Trend zu verfolgen.",
+    "characterMastery": "Zeichenbeherrschung",
+    "mastered": "Gemeistert",
+    "learning": "Lernen",
+    "notPracticedYet": "Noch nicht geübt",
+    "accuracyLabel": "Gen.: {{percent}}% ({{attempts}} Versuche)",
+    "confusingPairs": "Verwechslungspaare",
+    "noMixups": "Noch keine Verwechslungen aufgezeichnet. Übe weiter und dies füllt sich automatisch.",
+    "mixupCount": "{{count}} Verwechslung",
+    "mixupCount_other": "{{count}} Verwechslungen",
+    "focusedPractice": "Fokussiertes Üben",
+    "wpmLabel": "WPM",
+    "vs": "gegen",
+    "level": "Level {{level}}",
+    "xpProgress": "{{current}} / {{total}} XP",
+    "activityHeatmap": "Aktivität",
+    "dueForReview": "Zur Wiederholung fällig",
+    "dueForReviewEmpty": "Momentan nichts fällig. Übe weiter, um das so zu halten.",
+    "reviewNow": "Jetzt wiederholen",
+    "badgesTitle": "Abzeichen",
+    "badges": {
+      "firstLesson": "Erste Lektion",
+      "halfway": "Halbzeit",
+      "fullAlphabet": "Komplettes Alphabet",
+      "wpm10": "10 WPM Spitze",
+      "wpm20": "20 WPM Spitze",
+      "perfectEar": "Perfektes Gehör",
+      "sharpShooter": "Scharfschütze",
+      "streak3": "3 Tage Serie",
+      "streak7": "7 Tage Serie",
+      "streak30": "30 Tage Serie",
+      "gameExplorer": "Spieleentdecker",
+      "level5": "Level 5",
+      "level10": "Level 10"
+    },
+    "activeDaysThisMonth": "{{count}} active days this month",
+    "masteryLabel": "{{percent}}% mastery"
+  },
+  "encyclopedia": {
+    "title": "Enzyklopädie",
+    "description": "Jedes Zeichen mit Code, Timing und ein wenig Geschichte.",
+    "searchPlaceholder": "Zeichen oder Phonetik suchen…",
+    "categories": {
+      "all": "Alle",
+      "letter": "Alphabet",
+      "number": "Zahlen",
+      "punctuation": "Satzzeichen",
+      "prosign": "Prosigns"
+    },
+    "noResults": "Keine Zeichen entsprechen deiner Suche.",
+    "prosignsTitle": "Prosigns & Spezielle Signale",
+    "abbreviationsTitle": "Häufige Abkürzungen",
+    "historyTitle": "Eine kurze Geschichte",
+    "historyText": "Der Morsecode wurde in den 1830er und 1840er Jahren von Samuel Morse und Alfred Vail für den elektrischen Telegrafen entwickelt. Der ursprüngliche amerikanische Morsecode wurde später zum heute verwendeten internationalen Morsecode weiterentwickelt, der das Timing standardisiert und Unterstützung für akzentuierte Buchstaben hinzufügt. Lange nachdem die Telegrafie verschwand, lebte der Code im Amateurfunk, in der Luftfahrt und in der Schifffahrt weiter, geschätzt dafür, wie weit ein einfaches Ein/Aus-Signal durch Rauschen tragen kann, das Sprache übertönen würde."
+  },
+  "translator": {
+    "title": "Übersetzer",
+    "description": "Übersetze Text in Morsecode und zurück oder dekodiere eine Audioaufnahme. Funktioniert offline.",
+    "plainText": "Klartext",
+    "morseCode": "Morsecode",
+    "textPlaceholder": "Text zum Übersetzen eingeben...",
+    "morsePlaceholder": ".. --- ...",
+    "swapDirection": "Übersetzungsrichtung tauschen",
+    "decodeAudio": "Audio dekodieren",
+    "decodeAudioDescription": "Lade eine Morsecode-Aufnahme hoch, die auf diesem Gerät dekodiert wird.",
+    "clickToUpload": "Klicken zum Hochladen",
+    "orDragAndDrop": "oder per Drag & Drop",
+    "fileSizeLimit": "Audiodateien bis zu 10 MB",
+    "decoding": "Dekodieren…",
+    "decoded": "Dekodiert, Konfidenz {{confidence}}%",
+    "unrecognizedSequences": "Nicht erkannte Sequenzen: {{sequences}}",
+    "useThisText": "Diesen Text verwenden",
+    "fileTooLarge": "Die Datei ist zu groß. Bitte unter 10 MB halten.",
+    "notAudioFile": "Das sieht nicht wie eine Audiodatei aus.",
+    "noSignalDetected": "In dieser Aufnahme wurde kein Morse-Signal erkannt.",
+    "decodeFailed": "Diese Datei konnte nicht dekodiert werden. Sie könnte beschädigt oder in einem nicht unterstützten Format sein.",
+    "speedWpm": "Geschwindigkeit (WPM)",
+    "toneHz": "Ton (Hz)",
+    "exportTxt": "TXT exportieren",
+    "exportJson": "JSON exportieren",
+    "downloadWav": "WAV herunterladen",
+    "referencePdf": "PDF-Referenz",
+    "typeToSeeSignal": "Gib etwas ein, um das Signal zu sehen.",
+    "dictionary": {
+      "title": "Wörterbuch",
+      "default": "Standardalphabet",
+      "new": "Neues Wörterbuch",
+      "namePlaceholder": "Wörterbuchname",
+      "duplicate": "Duplizieren",
+      "rename": "Umbenennen",
+      "delete": "Löschen",
+      "deleteConfirm": "Dieses Wörterbuch löschen? Dies kann nicht rückgängig gemacht werden.",
+      "export": "Exportieren",
+      "import": "Importieren",
+      "importFailed": "Diese Datei ist kein gültiger Wörterbuchexport.",
+      "editorTitle": "Wörterbuch bearbeiten",
+      "character": "Zeichen",
+      "code": "Morsecode",
+      "addEntry": "Zeichen hinzufügen",
+      "conflictWarning": "'{{code}}' wird bereits von '{{other}}' verwendet, daher wird die Dekodierung mehrdeutig.",
+      "invalidCode": "Nur Punkte und Striche sind erlaubt.",
+      "noEntries": "Noch keine benutzerdefinierten Zeichen. Füge unten eines hinzu.",
+      "removeEntry": "Entfernen"
+    },
+    "script": {
+      "title": "Script / Language",
+      "default": "Default (ITU)",
+      "fa": "Persian (فارسی)",
+      "ar": "Arabic (العربية)",
+      "tr": "Turkish (Türkçe)",
+      "fr": "French (Français)",
+      "de": "German (Deutsch)",
+      "es": "Spanish (Español)",
+      "ru": "Russian (Русский)",
+      "ko": "Korean (한국어)",
+      "ja": "Japanese (日本語)",
+      "zh": "Chinese (中文)",
+      "el": "Greek (Ελληνικά)",
+      "he": "Hebrew (עברית)"
+    }
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "description": "Design, Audio, Timing, Backups und der KI-Assistent.",
+    "sections": {
+      "language": "Sprache",
+      "backup": "Daten & Backup",
+      "aiAssistant": "KI-Assistent",
+      "appearance": "Erscheinungsbild",
+      "audio": "Audio & Timing",
+      "accessibility": "Barrierefreiheit",
+      "shortcuts": "Tastaturkürzel"
+    },
+    "language": {
+      "description": "Wähle die Anzeigesprache der App. Die meisten Bereiche sind übersetzt, einzelne Texte können noch auf Englisch erscheinen.",
+      "placeholderBadge": "Platzhalter"
+    },
+    "backup": {
+      "description": "Alles, was du tust, wird nur auf diesem Gerät gespeichert. Sichere es regelmäßig, damit du keine Fortschritte verlierst.",
+      "autoBackup": "Automatisches lokales Backup",
+      "autoBackupDescription": "Erstelle still und leise in einem Intervall eine Momentaufnahme deines Fortschritts auf diesem Gerät, ohne jedes Mal eine Datei herunterzuladen.",
+      "interval": "Backup-Intervall",
+      "lastBackup": "Letztes automatisches Backup: {{time}}",
+      "neverBackedUp": "Noch kein automatisches Backup",
+      "downloadNow": "Jetzt Backup herunterladen",
+      "saveToFolder": "In synchronisierten Ordner speichern",
+      "saveToFolderDescription": "Wähle einen mit Google Drive, Dropbox oder iCloud synchronisierten Ordner aus, und Relay schreibt dein Backup direkt dorthin. Kein Konto erforderlich.",
+      "saveToFolderUnsupported": "Dein Browser unterstützt das direkte Speichern in einem Ordner nicht. Verwende stattdessen „Jetzt Backup herunterladen\" und verschiebe die Datei dann in deinen synchronisierten Ordner.",
+      "restoreFromFile": "Aus Datei wiederherstellen",
+      "restoreWarning": "Die Wiederherstellung überschreibt deinen aktuellen Fortschritt.",
+      "restoreSuccess": "Fortschritt erfolgreich wiederhergestellt.",
+      "restoreFailed": "Diese Datei sieht nicht wie ein gültiges Relay-Backup aus.",
+      "factoryReset": "Zurücksetzen",
+      "factoryResetWarning": "Dies löscht dauerhaft alle Fortschritte, Statistiken und Einstellungen auf diesem Gerät. Dies kann nicht rückgängig gemacht werden.",
+      "factoryResetConfirm": "Ja, alles löschen",
+      "resetFailed": "Etwas ist schiefgelaufen und deine Daten wurden nicht zurückgesetzt. Es wurde nichts gelöscht."
+    },
+    "ai": {
+      "description": "Stelle Fragen zu Morsecode, Timing oder zur Funktionsweise der App, direkt in Relay. Dies verwendet deinen eigenen API-Schlüssel und sendet niemals etwas außer deinen Chat-Nachrichten.",
+      "provider": "Anbieter",
+      "apiKey": "API-Schlüssel",
+      "apiKeyPlaceholder": "API-Schlüssel einfügen",
+      "apiKeyHelp": "Wird nur im lokalen Speicher dieses Browsers gespeichert. Niemals in Backups oder Exporten enthalten. Niemals woanders hingeschickt außer an den von dir gewählten Anbieter.",
+      "showKey": "Schlüssel anzeigen",
+      "hideKey": "Schlüssel verbergen",
+      "clearKey": "Schlüssel entfernen",
+      "costWarning": "Du bist für alle Kosten deines API-Anbieters verantwortlich. Wir empfehlen, vor der Nutzung dieser Funktion ein Ausgabenlimit oder eine Budgetwarnung im Dashboard deines Anbieters einzurichten.",
+      "dailyLimit": "Tägliches Nachrichtenlimit",
+      "dailyLimitHelp": "Eine harte Grenze zur Vermeidung unkontrollierter Kosten. Wird alle 24 Stunden zurückgesetzt.",
+      "maxTokens": "Maximale Antwortlänge",
+      "enable": "KI-Assistent aktivieren",
+      "notConfigured": "Füge einen API-Schlüssel hinzu, um den Assistenten zu aktivieren.",
+      "providerOpenAI": "OpenAI",
+      "providerAnthropic": "Anthropic",
+      "providerCustom": "Custom (OpenAI-compatible)",
+      "endpointUrl": "Endpoint URL",
+      "endpointPlaceholder": "https://your-provider.example.com/v1/chat/completions"
+    },
+    "appearance": {
+      "themeLabel": "Design",
+      "themes": {
+        "dark": "Standard Dunkel",
+        "light": "Standard Hell",
+        "midnight": "Mitternacht",
+        "ocean": "Ozean",
+        "forest": "Wald",
+        "coffee": "Kaffee",
+        "frost": "Frost",
+        "sunrise": "Sonnenaufgang"
+      },
+      "installTitle": "Relay installieren",
+      "installDescription": "Installiere die App für ein vollbildfähiges, offlinefähiges Erlebnis mit eigenem Symbol.",
+      "install": "App installieren",
+      "installed": "Bereits installiert",
+      "installUnsupported": "Dein Browser unterstützt hier keine Ein-Klick-Installation. Suche stattdessen in deinem Browsermenü nach „Zum Startbildschirm hinzufügen\" oder „Installieren\"."
+    },
+    "audioSettings": {
+      "title": "Standardgeschwindigkeit & Ton",
+      "description": "Diese Standardwerte gelten beim nächsten Öffnen von Lernen, Üben oder einem Spiel. Der Übersetzer behält seine eigenen Sitzungssteuerungen.",
+      "wpm": "Standardgeschwindigkeit (WPM)",
+      "farnsworth": "Farnsworth-Abstand",
+      "farnsworthOff": "Aus (der Zeichengeschwindigkeit entsprechen)",
+      "farnsworthHelp": "Verlangsamt den Abstand zwischen Buchstaben/Wörtern, während die Geschwindigkeit jedes Buchstabens schnell bleibt, eine klassische Technik zum Lernen mit hoher Zeichengeschwindigkeit.",
+      "frequency": "Ton (Hz)",
+      "volume": "Lautstärke",
+      "reset": "Auf Standard zurücksetzen"
+    },
+    "accessibility": {
+      "highContrast": "Hoher Kontrast",
+      "highContrastHelp": "Verstärkt Rahmen und Trennlinien für eine bessere visuelle Unterscheidung.",
+      "textSize": "Textgröße",
+      "textSizes": {
+        "small": "Klein",
+        "default": "Standard",
+        "large": "Groß"
+      },
+      "reducedMotion": "Reduzierte Bewegung",
+      "reducedMotionAuto": "Systemeinstellung folgen",
+      "reducedMotionOn": "Bewegung immer reduzieren",
+      "reducedMotionOff": "Bewegung immer erlauben"
+    },
+    "shortcuts": {
+      "title": "Tastaturkürzel",
+      "context": "Kontext",
+      "action": "Aktion",
+      "key": "Taste",
+      "learnTransmit": "Gedrückt halten, um Morsecode für das aktuelle Zeichen zu senden",
+      "morseInvadersDot": "Punkt senden",
+      "morseInvadersDash": "Strich senden",
+      "spaceKey": "Leertaste",
+      "dotKey": ". oder 4",
+      "dashKey": "- oder 6"
+    }
+  },
+  "mnemonics": {
+    "0": {
+      "hint": "Five dashes: the longest number.",
+      "examples": "Zero"
+    },
+    "1": {
+      "hint": "One dot, four dashes.",
+      "examples": "First"
+    },
+    "2": {
+      "hint": "Two dots, three dashes.",
+      "examples": "Second"
+    },
+    "3": {
+      "hint": "Three dots, two dashes.",
+      "examples": "Third"
+    },
+    "4": {
+      "hint": "Four dots, one dash.",
+      "examples": "Fourth"
+    },
+    "5": {
+      "hint": "Five dots: all short.",
+      "examples": "Fifth"
+    },
+    "6": {
+      "hint": "One dash, four dots.",
+      "examples": "Sixth"
+    },
+    "7": {
+      "hint": "Two dashes, three dots.",
+      "examples": "Seventh"
+    },
+    "8": {
+      "hint": "Three dashes, two dots.",
+      "examples": "Eighth"
+    },
+    "9": {
+      "hint": "Four dashes, one dot.",
+      "examples": "Ninth"
+    },
+    "A": {
+      "hint": "A short dot, then a long dash: like saying 'a-BOUT'.",
+      "examples": "Apple|Around|Ago"
+    },
+    "B": {
+      "hint": "One long dash, then three short dots.",
+      "examples": "Banana|Bottle|Beacon"
+    },
+    "C": {
+      "hint": "Dash dot dash dot: a rhythmic, rocking pattern.",
+      "examples": "Coconut|Circle|Compass"
+    },
+    "D": {
+      "hint": "One dash, two dots: 'DAH-dit-dit'.",
+      "examples": "Dog|Delta|Drum"
+    },
+    "E": {
+      "hint": "The shortest, sharpest sound: just one dot.",
+      "examples": "Echo|Egg|Elephant"
+    },
+    "F": {
+      "hint": "Dot dot dash dot: fast and fluttery.",
+      "examples": "Falcon|Forest|Flute"
+    },
+    "G": {
+      "hint": "Two dashes, then a dot: 'GAH-gah-dit'.",
+      "examples": "Garden|Guitar|Galaxy"
+    },
+    "H": {
+      "hint": "Four quick dots in a row: like a giggle.",
+      "examples": "Harbor|Hello|Horizon"
+    },
+    "I": {
+      "hint": "Two short dots: brief and light.",
+      "examples": "Island|Ice|Igloo"
+    },
+    "J": {
+      "hint": "One dot, three dashes: starts short, stays long.",
+      "examples": "Jungle|Jupiter|Journey"
+    },
+    "K": {
+      "hint": "Dash dot dash: 'KAH-dit-DAH'.",
+      "examples": "Kite|Koala|Kettle"
+    },
+    "L": {
+      "hint": "Dot dash dot dot: a lilting little run.",
+      "examples": "Lantern|Lighthouse|Lemon"
+    },
+    "M": {
+      "hint": "Two dashes: 'MAH-dah', slow and heavy.",
+      "examples": "Mountain|Moon|Music"
+    },
+    "N": {
+      "hint": "One dash, one dot: 'NAH-dit'.",
+      "examples": "Nest|North|Nova"
+    },
+    "O": {
+      "hint": "Three long dashes: the roundest, heaviest letter.",
+      "examples": "Ocean|Orbit|Oasis"
+    },
+    "P": {
+      "hint": "Dot dash dash dot: bookended by dots.",
+      "examples": "Puzzle|Planet|Piano"
+    },
+    "Q": {
+      "hint": "Dash dash dot dash: mostly long, one short.",
+      "examples": "Quartz|Quest|Quiet"
+    },
+    "R": {
+      "hint": "Dot dash dot: a little arch shape.",
+      "examples": "River|Rocket|Rainbow"
+    },
+    "S": {
+      "hint": "Three quick dots: 'dit-dit-dit', like a snake hiss.",
+      "examples": "Sunset|Silver|Star"
+    },
+    "T": {
+      "hint": "A single dash: the longest, simplest sound.",
+      "examples": "Tree|Thunder|Torch"
+    },
+    "U": {
+      "hint": "Dot dot dash: two short, one long.",
+      "examples": "Umbrella|Universe|Uphill"
+    },
+    "V": {
+      "hint": "Dot dot dot dash: Beethoven's Fifth Symphony.",
+      "examples": "Valley|Violet|Voyage"
+    },
+    "W": {
+      "hint": "Dot dash dash: starts short, ends long.",
+      "examples": "Waterfall|Wonder|Willow"
+    },
+    "X": {
+      "hint": "Dash dot dot dash: long, short, short, long.",
+      "examples": "Xylophone|Xenon"
+    },
+    "Y": {
+      "hint": "Dash dot dash dash: mostly dashes.",
+      "examples": "Yellow|Yonder|Yoga"
+    },
+    "Z": {
+      "hint": "Dash dash dot dot: heavy start, light end.",
+      "examples": "Zephyr|Zigzag|Zenith"
+    },
+    "fallbackHint": "No mnemonic yet for this symbol."
+  },
+  "aiChat": {
+    "openLabel": "KI-Assistent öffnen",
+    "closeLabel": "KI-Assistent schließen",
+    "placeholder": "Frage zu Morsecode, Timing oder dieser App…",
+    "send": "Senden",
+    "thinking": "Denke nach…",
+    "notConfigured": "Füge deinen API-Schlüssel in Einstellungen → KI-Assistent hinzu, um mit dem Chatten zu beginnen.",
+    "goToSettings": "Zu den Einstellungen",
+    "limitReached": "Du hast das heutige Nachrichtenlimit erreicht ({{limit}}). Dies wird in {{resetIn}} zurückgesetzt.",
+    "messagesRemaining": "{{count}} Nachrichten heute übrig",
+    "error": "Bei der Kontaktaufnahme mit dem KI-Anbieter ist ein Fehler aufgetreten. Dein Schlüssel und deine Nachricht waren nicht betroffen.",
+    "clearChat": "Unterhaltung löschen",
+    "disclaimer": "Antworten können ungenau sein. Verwendet deinen eigenen API-Schlüssel und dein Kontingent.",
+    "title": "AI Assistant"
+  }
+}
