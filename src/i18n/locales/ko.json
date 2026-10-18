@@ -1,0 +1,701 @@
+{
+  "app": {
+    "name": "Relay",
+    "tagline": "무료 & 오프라인"
+  },
+  "nav": {
+    "dashboard": "대시보드",
+    "learn": "학습",
+    "practice": "연습",
+    "translator": "번역기",
+    "games": "게임",
+    "progress": "진행 상황",
+    "encyclopedia": "백과사전",
+    "settings": "설정",
+    "freeForever": "영원히 무료"
+  },
+  "common": {
+    "copy": "복사",
+    "copied": "복사됨",
+    "clear": "지우기",
+    "save": "저장",
+    "cancel": "취소",
+    "close": "닫기",
+    "delete": "삭제",
+    "confirm": "확인",
+    "loading": "로딩 중…",
+    "error": "오류",
+    "success": "성공",
+    "back": "뒤로",
+    "next": "다음",
+    "previous": "이전",
+    "continue": "계속",
+    "start": "시작",
+    "stop": "중지",
+    "play": "재생",
+    "pause": "일시정지",
+    "retry": "재시도",
+    "download": "다운로드",
+    "upload": "업로드",
+    "import": "가져오기",
+    "export": "내보내기",
+    "enabled": "활성화",
+    "disabled": "비활성화",
+    "on": "켜짐",
+    "off": "꺼짐",
+    "comingSoon": "{{feature}} 기능이 다음에 준비됩니다",
+    "characters": "{{count}}자",
+    "minutes": "{{count}}분",
+    "seconds": "{{count}}초",
+    "mainNavigation": "메인 내비게이션",
+    "primaryNavigation": "기본",
+    "chartRange": "차트 범위",
+    "clearTranslation": "번역 지우기",
+    "reviewWeakSymbols": "취약한 기호 모두 복습",
+    "percent": "{{percent}} percent",
+    "less": "less",
+    "more": "more",
+    "requestFailed": "Request failed.",
+    "rangeWeek": "1W",
+    "rangeMonth": "1M",
+    "rangeAll": "ALL",
+    "daySun": "Sun",
+    "dayMon": "Mon",
+    "dayTue": "Tue",
+    "dayWed": "Wed",
+    "dayThu": "Thu",
+    "dayFri": "Fri",
+    "daySat": "Sat",
+    "eg": "e.g.",
+    "playMorseFor": "Play Morse for {{char}}"
+  },
+  "errorBoundary": {
+    "description": "Relay에 예상치 못한 오류가 발생했습니다. 저장된 진행 상황은 안전합니다. 보통 새로고침으로 해결됩니다.",
+    "goHome": "대시보드로 이동"
+  },
+  "dashboard": {
+    "title": "대시보드",
+    "description": "멈춘 곳에서 이어서 하고 무엇이 달라졌는지 확인하세요.",
+    "startLearning": "학습 시작",
+    "streakDays": "{{count}}일 연속",
+    "welcomeBack": "돌아오신 것을 환영합니다, 오퍼레이터.",
+    "continuePrompt": "현재 '{{char}}' 문자를 학습 중입니다. 연속 기록을 유지하세요.",
+    "continueLesson": "'{{char}}' 레슨 계속하기",
+    "dailyChallenge": "일일 도전",
+    "dailyChallengeGoal": "오늘 {{target}}개의 정답을 맞히세요",
+    "startChallenge": "도전 시작",
+    "overallMastery": "전체 숙련도",
+    "needsReview": "복습 필요",
+    "recentBadges": "최근 배지",
+    "locked": "잠김: {{label}}",
+    "speedProgression": "속도 진행 (WPM)",
+    "accuracyTooltip": "Accuracy: {{accuracy}}%",
+    "greetingMorning": "좋은 아침입니다, 오퍼레이터.",
+    "greetingAfternoon": "좋은 오후입니다, 오퍼레이터.",
+    "greetingEvening": "좋은 저녁입니다, 오퍼레이터.",
+    "challengeComplete": "잘하셨어요. 오늘의 챌린지를 완료했습니다.",
+    "noSpeedDataYet": "이 기간에는 아직 시간 측정 세션이 없습니다.",
+    "playAGame": "게임 플레이"
+  },
+  "learn": {
+    "title": "학습",
+    "description": "한 번에 한 글자씩 늘리는 Koch 방식 레슨. 타이밍과 다시 들을 수 있는 오디오가 함께합니다.",
+    "progress": "진행률",
+    "character": "문자",
+    "signalAnalysis": "신호 분석",
+    "oneUnitDuration": "한 단위 지속 시간.",
+    "unitsWithGap": "{{count}}단위, 각각 한 간격.",
+    "transmissionPractice": "송신 연습",
+    "spaceToKey": "[스페이스] 키 입력",
+    "ctrlKeyHint": "또는 L-Ctrl = 점, R-Ctrl = 선",
+    "tapToTransmit": "스페이스바를 눌러 '{{char}}' 전송",
+    "mnemonic": "연상법",
+    "examples": "예시",
+    "loadingProgress": "진행 상황 불러오는 중…",
+    "start": "시작",
+    "signal": "신호",
+    "end": "종료",
+    "unitTiming": "1 dit = {{ms}}ms @ {{wpm}} WPM",
+    "stopPlayback": "재생 중지",
+    "playAudio": "모스 오디오 재생",
+    "nextCharacter": "다음 문자",
+    "masteryGate": {
+      "progress": "다음 문자 잠금 해제에 {{correct}}/{{needed}}개 정답 필요",
+      "readyHint": "잘 하셨습니다. 준비가 되면 언제든지 넘어가세요.",
+      "kochExplainer": "학습 순서는 Koch 방법을 따릅니다: K와 M으로 시작합니다(A가 아닌). 그 이유는 이 두 글자가 청각적으로 가장 다르게 들리기 때문에, 까다로운 유사 문자를 추가하기 전에 더 강한 청각 타이밍 감각을 기를 수 있습니다."
+    },
+    "dot": "Dot",
+    "dash": "Dash"
+  },
+  "practice": {
+    "title": "연습",
+    "description": "자꾸 헷갈리는 기호에 집중하는 짧은 연습.",
+    "modes": {
+      "hearAndType": "듣고 입력",
+      "readAndType": "읽고 입력",
+      "translateDrill": "번역 훈련",
+      "flashcards": "플래시카드",
+      "speed": "속도 모드",
+      "endless": "무한",
+      "memory": "기억력",
+      "morseTree": {
+        "title": "모스 트리 탐색기",
+        "idle": "시작을 눌러 모스 트리를 탐색하세요",
+        "path": "경로",
+        "deadEnd": "✕ 막다른 길: 루트로 돌아갑니다",
+        "hint": "이동하려면 점 키(L-Ctrl, . 또는 4) 또는 선 키(R-Ctrl, - 또는 6)를 누르세요",
+        "pathEquals": " = {{char}}",
+        "correct": "정답",
+        "incorrect": "오답",
+        "accuracy": "정확도",
+        "streak": "연속"
+      }
+    },
+    "hearAndType": {
+      "instructions": "음색을 듣고, 들은 문자를 입력하세요.",
+      "replay": "다시 듣기",
+      "inputPlaceholder": "문자 입력…",
+      "correct": "정답!",
+      "incorrect": "틀렸습니다. 정답은 '{{answer}}'입니다",
+      "inputPlaceholderShort": "Type"
+    },
+    "readAndType": {
+      "instructions": "모스 부호를 읽고, 해당하는 문자를 입력하세요.",
+      "inputPlaceholder": "문자 입력…",
+      "inputPlaceholderShort": "Type"
+    },
+    "translateDrill": {
+      "instructions": "표시된 문자에 해당하는 모스 부호를 .과 - 키를 사용하여 입력하세요.",
+      "spaceToKey": ".과 -를 직접 입력하거나, L-Ctrl / R-Ctrl을 사용하세요"
+    },
+    "endless": {
+      "instructions": "자신의 속도로 듣고 입력하세요. 타이머 없음, 압박 없음. 언제든지 중단할 수 있습니다.",
+      "stop": "세션 중단",
+      "summary": "세션 요약"
+    },
+    "memory": {
+      "instructions": "순서를 지켜본 후, 그대로 재현하세요.",
+      "watchPrompt": "관찰 중…",
+      "yourTurn": "당신의 차례. 본 순서를 입력하세요",
+      "sequenceLength": "순서: {{length}}",
+      "bestLength": "최고: {{length}}",
+      "roundFailed": "정확하지 않습니다. 최고 순서: {{length}}",
+      "startRound": "시작"
+    },
+    "flashcards": {
+      "instructions": "카드를 뒤집어 답을 확인하세요.",
+      "showAnswer": "정답 보기",
+      "iKnewIt": "알고 있었어요",
+      "didNotKnow": "몰랐어요"
+    },
+    "speed": {
+      "instructions": "시간이 다 가기 전에 각 문자를 최대한 빨리 입력하세요.",
+      "timeLeft": "남은 시간",
+      "wpm": "WPM",
+      "accuracy": "정확도",
+      "streak": "연속",
+      "sessionOver": "세션 완료!",
+      "startSession": "세션 시작",
+      "playAgain": "다시 하기"
+    },
+    "session": {
+      "correct": "정답",
+      "attempts": "시도",
+      "endSession": "세션 종료",
+      "bestStreak": "최고 연속"
+    },
+    "focusedFilter": {
+      "label": "집중 연습: {{chars}}",
+      "clear": "필터 지우기"
+    }
+  },
+  "games": {
+    "title": "게임",
+    "description": "레슨 없이 연습하고 싶을 때 쓰는 다섯 가지 작은 게임.",
+    "notPlayedYet": "아직 플레이하지 않음",
+    "best": "최고: {{score}}",
+    "play": "플레이",
+    "score": "점수",
+    "topWpm": "최고 WPM",
+    "destroyed": "격추",
+    "rounds": "라운드",
+    "newHighScore": "신기록!",
+    "morseInvaders": {
+      "title": "모스 인베이더",
+      "cardDescription": "문자가 위에서 떨어집니다. 떨어지기 전에 점/선 코드를 입력하세요.",
+      "instructions": "문자가 위에서 떨어집니다. 떨어지기 전에 모스 부호(점/선)를 입력하세요. 세 번 놓치면 게임 오버입니다.",
+      "hint": "버튼을 누르거나, . / -를 입력하거나, L-Ctrl / R-Ctrl을 사용하세요",
+      "bestScore": "최고 점수: {{score}}",
+      "destroyedLabel": "격추",
+      "dash": "선",
+      "dot": "점",
+      "difficulty": {
+        "easy": "쉬움 (느린 낙하)",
+        "medium": "보통 (기본)",
+        "hard": "어려움 (빠른 낙하)"
+      }
+    },
+    "signalRush": {
+      "title": "신호 러시",
+      "cardDescription": "듣고 최대한 빨리 입력하세요. 정답을 맞힐 때마다 속도가 올라갑니다.",
+      "instructions": "듣고 최대한 빨리 입력하세요. 정답을 맞힐 때마다 속도가 증가합니다. 세 번 실패하면 종료됩니다.",
+      "speedLabel": "속도: {{wpm}} WPM",
+      "bestScore": "최고 점수: {{score}}",
+      "difficulty": {
+        "easy": "쉬움 (완만한 가속)",
+        "medium": "보통 (기본)",
+        "hard": "어려움 (급격한 가속)"
+      }
+    },
+    "decodeTranslate": {
+      "title": "해독과 번역",
+      "cardDescription": "모스 부호로 된 단어를 듣고, 시간이 다 되기 전에 해독한 단어를 입력하세요.",
+      "instructions": "모스 부호 순서를 듣고 그것이 만드는 단어를 입력하세요. 정답을 맞힐 때마다 시간이 줄어듭니다.",
+      "replay": "다시 듣기",
+      "inputPlaceholder": "단어를 입력하세요…",
+      "correctWord": "{{word}}, 정답!",
+      "incorrectWord": "정답은 '{{word}}'였습니다",
+      "difficulty": {
+        "easy": "쉬움 (3글자 단어)",
+        "medium": "보통 (5글자 단어)",
+        "hard": "어려움 (문장과 문장부호)"
+      },
+      "round": "{{n}} 라운드",
+      "bestScore": "최고 점수: {{score}}"
+    },
+    "morseMatch": {
+      "title": "모스 매칭",
+      "cardDescription": "카드를 뒤집어 각 알파벳과 모스 부호를 짝지으세요. 순수한 시각 기억력 게임.",
+      "instructions": "한 번에 카드 두 장을 뒤집어 알파벳/모스 부호 짝을 찾으세요. 모든 짝을 찾으면 라운드 승리.",
+      "pairsFound": "짝: {{count}}/{{total}}",
+      "flips": "뒤집기: {{count}}",
+      "timeBonus": "시간 보너스",
+      "youWon": "모든 짝을 찾았습니다!",
+      "difficulty": {
+        "easy": "쉬움 (4×4)",
+        "hard": "어려움 (6×6)"
+      },
+      "bestScore": "최고 점수: {{score}}"
+    },
+    "emergencyRelay": {
+      "title": "긴급 중계",
+      "cardDescription": "줄어드는 타이머 속에서 조난 신호에 응답하세요. 실수할 때마다 압박이 커집니다.",
+      "instructions": "조난 신호가 깜빡입니다. 타이머가 끝나기 전에 올바른 모스 부호를 보내세요. 실수하면 시계가 빨라집니다.",
+      "timer": "{{ms}}ms",
+      "lifeLost": "너무 느립니다!",
+      "bestScore": "최고 점수: {{score}}",
+      "difficulty": {
+        "easy": "쉬움 (SOS + 알파벳)",
+        "hard": "어려움 (문장부호 포함)"
+      }
+    },
+    "accuracy": "정확도",
+    "bestCombo": "최고 콤보",
+    "combo": "{{count}}x 콤보!",
+    "efficiency": "효율"
+  },
+  "progress": {
+    "title": "진행 분석",
+    "description": "무엇을 익혔고 무엇이 더 필요한지 확인하세요.",
+    "exportReport": "보고서 내보내기",
+    "mastery": "숙련도",
+    "practiceTime": "연습 시간",
+    "currentStreak": "현재 연속 기록",
+    "performanceTrends": "성능 추세",
+    "trendEmptyState": "속도 모드 또는 게임 세션을 완료하면 추세 추적이 시작됩니다.",
+    "characterMastery": "문자 숙련도",
+    "mastered": "마스터함",
+    "learning": "학습 중",
+    "notPracticedYet": "아직 연습하지 않음",
+    "accuracyLabel": "정확도: {{percent}}% ({{attempts}}회 시도)",
+    "confusingPairs": "혼동 쌍",
+    "noMixups": "아직 기록된 혼동이 없습니다. 계속 연습하면 자동으로 채워집니다.",
+    "mixupCount": "혼동 {{count}}회",
+    "mixupCount_other": "혼동 {{count}}회",
+    "focusedPractice": "집중 연습",
+    "wpmLabel": "WPM",
+    "vs": "vs",
+    "level": "레벨 {{level}}",
+    "xpProgress": "{{current}} / {{total}} XP",
+    "activityHeatmap": "활동",
+    "dueForReview": "복습 예정",
+    "dueForReviewEmpty": "현재 복습할 항목이 없습니다. 계속 연습하세요.",
+    "reviewNow": "지금 복습",
+    "badgesTitle": "배지",
+    "badges": {
+      "firstLesson": "첫 레슨",
+      "halfway": "절반 도달",
+      "fullAlphabet": "전체 알파벳",
+      "wpm10": "10 WPM 달성",
+      "wpm20": "20 WPM 달성",
+      "perfectEar": "완벽한 귀",
+      "sharpShooter": "명사수",
+      "streak3": "3일 연속",
+      "streak7": "7일 연속",
+      "streak30": "30일 연속",
+      "gameExplorer": "게임 탐험가",
+      "level5": "레벨 5",
+      "level10": "레벨 10"
+    },
+    "activeDaysThisMonth": "{{count}} active days this month",
+    "masteryLabel": "{{percent}}% mastery"
+  },
+  "encyclopedia": {
+    "title": "백과사전",
+    "description": "모든 문자를 부호, 타이밍, 짧은 역사와 함께.",
+    "searchPlaceholder": "문자 또는 발음 검색…",
+    "categories": {
+      "all": "전체",
+      "letter": "알파벳",
+      "number": "숫자",
+      "punctuation": "문장부호",
+      "prosign": "프로사인"
+    },
+    "noResults": "검색 결과가 없습니다.",
+    "prosignsTitle": "프로사인 및 특수 신호",
+    "abbreviationsTitle": "일반 약어",
+    "historyTitle": "간략한 역사",
+    "historyText": "모스 부호는 1830~40년대에 새뮤얼 모스와 알프레드 베일에 의해 전신기용으로 개발되었습니다. 원래의 미국식 모스 부호는 나중에 오늘날 사용되는 국제 모스 부호로 개량되어 타이밍이 표준화되고 악센트 문자가 추가되었습니다. 전신 시대가 지난 후에도 이 부호는 아마추어 무선, 항공, 해상 통신에서 계속 사용되었습니다. 단순한 온/오프 신호가 잡음 속에서도 멀리 전달되기 때문입니다."
+  },
+  "translator": {
+    "title": "번역기",
+    "description": "텍스트를 모스 부호로, 또는 그 반대로 바꾸고 오디오 녹음을 해독하세요. 오프라인에서도 됩니다.",
+    "plainText": "일반 텍스트",
+    "morseCode": "모스 부호",
+    "textPlaceholder": "번역할 텍스트 입력...",
+    "morsePlaceholder": ".. --- ...",
+    "swapDirection": "번역 방향 전환",
+    "decodeAudio": "오디오 디코딩",
+    "decodeAudioDescription": "모스 부호 녹음을 업로드하면 텍스트로 디코딩됩니다. 모든 처리는 이 기기에서 이루어집니다.",
+    "clickToUpload": "클릭하여 업로드",
+    "orDragAndDrop": "또는 드래그 앤 드롭",
+    "fileSizeLimit": "오디오 파일 최대 10MB",
+    "decoding": "디코딩 중…",
+    "decoded": "디코딩 완료, 신뢰도 {{confidence}}%",
+    "unrecognizedSequences": "인식되지 않은 시퀀스: {{sequences}}",
+    "useThisText": "이 텍스트 사용",
+    "fileTooLarge": "파일이 너무 큽니다. 10MB 미만으로 유지해 주세요.",
+    "notAudioFile": "오디오 파일로 보이지 않습니다.",
+    "noSignalDetected": "이 녹음에서 모스 신호가 감지되지 않았습니다.",
+    "decodeFailed": "이 파일을 디코딩할 수 없습니다. 손상되었거나 지원되지 않는 형식일 수 있습니다.",
+    "speedWpm": "속도 (WPM)",
+    "toneHz": "음색 (Hz)",
+    "exportTxt": "TXT 내보내기",
+    "exportJson": "JSON 내보내기",
+    "downloadWav": "WAV 다운로드",
+    "referencePdf": "참고 PDF",
+    "typeToSeeSignal": "무언가 입력하면 신호를 볼 수 있습니다.",
+    "dictionary": {
+      "title": "사전",
+      "default": "기본 알파벳",
+      "new": "새 사전",
+      "namePlaceholder": "사전 이름",
+      "duplicate": "복제",
+      "rename": "이름 변경",
+      "delete": "삭제",
+      "deleteConfirm": "이 사전을 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.",
+      "export": "내보내기",
+      "import": "가져오기",
+      "importFailed": "유효한 사전 내보내기 파일이 아닙니다.",
+      "editorTitle": "사전 편집",
+      "character": "문자",
+      "code": "모스 부호",
+      "addEntry": "문자 추가",
+      "conflictWarning": "'{{code}}'는 이미 '{{other}}'에서 사용 중이므로 디코딩할 때 모호해집니다.",
+      "invalidCode": "점과 선만 허용됩니다.",
+      "noEntries": "아직 사용자 정의 문자가 없습니다. 아래에서 추가하세요.",
+      "removeEntry": "제거"
+    },
+    "script": {
+      "title": "Script / Language",
+      "default": "Default (ITU)",
+      "fa": "Persian (فارسی)",
+      "ar": "Arabic (العربية)",
+      "tr": "Turkish (Türkçe)",
+      "fr": "French (Français)",
+      "de": "German (Deutsch)",
+      "es": "Spanish (Español)",
+      "ru": "Russian (Русский)",
+      "ko": "Korean (한국어)",
+      "ja": "Japanese (日本語)",
+      "zh": "Chinese (中文)",
+      "el": "Greek (Ελληνικά)",
+      "he": "Hebrew (עברית)"
+    }
+  },
+  "settings": {
+    "title": "설정",
+    "description": "테마, 오디오, 타이밍, 백업, AI 어시스턴트.",
+    "sections": {
+      "language": "언어",
+      "backup": "데이터 및 백업",
+      "aiAssistant": "AI 어시스턴트",
+      "appearance": "외관",
+      "audio": "오디오 및 타이밍",
+      "accessibility": "접근성",
+      "shortcuts": "키보드 단축키"
+    },
+    "language": {
+      "description": "앱의 표시 언어를 선택하세요. 대부분의 화면이 번역되어 있지만 일부 문구는 아직 영어로 보일 수 있습니다.",
+      "placeholderBadge": "플레이스홀더"
+    },
+    "backup": {
+      "description": "모든 데이터는 이 기기에만 저장됩니다. 정기적으로 백업하여 진행 상황을 보호하세요.",
+      "autoBackup": "자동 로컬 백업",
+      "autoBackupDescription": "정해진 간격으로 진행 상황을 이 기기에 자동으로 스냅샷 저장합니다. 파일을 매번 다운로드할 필요가 없습니다.",
+      "interval": "백업 간격",
+      "lastBackup": "마지막 자동 백업: {{time}}",
+      "neverBackedUp": "아직 자동 백업 없음",
+      "downloadNow": "지금 백업 다운로드",
+      "saveToFolder": "동기화 폴더에 저장",
+      "saveToFolderDescription": "Google Drive, Dropbox 또는 iCloud와 동기화된 폴더를 선택하면, Relay가 백업을 해당 폴더에 직접 저장합니다. 계정이 필요하지 않습니다.",
+      "saveToFolderUnsupported": "브라우저가 폴더에 직접 저장하는 기능을 지원하지 않습니다. 대신 \"지금 백업 다운로드\"를 사용한 후 파일을 동기화 폴더로 이동하세요.",
+      "restoreFromFile": "파일에서 복원",
+      "restoreWarning": "복원하면 현재 진행 상황이 덮어쓰여집니다.",
+      "restoreSuccess": "진행 상황이 성공적으로 복원되었습니다.",
+      "restoreFailed": "유효한 Relay 백업 파일로 보이지 않습니다.",
+      "factoryReset": "공장 초기화",
+      "factoryResetWarning": "이 기기의 모든 진행 상황, 통계 및 설정이 영구적으로 삭제됩니다. 이 작업은 되돌릴 수 없습니다.",
+      "factoryResetConfirm": "네, 모두 삭제합니다",
+      "resetFailed": "문제가 발생하여 데이터가 초기화되지 않았습니다. 삭제된 항목은 없습니다."
+    },
+    "ai": {
+      "description": "모스 부호, 타이밍, 앱 사용법에 대해 Relay 안에서 바로 물어보세요. 본인의 API 키를 사용하며 채팅 메시지 외에는 아무것도 전송하지 않습니다.",
+      "provider": "제공자",
+      "apiKey": "API 키",
+      "apiKeyPlaceholder": "API 키를 붙여넣으세요",
+      "apiKeyHelp": "이 브라우저의 로컬 스토리지에만 저장됩니다. 백업이나 내보내기에 포함되지 않습니다. 선택한 제공자를 제외한 어디에도 전송되지 않습니다.",
+      "showKey": "키 표시",
+      "hideKey": "키 숨기기",
+      "clearKey": "키 제거",
+      "costWarning": "모든 요금 청구는 사용자 본인에게 부과됩니다. 이 기능을 사용하기 전에 제공자 대시보드에서 지출 한도 또는 예산 알림을 설정하는 것을 권장합니다.",
+      "dailyLimit": "일일 메시지 한도",
+      "dailyLimitHelp": "비용 폭주를 방지하는 상한선입니다. 24시간마다 초기화됩니다.",
+      "maxTokens": "최대 응답 길이",
+      "enable": "AI 어시스턴트 활성화",
+      "notConfigured": "API 키를 추가하여 어시스턴트를 활성화하세요.",
+      "providerOpenAI": "OpenAI",
+      "providerAnthropic": "Anthropic",
+      "providerCustom": "Custom (OpenAI-compatible)",
+      "endpointUrl": "Endpoint URL",
+      "endpointPlaceholder": "https://your-provider.example.com/v1/chat/completions"
+    },
+    "appearance": {
+      "themeLabel": "테마",
+      "themes": {
+        "dark": "기본 다크",
+        "light": "기본 라이트",
+        "midnight": "미드나잇",
+        "ocean": "오션",
+        "forest": "포레스트",
+        "coffee": "커피",
+        "frost": "프로스트",
+        "sunrise": "선라이즈"
+      },
+      "installTitle": "Relay 설치",
+      "installDescription": "앱을 설치하면 전체 화면, 오프라인 사용 가능한 경험과 자체 아이콘을 이용할 수 있습니다.",
+      "install": "앱 설치",
+      "installed": "이미 설치됨",
+      "installUnsupported": "브라우저가 원클릭 설치를 지원하지 않습니다. 브라우저 메뉴에서 \"홈 화면에 추가\" 또는 \"설치\"를 찾아보세요."
+    },
+    "audioSettings": {
+      "title": "기본 속도 및 음색",
+      "description": "이 설정은 학습, 연습 또는 게임을 다음에 열 때 적용됩니다. 번역기는 자체 세션별 컨트롤을 유지합니다.",
+      "wpm": "기본 속도 (WPM)",
+      "farnsworth": "판스워스 간격",
+      "farnsworthOff": "끄기 (문자 속도와 일치)",
+      "farnsworthHelp": "글자와 단어 사이의 간격을 늘리면서 각 문자의 속도는 빠르게 유지합니다. 높은 문자 속도로 배울 때 쓰는 고전적인 방법입니다.",
+      "frequency": "음색 (Hz)",
+      "volume": "볼륨",
+      "reset": "기본값으로 초기화"
+    },
+    "accessibility": {
+      "highContrast": "고대비",
+      "highContrastHelp": "테두리와 구분선을 강화하여 시각적 구분을 쉽게 합니다.",
+      "textSize": "텍스트 크기",
+      "textSizes": {
+        "small": "작게",
+        "default": "기본",
+        "large": "크게"
+      },
+      "reducedMotion": "움직임 줄이기",
+      "reducedMotionAuto": "시스템 설정 따르기",
+      "reducedMotionOn": "항상 움직임 줄이기",
+      "reducedMotionOff": "항상 움직임 허용"
+    },
+    "shortcuts": {
+      "title": "키보드 단축키",
+      "context": "컨텍스트",
+      "action": "동작",
+      "key": "키",
+      "learnTransmit": "길게 눌러 현재 문자에 대한 모스 부호 전송",
+      "morseInvadersDot": "점 보내기",
+      "morseInvadersDash": "선 보내기",
+      "spaceKey": "스페이스",
+      "dotKey": ". 또는 4",
+      "dashKey": "- 또는 6"
+    }
+  },
+  "mnemonics": {
+    "0": {
+      "hint": "Five dashes: the longest number.",
+      "examples": "Zero"
+    },
+    "1": {
+      "hint": "One dot, four dashes.",
+      "examples": "First"
+    },
+    "2": {
+      "hint": "Two dots, three dashes.",
+      "examples": "Second"
+    },
+    "3": {
+      "hint": "Three dots, two dashes.",
+      "examples": "Third"
+    },
+    "4": {
+      "hint": "Four dots, one dash.",
+      "examples": "Fourth"
+    },
+    "5": {
+      "hint": "Five dots: all short.",
+      "examples": "Fifth"
+    },
+    "6": {
+      "hint": "One dash, four dots.",
+      "examples": "Sixth"
+    },
+    "7": {
+      "hint": "Two dashes, three dots.",
+      "examples": "Seventh"
+    },
+    "8": {
+      "hint": "Three dashes, two dots.",
+      "examples": "Eighth"
+    },
+    "9": {
+      "hint": "Four dashes, one dot.",
+      "examples": "Ninth"
+    },
+    "A": {
+      "hint": "A short dot, then a long dash: like saying 'a-BOUT'.",
+      "examples": "Apple|Around|Ago"
+    },
+    "B": {
+      "hint": "One long dash, then three short dots.",
+      "examples": "Banana|Bottle|Beacon"
+    },
+    "C": {
+      "hint": "Dash dot dash dot: a rhythmic, rocking pattern.",
+      "examples": "Coconut|Circle|Compass"
+    },
+    "D": {
+      "hint": "One dash, two dots: 'DAH-dit-dit'.",
+      "examples": "Dog|Delta|Drum"
+    },
+    "E": {
+      "hint": "The shortest, sharpest sound: just one dot.",
+      "examples": "Echo|Egg|Elephant"
+    },
+    "F": {
+      "hint": "Dot dot dash dot: fast and fluttery.",
+      "examples": "Falcon|Forest|Flute"
+    },
+    "G": {
+      "hint": "Two dashes, then a dot: 'GAH-gah-dit'.",
+      "examples": "Garden|Guitar|Galaxy"
+    },
+    "H": {
+      "hint": "Four quick dots in a row: like a giggle.",
+      "examples": "Harbor|Hello|Horizon"
+    },
+    "I": {
+      "hint": "Two short dots: brief and light.",
+      "examples": "Island|Ice|Igloo"
+    },
+    "J": {
+      "hint": "One dot, three dashes: starts short, stays long.",
+      "examples": "Jungle|Jupiter|Journey"
+    },
+    "K": {
+      "hint": "Dash dot dash: 'KAH-dit-DAH'.",
+      "examples": "Kite|Koala|Kettle"
+    },
+    "L": {
+      "hint": "Dot dash dot dot: a lilting little run.",
+      "examples": "Lantern|Lighthouse|Lemon"
+    },
+    "M": {
+      "hint": "Two dashes: 'MAH-dah', slow and heavy.",
+      "examples": "Mountain|Moon|Music"
+    },
+    "N": {
+      "hint": "One dash, one dot: 'NAH-dit'.",
+      "examples": "Nest|North|Nova"
+    },
+    "O": {
+      "hint": "Three long dashes: the roundest, heaviest letter.",
+      "examples": "Ocean|Orbit|Oasis"
+    },
+    "P": {
+      "hint": "Dot dash dash dot: bookended by dots.",
+      "examples": "Puzzle|Planet|Piano"
+    },
+    "Q": {
+      "hint": "Dash dash dot dash: mostly long, one short.",
+      "examples": "Quartz|Quest|Quiet"
+    },
+    "R": {
+      "hint": "Dot dash dot: a little arch shape.",
+      "examples": "River|Rocket|Rainbow"
+    },
+    "S": {
+      "hint": "Three quick dots: 'dit-dit-dit', like a snake hiss.",
+      "examples": "Sunset|Silver|Star"
+    },
+    "T": {
+      "hint": "A single dash: the longest, simplest sound.",
+      "examples": "Tree|Thunder|Torch"
+    },
+    "U": {
+      "hint": "Dot dot dash: two short, one long.",
+      "examples": "Umbrella|Universe|Uphill"
+    },
+    "V": {
+      "hint": "Dot dot dot dash: Beethoven's Fifth Symphony.",
+      "examples": "Valley|Violet|Voyage"
+    },
+    "W": {
+      "hint": "Dot dash dash: starts short, ends long.",
+      "examples": "Waterfall|Wonder|Willow"
+    },
+    "X": {
+      "hint": "Dash dot dot dash: long, short, short, long.",
+      "examples": "Xylophone|Xenon"
+    },
+    "Y": {
+      "hint": "Dash dot dash dash: mostly dashes.",
+      "examples": "Yellow|Yonder|Yoga"
+    },
+    "Z": {
+      "hint": "Dash dash dot dot: heavy start, light end.",
+      "examples": "Zephyr|Zigzag|Zenith"
+    },
+    "fallbackHint": "No mnemonic yet for this symbol."
+  },
+  "aiChat": {
+    "openLabel": "AI 어시스턴트 열기",
+    "closeLabel": "AI 어시스턴트 닫기",
+    "placeholder": "모스 부호, 타이밍 또는 이 앱에 대해 질문하세요…",
+    "send": "전송",
+    "thinking": "생각 중…",
+    "notConfigured": "설정 → AI 어시스턴트에서 API 키를 추가하여 채팅을 시작하세요.",
+    "goToSettings": "설정으로 이동",
+    "limitReached": "오늘의 메시지 한도({{limit}}개)에 도달했습니다. {{resetIn}} 후에 초기화됩니다.",
+    "messagesRemaining": "오늘 {{count}}개의 메시지 남음",
+    "error": "AI 제공자에 연결하는 중 문제가 발생했습니다. 키와 메시지는 영향을 받지 않았습니다.",
+    "clearChat": "대화 지우기",
+    "disclaimer": "답변은 부정확할 수 있습니다. 사용자 본인의 API 키와 할당량을 사용합니다.",
+    "title": "AI Assistant"
+  }
+}
