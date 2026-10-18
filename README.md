@@ -1,14 +1,20 @@
 <div align="center">
 
-  <img src="docs/images/banner.png" alt="Relay app icon" />
+  <img src="docs/images/banner.png" alt="Relay — Morse code learning platform banner" width="100%" />
 
   <h1>Relay</h1>
 
   <p><strong>Learn Morse. Hear the signal. Build the skill.</strong></p>
   <p>An offline-first Morse code learning platform for structured lessons, deliberate practice, audio tools, games, and progress tracking.</p>
 
-  <!-- TODO: Add the custom Relay banner here when the owner supplies the final image. -->
-  <!-- TODO: Add a WebM demo video when the owner supplies the final recording. -->
+  <p>
+    <a href="https://github.com/mh3nj/Relay/actions/workflows/ci.yml"><img src="https://github.com/mh3nj/Relay/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI status" /></a>
+    <a href="https://github.com/mh3nj/Relay/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-custom-lightgrey.svg" alt="Custom license" /></a>
+    <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-5%2B-3178C6?logo=typescript&logoColor=white" alt="TypeScript" /></a>
+    <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-19-149ECA?logo=react&logoColor=white" alt="React" /></a>
+    <a href="https://github.com/mh3nj/Relay/issues"><img src="https://img.shields.io/github/issues/mh3nj/Relay" alt="GitHub issues" /></a>
+    <a href="https://github.com/mh3nj/Relay/commits/main"><img src="https://img.shields.io/github/last-commit/mh3nj/Relay" alt="Last commit" /></a>
+  </p>
 
   <p>
     <a href="https://github.com/mh3nj/Relay/issues">Issues</a> ·
@@ -35,7 +41,7 @@ Relay is a browser-based Morse code learning environment built around a repeatab
 
 It goes beyond a simple text-to-Morse converter by bringing lessons, practice drills, games, audio decoding, a reference encyclopedia, and personal progress into one installable Progressive Web App (PWA).
 
-> **Project status:** Source available; setup and release verification are in progress. No live demo URL is claimed here. Screenshots and the video demonstration will be added after the owner supplies final media.
+> **Project status:** The source code, screenshots, and demo recording are available in this repository. The hosted demo and static landing page are linked above; build and deployment behavior can vary by hosting environment.
 
 
 ## Features
@@ -58,7 +64,7 @@ Feature availability and browser behavior can vary by environment. Audio decodin
 
 ## Screenshots and demo
 
-[relay.webm](https://github.com/user-attachments/assets/7fdf93a5-1998-49e1-8e85-defeb73d13eb)
+[▶ Watch the Relay demo (WebM)](https://github.com/user-attachments/assets/7fdf93a5-1998-49e1-8e85-defeb73d13eb)
 
 
 <table>
