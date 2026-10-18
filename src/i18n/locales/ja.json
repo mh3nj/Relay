@@ -1,0 +1,701 @@
+{
+  "app": {
+    "name": "Relay",
+    "tagline": "無料＆オフライン"
+  },
+  "nav": {
+    "dashboard": "ダッシュボード",
+    "learn": "学習",
+    "practice": "練習",
+    "translator": "翻訳機",
+    "games": "ゲーム",
+    "progress": "進捗",
+    "encyclopedia": "百科事典",
+    "settings": "設定",
+    "freeForever": "永久無料"
+  },
+  "common": {
+    "copy": "コピー",
+    "copied": "コピーしました",
+    "clear": "クリア",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "close": "閉じる",
+    "delete": "削除",
+    "confirm": "確認",
+    "loading": "読み込み中…",
+    "error": "エラー",
+    "success": "成功",
+    "back": "戻る",
+    "next": "次へ",
+    "previous": "前へ",
+    "continue": "続ける",
+    "start": "開始",
+    "stop": "停止",
+    "play": "再生",
+    "pause": "一時停止",
+    "retry": "リトライ",
+    "download": "ダウンロード",
+    "upload": "アップロード",
+    "import": "インポート",
+    "export": "エクスポート",
+    "enabled": "有効",
+    "disabled": "無効",
+    "on": "オン",
+    "off": "オフ",
+    "comingSoon": "{{feature}}が近日公開予定",
+    "characters": "{{count}}文字",
+    "minutes": "{{count}}分",
+    "seconds": "{{count}}秒",
+    "mainNavigation": "メインナビゲーション",
+    "primaryNavigation": "プライマリ",
+    "chartRange": "チャート範囲",
+    "clearTranslation": "翻訳をクリア",
+    "reviewWeakSymbols": "苦手な記号を復習",
+    "percent": "{{percent}} percent",
+    "less": "less",
+    "more": "more",
+    "requestFailed": "Request failed.",
+    "rangeWeek": "1W",
+    "rangeMonth": "1M",
+    "rangeAll": "ALL",
+    "daySun": "Sun",
+    "dayMon": "Mon",
+    "dayTue": "Tue",
+    "dayWed": "Wed",
+    "dayThu": "Thu",
+    "dayFri": "Fri",
+    "daySat": "Sat",
+    "eg": "e.g.",
+    "playMorseFor": "Play Morse for {{char}}"
+  },
+  "errorBoundary": {
+    "description": "Relayで予期しないエラーが発生しました。保存された進捗は影響を受けていません。通常は再読み込みで解決します。",
+    "goHome": "ダッシュボードに移動"
+  },
+  "dashboard": {
+    "title": "ダッシュボード",
+    "description": "前回の続きから始めて、変わったことを確認しましょう。",
+    "startLearning": "学習を始める",
+    "streakDays": "{{count}}日連続",
+    "welcomeBack": "おかえりなさい、オペレーター。",
+    "continuePrompt": "現在「{{char}}」の文字に取り組んでいます。連続記録を維持しましょう。",
+    "continueLesson": "レッスン「{{char}}」を続ける",
+    "dailyChallenge": "デイリーチャレンジ",
+    "dailyChallengeGoal": "今日中に{{target}}問正解しましょう",
+    "startChallenge": "チャレンジ開始",
+    "overallMastery": "全体の習得度",
+    "needsReview": "復習が必要",
+    "recentBadges": "最近のバッジ",
+    "locked": "ロック中: {{label}}",
+    "speedProgression": "スピード推移（WPM）",
+    "accuracyTooltip": "Accuracy: {{accuracy}}%",
+    "greetingMorning": "おはようございます、オペレーター。",
+    "greetingAfternoon": "こんにちは、オペレーター。",
+    "greetingEvening": "こんばんは、オペレーター。",
+    "challengeComplete": "お見事です。今日のチャレンジは完了しました。",
+    "noSpeedDataYet": "この期間の計測セッションはまだありません。",
+    "playAGame": "ゲームをプレイ"
+  },
+  "learn": {
+    "title": "学習",
+    "description": "1文字ずつ増やしていくコッホ式レッスン。タイミングと音声は何度でも再生できます。",
+    "progress": "進捗",
+    "character": "文字",
+    "signalAnalysis": "信号分析",
+    "oneUnitDuration": "1単位の長さ。",
+    "unitsWithGap": "{{count}}単位、各間に1ギャップ。",
+    "transmissionPractice": "送信練習",
+    "spaceToKey": "[Space]でキー操作",
+    "ctrlKeyHint": "または L-Ctrl = 短点、R-Ctrl = 長点",
+    "tapToTransmit": "スペースバーをタップまたは長押しして「{{char}}」を送信",
+    "mnemonic": "記憶法",
+    "examples": "例",
+    "loadingProgress": "進捗を読み込み中…",
+    "start": "開始",
+    "signal": "信号",
+    "end": "終了",
+    "unitTiming": "1短点 = {{ms}}ms @ {{wpm}} WPM",
+    "stopPlayback": "再生を停止",
+    "playAudio": "モールス音声を再生",
+    "nextCharacter": "次の文字",
+    "masteryGate": {
+      "progress": "次の文字を解除するには{{correct}}/{{needed}}問の正解が必要です",
+      "readyHint": "よくできました。準備ができたら次に進んでください。",
+      "kochExplainer": "学習順序はコッホメソッドに従います：KとMから始まります（Aではありません）。これらの音が最大限に異なるため、トリッキーな似た文字を追加する前に、タイミングに対する耳をより強く鍛えることができます。"
+    },
+    "dot": "Dot",
+    "dash": "Dash"
+  },
+  "practice": {
+    "title": "練習",
+    "description": "覚えられない記号に絞った短いドリル。",
+    "modes": {
+      "hearAndType": "聞いて入力",
+      "readAndType": "読んで入力",
+      "translateDrill": "翻訳ドリル",
+      "flashcards": "フラッシュカード",
+      "speed": "スピードモード",
+      "endless": "エンドレス",
+      "memory": "メモリー",
+      "morseTree": {
+        "title": "モールスツリーエクスプローラー",
+        "idle": "「開始」を押してモールスツリーを探索しましょう",
+        "path": "経路",
+        "deadEnd": "✕ 行き止まり。ルートに戻ります",
+        "hint": "移動するには、点キー（L-Ctrl、.、4）または線キー（R-Ctrl、-、6）を押します",
+        "pathEquals": " = {{char}}",
+        "correct": "正解",
+        "incorrect": "不正解",
+        "accuracy": "正確さ",
+        "streak": "連続"
+      }
+    },
+    "hearAndType": {
+      "instructions": "音を聞いて、聞こえた文字を入力してください。",
+      "replay": "再生",
+      "inputPlaceholder": "文字を入力…",
+      "correct": "正解！",
+      "incorrect": "違います。答えは「{{answer}}」でした",
+      "inputPlaceholderShort": "Type"
+    },
+    "readAndType": {
+      "instructions": "モールス信号を読んで、それが表す文字を入力してください。",
+      "inputPlaceholder": "文字を入力…",
+      "inputPlaceholderShort": "Type"
+    },
+    "translateDrill": {
+      "instructions": "表示された文字のモールス信号を、. と - キーを使って送信してください。",
+      "spaceToKey": ". と - を直接入力するか、L-Ctrl / R-Ctrl を使用"
+    },
+    "endless": {
+      "instructions": "自分のペースで聞いて入力。タイマーもプレッシャーもありません。好きな時に停止できます。",
+      "stop": "セッションを終了",
+      "summary": "セッションの概要"
+    },
+    "memory": {
+      "instructions": "シーケンスを観察し、その順序で再現してください。",
+      "watchPrompt": "観察中…",
+      "yourTurn": "あなたの番。見たシーケンスを入力してください",
+      "sequenceLength": "シーケンス: {{length}}",
+      "bestLength": "最高: {{length}}",
+      "roundFailed": "正しくありません。最高シーケンス: {{length}}",
+      "startRound": "開始"
+    },
+    "flashcards": {
+      "instructions": "カードをめくって答えを確認してください。",
+      "showAnswer": "答えを表示",
+      "iKnewIt": "わかっていた",
+      "didNotKnow": "わからなかった"
+    },
+    "speed": {
+      "instructions": "制限時間内にできるだけ速く各文字を入力してください。",
+      "timeLeft": "残り時間",
+      "wpm": "WPM",
+      "accuracy": "正確さ",
+      "streak": "連続",
+      "sessionOver": "セッション完了！",
+      "startSession": "セッション開始",
+      "playAgain": "もう一度プレイ"
+    },
+    "session": {
+      "correct": "正解",
+      "attempts": "試行",
+      "endSession": "セッション終了",
+      "bestStreak": "最高連続"
+    },
+    "focusedFilter": {
+      "label": "集中練習: {{chars}}",
+      "clear": "フィルターをクリア"
+    }
+  },
+  "games": {
+    "title": "ゲーム",
+    "description": "レッスンなしで練習したいときの5つの小さなゲーム。",
+    "notPlayedYet": "まだプレイしていません",
+    "best": "最高: {{score}}",
+    "play": "プレイ",
+    "score": "スコア",
+    "topWpm": "最高WPM",
+    "destroyed": "撃破数",
+    "rounds": "ラウンド",
+    "newHighScore": "新記録！",
+    "morseInvaders": {
+      "title": "モールス・インベーダー",
+      "cardDescription": "上部から文字が降ってくる。着地する前にドット/ダッシュコードを入力しよう。",
+      "instructions": "上部から文字が降ってきます。着地する前にモールス信号（ドット/ダッシュ）を入力してください。3回ミスでゲームオーバーです。",
+      "hint": "ボタンをタップするか、. / - を押すか、L-Ctrl / R-Ctrl を使用",
+      "bestScore": "最高スコア: {{score}}",
+      "destroyedLabel": "撃破数",
+      "dash": "長点",
+      "dot": "短点",
+      "difficulty": {
+        "easy": "かんたん（ゆっくり落下）",
+        "medium": "ふつう（標準）",
+        "hard": "むずかしい（速く落下）"
+      }
+    },
+    "signalRush": {
+      "title": "シグナル・ラッシュ",
+      "cardDescription": "聞いてできるだけ速く入力。正解するごとにスピードが上がります。",
+      "instructions": "聞いてできるだけ速く入力。正解するごとにスピードが上がります。3回ミスで終了です。",
+      "speedLabel": "スピード: {{wpm}} WPM",
+      "bestScore": "最高スコア: {{score}}",
+      "difficulty": {
+        "easy": "かんたん（ゆるやかに加速）",
+        "medium": "ふつう（標準）",
+        "hard": "むずかしい（急激に加速）"
+      }
+    },
+    "decodeTranslate": {
+      "title": "解読＆翻訳",
+      "cardDescription": "モールス信号で単語を聞き、時間切れになる前に解読した単語を入力しましょう。",
+      "instructions": "モールス信号の並びを聞いて、それが綴る単語を入力します。正解するたびに制限時間が短くなります。",
+      "replay": "もう一度再生",
+      "inputPlaceholder": "単語を入力…",
+      "correctWord": "{{word}}、正解！",
+      "incorrectWord": "正解は「{{word}}」でした",
+      "difficulty": {
+        "easy": "かんたん（3文字の単語）",
+        "medium": "ふつう（5文字の単語）",
+        "hard": "むずかしい（文と句読点）"
+      },
+      "round": "ラウンド {{n}}",
+      "bestScore": "ベストスコア: {{score}}"
+    },
+    "morseMatch": {
+      "title": "モールス・マッチ",
+      "cardDescription": "カードをめくって、各文字とそのモールス符号を揃えましょう。純粋な視覚記憶のゲームです。",
+      "instructions": "一度に2枚のカードをめくり、文字とモールス符号のペアを見つけます。すべて揃えばラウンドクリアです。",
+      "pairsFound": "ペア: {{count}}/{{total}}",
+      "flips": "めくった回数: {{count}}",
+      "timeBonus": "タイムボーナス",
+      "youWon": "すべてのペアを揃えました！",
+      "difficulty": {
+        "easy": "かんたん（4×4）",
+        "hard": "むずかしい（6×6）"
+      },
+      "bestScore": "ベストスコア: {{score}}"
+    },
+    "emergencyRelay": {
+      "title": "緊急リレー",
+      "cardDescription": "短くなり続けるタイマーの中で遭難信号に応答しましょう。ミスするたびにプレッシャーが増します。",
+      "instructions": "遭難信号が点滅します。タイマーが切れる前に正しいモールス符号を送りましょう。ミスすると時計が速まります。",
+      "timer": "{{ms}}ms",
+      "lifeLost": "遅すぎます！",
+      "bestScore": "ベストスコア: {{score}}",
+      "difficulty": {
+        "easy": "かんたん（SOS＋文字）",
+        "hard": "むずかしい（句読点を含む）"
+      }
+    },
+    "accuracy": "正確さ",
+    "bestCombo": "最高コンボ",
+    "combo": "{{count}}コンボ！",
+    "efficiency": "効率"
+  },
+  "progress": {
+    "title": "進捗分析",
+    "description": "身についたことと、まだ練習が必要なところを見ましょう。",
+    "exportReport": "レポートをエクスポート",
+    "mastery": "習得度",
+    "practiceTime": "練習時間",
+    "currentStreak": "現在の連続記録",
+    "performanceTrends": "パフォーマンス推移",
+    "trendEmptyState": "推移を記録するには、スピードモードまたはゲームのセッションを完了してください。",
+    "characterMastery": "文字の習得度",
+    "mastered": "習得済み",
+    "learning": "学習中",
+    "notPracticedYet": "未練習",
+    "accuracyLabel": "正解率: {{percent}}%（{{attempts}}回の試行）",
+    "confusingPairs": "混同しやすいペア",
+    "noMixups": "まだ混同が記録されていません。練習を続けると自動的に表示されます。",
+    "mixupCount": "{{count}}回の混同",
+    "mixupCount_other": "{{count}}回の混同",
+    "focusedPractice": "集中練習",
+    "wpmLabel": "WPM",
+    "vs": "vs",
+    "level": "レベル{{level}}",
+    "xpProgress": "{{current}} / {{total}} XP",
+    "activityHeatmap": "アクティビティ",
+    "dueForReview": "復習予定",
+    "dueForReviewEmpty": "現在復習予定はありません。練習を続けてその状態を維持しましょう。",
+    "reviewNow": "今すぐ復習",
+    "badgesTitle": "バッジ",
+    "badges": {
+      "firstLesson": "最初のレッスン",
+      "halfway": "折り返し",
+      "fullAlphabet": "全アルファベット",
+      "wpm10": "WPM 10到達",
+      "wpm20": "WPM 20到達",
+      "perfectEar": "完璧な耳",
+      "sharpShooter": "シャープシューター",
+      "streak3": "3日連続",
+      "streak7": "7日連続",
+      "streak30": "30日連続",
+      "gameExplorer": "ゲーム探検家",
+      "level5": "レベル5",
+      "level10": "レベル10"
+    },
+    "activeDaysThisMonth": "{{count}} active days this month",
+    "masteryLabel": "{{percent}}% mastery"
+  },
+  "encyclopedia": {
+    "title": "百科事典",
+    "description": "すべての文字を、符号・タイミング・ちょっとした歴史とともに。",
+    "searchPlaceholder": "文字や発音を検索…",
+    "categories": {
+      "all": "すべて",
+      "letter": "アルファベット",
+      "number": "数字",
+      "punctuation": "句読点",
+      "prosign": "プロサイン"
+    },
+    "noResults": "検索に一致する文字はありません。",
+    "prosignsTitle": "プロサイン＆特殊信号",
+    "abbreviationsTitle": "よく使われる略語",
+    "historyTitle": "簡単な歴史",
+    "historyText": "モールス信号は1830〜40年代にサミュエル・モールスとアルフレッド・ベイルによって電信機用に開発されました。当初のアメリカンモールス信号は後に現在使われている国際モールス信号へと洗練され、タイミングの標準化とアクセント付き文字への対応が行われました。電信が衰退した後も、モールス信号はアマチュア無線、航空、海上通信の中で生き続けました。音声をかき消すようなノイズの中でも、単純なオン/オフ信号が遠くまで届くからです。"
+  },
+  "translator": {
+    "title": "翻訳機",
+    "description": "テキストをモールス信号に、またその逆に変換。音声ファイルの解読もできます。オフラインで動きます。",
+    "plainText": "プレーンテキスト",
+    "morseCode": "モールス信号",
+    "textPlaceholder": "翻訳するテキストを入力...",
+    "morsePlaceholder": ".. --- ...",
+    "swapDirection": "翻訳方向を入れ替え",
+    "decodeAudio": "音声をデコード",
+    "decodeAudioDescription": "モールス信号の録音をアップロードすると、すべてこのデバイス上でテキストにデコードされます。",
+    "clickToUpload": "クリックしてアップロード",
+    "orDragAndDrop": "またはドラッグ＆ドロップ",
+    "fileSizeLimit": "10MBまでの音声ファイル",
+    "decoding": "デコード中…",
+    "decoded": "デコード完了、確信度 {{confidence}}%",
+    "unrecognizedSequences": "認識できないシーケンス: {{sequences}}",
+    "useThisText": "このテキストを使用",
+    "fileTooLarge": "ファイルが大きすぎます。10MB未満のファイルを選択してください。",
+    "notAudioFile": "音声ファイルではないようです。",
+    "noSignalDetected": "この録音からモールス信号は検出されませんでした。",
+    "decodeFailed": "このファイルをデコードできませんでした。破損しているか、サポートされていない形式の可能性があります。",
+    "speedWpm": "速度（WPM）",
+    "toneHz": "トーン（Hz）",
+    "exportTxt": "TXT形式でエクスポート",
+    "exportJson": "JSON形式でエクスポート",
+    "downloadWav": "WAVをダウンロード",
+    "referencePdf": "リファレンスPDF",
+    "typeToSeeSignal": "何か入力すると信号が表示されます。",
+    "dictionary": {
+      "title": "辞書",
+      "default": "標準アルファベット",
+      "new": "新しい辞書",
+      "namePlaceholder": "辞書名",
+      "duplicate": "複製",
+      "rename": "名前変更",
+      "delete": "削除",
+      "deleteConfirm": "この辞書を削除しますか？この操作は元に戻せません。",
+      "export": "エクスポート",
+      "import": "インポート",
+      "importFailed": "このファイルは有効な辞書エクスポートファイルではありません。",
+      "editorTitle": "辞書を編集",
+      "character": "文字",
+      "code": "モールス信号",
+      "addEntry": "文字を追加",
+      "conflictWarning": "「{{code}}」はすでに「{{other}}」で使われているため、デコード結果が曖昧になります。",
+      "invalidCode": "ドットとダッシュのみ使用できます。",
+      "noEntries": "まだカスタム文字がありません。以下から追加してください。",
+      "removeEntry": "削除"
+    },
+    "script": {
+      "title": "Script / Language",
+      "default": "Default (ITU)",
+      "fa": "Persian (فارسی)",
+      "ar": "Arabic (العربية)",
+      "tr": "Turkish (Türkçe)",
+      "fr": "French (Français)",
+      "de": "German (Deutsch)",
+      "es": "Spanish (Español)",
+      "ru": "Russian (Русский)",
+      "ko": "Korean (한국어)",
+      "ja": "Japanese (日本語)",
+      "zh": "Chinese (中文)",
+      "el": "Greek (Ελληνικά)",
+      "he": "Hebrew (עברית)"
+    }
+  },
+  "settings": {
+    "title": "設定",
+    "description": "テーマ、音声、タイミング、バックアップ、AIアシスタント。",
+    "sections": {
+      "language": "言語",
+      "backup": "データ＆バックアップ",
+      "aiAssistant": "AIアシスタント",
+      "appearance": "外観",
+      "audio": "音声＆タイミング",
+      "accessibility": "アクセシビリティ",
+      "shortcuts": "キーボードショートカット"
+    },
+    "language": {
+      "description": "アプリの表示言語を選択します。ほとんどの画面は翻訳済みですが、一部の文章は英語のまま表示される場合があります。",
+      "placeholderBadge": "プレースホルダー"
+    },
+    "backup": {
+      "description": "すべてのデータはこのデバイスにのみ保存されます。進捗を失わないために定期的にバックアップしましょう。",
+      "autoBackup": "自動ローカルバックアップ",
+      "autoBackupDescription": "一定間隔で進捗をこのデバイスに自動保存します。毎回ファイルをダウンロードする必要はありません。",
+      "interval": "バックアップ間隔",
+      "lastBackup": "最終自動バックアップ: {{time}}",
+      "neverBackedUp": "まだ自動バックアップはありません",
+      "downloadNow": "今すぐバックアップをダウンロード",
+      "saveToFolder": "同期フォルダに保存",
+      "saveToFolderDescription": "Google Drive、Dropbox、iCloudと同期したフォルダを選択すると、Relayがバックアップをそこに直接書き込みます。アカウントは不要です。",
+      "saveToFolderUnsupported": "お使いのブラウザはフォルダへの直接保存をサポートしていません。「今すぐバックアップをダウンロード」を使用してから、ファイルを同期フォルダに移動してください。",
+      "restoreFromFile": "ファイルから復元",
+      "restoreWarning": "復元すると現在の進捗が上書きされます。",
+      "restoreSuccess": "進捗が正常に復元されました。",
+      "restoreFailed": "このファイルは有効なRelayのバックアップファイルではないようです。",
+      "factoryReset": "出荷時設定にリセット",
+      "factoryResetWarning": "これにより、このデバイス上のすべての進捗、統計、設定が完全に削除されます。この操作は元に戻せません。",
+      "factoryResetConfirm": "はい、すべて削除します",
+      "resetFailed": "問題が発生し、データはリセットされませんでした。何も削除されていません。"
+    },
+    "ai": {
+      "description": "モールス信号、タイミング、アプリの使い方についての質問をRelay内で直接行えます。あなた自身のAPIキーを使用し、チャットメッセージ以外は送信されません。",
+      "provider": "プロバイダー",
+      "apiKey": "APIキー",
+      "apiKeyPlaceholder": "APIキーを貼り付け",
+      "apiKeyHelp": "このブラウザのローカルストレージにのみ保存されます。バックアップやエクスポートに含まれることはありません。選択したプロバイダー以外に送信されることはありません。",
+      "showKey": "キーを表示",
+      "hideKey": "キーを非表示",
+      "clearKey": "キーを削除",
+      "costWarning": "APIプロバイダーからのすべての料金はお客様の責任です。この機能を使用する前に、プロバイダーのダッシュボードで利用制限または予算アラートを設定することをお勧めします。",
+      "dailyLimit": "1日のメッセージ制限",
+      "dailyLimitHelp": "費用の急増を防ぐための上限です。24時間ごとにリセットされます。",
+      "maxTokens": "最大応答長",
+      "enable": "AIアシスタントを有効化",
+      "notConfigured": "APIキーを追加してアシスタントを有効にしてください。",
+      "providerOpenAI": "OpenAI",
+      "providerAnthropic": "Anthropic",
+      "providerCustom": "Custom (OpenAI-compatible)",
+      "endpointUrl": "Endpoint URL",
+      "endpointPlaceholder": "https://your-provider.example.com/v1/chat/completions"
+    },
+    "appearance": {
+      "themeLabel": "テーマ",
+      "themes": {
+        "dark": "デフォルトダーク",
+        "light": "デフォルトライト",
+        "midnight": "ミッドナイト",
+        "ocean": "オーシャン",
+        "forest": "フォレスト",
+        "coffee": "コーヒー",
+        "frost": "フロスト",
+        "sunrise": "サンライズ"
+      },
+      "installTitle": "Relayをインストール",
+      "installDescription": "アプリをインストールすると、フルスクリーンでオフラインでも使用でき、専用アイコンが追加されます。",
+      "install": "アプリをインストール",
+      "installed": "インストール済み",
+      "installUnsupported": "お使いのブラウザはワンタップインストールをサポートしていません。ブラウザのメニューから「ホーム画面に追加」または「インストール」を探してください。"
+    },
+    "audioSettings": {
+      "title": "デフォルトの速度とトーン",
+      "description": "これらのデフォルト設定は、次回「学習」「練習」「ゲーム」を開いたときに適用されます。「翻訳機」は独自のセッションごとの設定を保持します。",
+      "wpm": "デフォルト速度（WPM）",
+      "farnsworth": "ファーンズワース間隔",
+      "farnsworthOff": "オフ（文字速度に合わせる）",
+      "farnsworthHelp": "各文字のテンポは速いまま、文字や単語の間隔だけを広げます。高速で学ぶときの定番の方法です。",
+      "frequency": "トーン（Hz）",
+      "volume": "音量",
+      "reset": "デフォルトにリセット"
+    },
+    "accessibility": {
+      "highContrast": "ハイコントラスト",
+      "highContrastHelp": "境界線と区切りを強調して視認性を高めます。",
+      "textSize": "文字サイズ",
+      "textSizes": {
+        "small": "小",
+        "default": "標準",
+        "large": "大"
+      },
+      "reducedMotion": "動作の低減",
+      "reducedMotionAuto": "システム設定に従う",
+      "reducedMotionOn": "常に動作を低減",
+      "reducedMotionOff": "常に動作を許可"
+    },
+    "shortcuts": {
+      "title": "キーボードショートカット",
+      "context": "コンテキスト",
+      "action": "アクション",
+      "key": "キー",
+      "learnTransmit": "長押しで現在の文字のモールス信号を送信",
+      "morseInvadersDot": "短点を送信",
+      "morseInvadersDash": "長点を送信",
+      "spaceKey": "スペース",
+      "dotKey": ". または 4",
+      "dashKey": "- または 6"
+    }
+  },
+  "mnemonics": {
+    "0": {
+      "hint": "Five dashes: the longest number.",
+      "examples": "Zero"
+    },
+    "1": {
+      "hint": "One dot, four dashes.",
+      "examples": "First"
+    },
+    "2": {
+      "hint": "Two dots, three dashes.",
+      "examples": "Second"
+    },
+    "3": {
+      "hint": "Three dots, two dashes.",
+      "examples": "Third"
+    },
+    "4": {
+      "hint": "Four dots, one dash.",
+      "examples": "Fourth"
+    },
+    "5": {
+      "hint": "Five dots: all short.",
+      "examples": "Fifth"
+    },
+    "6": {
+      "hint": "One dash, four dots.",
+      "examples": "Sixth"
+    },
+    "7": {
+      "hint": "Two dashes, three dots.",
+      "examples": "Seventh"
+    },
+    "8": {
+      "hint": "Three dashes, two dots.",
+      "examples": "Eighth"
+    },
+    "9": {
+      "hint": "Four dashes, one dot.",
+      "examples": "Ninth"
+    },
+    "A": {
+      "hint": "A short dot, then a long dash: like saying 'a-BOUT'.",
+      "examples": "Apple|Around|Ago"
+    },
+    "B": {
+      "hint": "One long dash, then three short dots.",
+      "examples": "Banana|Bottle|Beacon"
+    },
+    "C": {
+      "hint": "Dash dot dash dot: a rhythmic, rocking pattern.",
+      "examples": "Coconut|Circle|Compass"
+    },
+    "D": {
+      "hint": "One dash, two dots: 'DAH-dit-dit'.",
+      "examples": "Dog|Delta|Drum"
+    },
+    "E": {
+      "hint": "The shortest, sharpest sound: just one dot.",
+      "examples": "Echo|Egg|Elephant"
+    },
+    "F": {
+      "hint": "Dot dot dash dot: fast and fluttery.",
+      "examples": "Falcon|Forest|Flute"
+    },
+    "G": {
+      "hint": "Two dashes, then a dot: 'GAH-gah-dit'.",
+      "examples": "Garden|Guitar|Galaxy"
+    },
+    "H": {
+      "hint": "Four quick dots in a row: like a giggle.",
+      "examples": "Harbor|Hello|Horizon"
+    },
+    "I": {
+      "hint": "Two short dots: brief and light.",
+      "examples": "Island|Ice|Igloo"
+    },
+    "J": {
+      "hint": "One dot, three dashes: starts short, stays long.",
+      "examples": "Jungle|Jupiter|Journey"
+    },
+    "K": {
+      "hint": "Dash dot dash: 'KAH-dit-DAH'.",
+      "examples": "Kite|Koala|Kettle"
+    },
+    "L": {
+      "hint": "Dot dash dot dot: a lilting little run.",
+      "examples": "Lantern|Lighthouse|Lemon"
+    },
+    "M": {
+      "hint": "Two dashes: 'MAH-dah', slow and heavy.",
+      "examples": "Mountain|Moon|Music"
+    },
+    "N": {
+      "hint": "One dash, one dot: 'NAH-dit'.",
+      "examples": "Nest|North|Nova"
+    },
+    "O": {
+      "hint": "Three long dashes: the roundest, heaviest letter.",
+      "examples": "Ocean|Orbit|Oasis"
+    },
+    "P": {
+      "hint": "Dot dash dash dot: bookended by dots.",
+      "examples": "Puzzle|Planet|Piano"
+    },
+    "Q": {
+      "hint": "Dash dash dot dash: mostly long, one short.",
+      "examples": "Quartz|Quest|Quiet"
+    },
+    "R": {
+      "hint": "Dot dash dot: a little arch shape.",
+      "examples": "River|Rocket|Rainbow"
+    },
+    "S": {
+      "hint": "Three quick dots: 'dit-dit-dit', like a snake hiss.",
+      "examples": "Sunset|Silver|Star"
+    },
+    "T": {
+      "hint": "A single dash: the longest, simplest sound.",
+      "examples": "Tree|Thunder|Torch"
+    },
+    "U": {
+      "hint": "Dot dot dash: two short, one long.",
+      "examples": "Umbrella|Universe|Uphill"
+    },
+    "V": {
+      "hint": "Dot dot dot dash: Beethoven's Fifth Symphony.",
+      "examples": "Valley|Violet|Voyage"
+    },
+    "W": {
+      "hint": "Dot dash dash: starts short, ends long.",
+      "examples": "Waterfall|Wonder|Willow"
+    },
+    "X": {
+      "hint": "Dash dot dot dash: long, short, short, long.",
+      "examples": "Xylophone|Xenon"
+    },
+    "Y": {
+      "hint": "Dash dot dash dash: mostly dashes.",
+      "examples": "Yellow|Yonder|Yoga"
+    },
+    "Z": {
+      "hint": "Dash dash dot dot: heavy start, light end.",
+      "examples": "Zephyr|Zigzag|Zenith"
+    },
+    "fallbackHint": "No mnemonic yet for this symbol."
+  },
+  "aiChat": {
+    "openLabel": "AIアシスタントを開く",
+    "closeLabel": "AIアシスタントを閉じる",
+    "placeholder": "モールス信号、タイミング、アプリについて質問…",
+    "send": "送信",
+    "thinking": "考え中…",
+    "notConfigured": "設定 → AIアシスタントでAPIキーを追加してチャットを始めましょう。",
+    "goToSettings": "設定に移動",
+    "limitReached": "本日のメッセージ制限（{{limit}}）に達しました。{{resetIn}}後にリセットされます。",
+    "messagesRemaining": "残り{{count}}メッセージ",
+    "error": "AIプロバイダーへの接続で問題が発生しました。あなたのキーとメッセージに影響はありません。",
+    "clearChat": "会話をクリア",
+    "disclaimer": "回答は不正確な場合があります。お客様自身のAPIキーと割り当て量を使用します。",
+    "title": "AI Assistant"
+  }
+}
