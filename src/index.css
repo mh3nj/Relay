@@ -1,0 +1,560 @@
+@import "tailwindcss";
+
+@theme {
+  /* ---- Color: Slate/Indigo dark system (from DESIGN.md) ---- */
+  --color-surface: #13131b;
+  --color-surface-dim: #13131b;
+  --color-surface-bright: #393841;
+  --color-surface-container-lowest: #0d0d15;
+  --color-surface-container-low: #1b1b23;
+  --color-surface-container: #1f1f27;
+  --color-surface-container-high: #292932;
+  --color-surface-container-highest: #34343d;
+  --color-surface-variant: #34343d;
+
+  --color-on-surface: #e4e1ed;
+  --color-on-surface-variant: #c7c4d7;
+  --color-inverse-surface: #e4e1ed;
+  --color-inverse-on-surface: #303038;
+
+  --color-outline: #908fa0;
+  --color-outline-variant: #464554;
+  --color-surface-tint: #c0c1ff;
+
+  --color-primary: #c0c1ff;
+  --color-on-primary: #1000a9;
+  --color-primary-container: #8083ff;
+  --color-on-primary-container: #0d0096;
+  --color-inverse-primary: #494bd6;
+  --color-primary-fixed: #e1e0ff;
+  --color-primary-fixed-dim: #c0c1ff;
+  --color-on-primary-fixed: #07006c;
+  --color-on-primary-fixed-variant: #2f2ebe;
+
+  --color-secondary: #b9c8de;
+  --color-on-secondary: #233143;
+  --color-secondary-container: #39485a;
+  --color-on-secondary-container: #a7b6cc;
+  --color-secondary-fixed: #d4e4fa;
+  --color-secondary-fixed-dim: #b9c8de;
+  --color-on-secondary-fixed: #0d1c2d;
+  --color-on-secondary-fixed-variant: #39485a;
+
+  --color-tertiary: #ffb783;
+  --color-on-tertiary: #4f2500;
+  --color-tertiary-container: #d97721;
+  --color-on-tertiary-container: #452000;
+  --color-tertiary-fixed: #ffdcc5;
+  --color-tertiary-fixed-dim: #ffb783;
+  --color-on-tertiary-fixed: #301400;
+  --color-on-tertiary-fixed-variant: #703700;
+
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+
+  --color-background: #13131b;
+  --color-on-background: #e4e1ed;
+
+  --color-waveform-well: #0f172a;
+
+  /* ---- Typography ---- */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --text-display-lg: 48px;
+  --text-display-lg--line-height: 56px;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--font-weight: 700;
+
+  --text-display-lg-mobile: 36px;
+  --text-display-lg-mobile--line-height: 44px;
+  --text-display-lg-mobile--letter-spacing: -0.02em;
+  --text-display-lg-mobile--font-weight: 700;
+
+  --text-heading-md: 24px;
+  --text-heading-md--line-height: 32px;
+  --text-heading-md--letter-spacing: -0.01em;
+  --text-heading-md--font-weight: 600;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--letter-spacing: 0em;
+  --text-body-md--font-weight: 400;
+
+  --text-label-sm: 12px;
+  --text-label-sm--line-height: 16px;
+  --text-label-sm--letter-spacing: 0.05em;
+  --text-label-sm--font-weight: 500;
+
+  --text-morse-code: 32px;
+  --text-morse-code--line-height: 40px;
+  --text-morse-code--letter-spacing: 0.2em;
+  --text-morse-code--font-weight: 500;
+
+  /* ---- Radii ---- */
+  --radius-sm: 0.25rem;
+  --radius-DEFAULT: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* ---- Spacing (8px grid) ----
+   * NOTE: these are intentionally NOT under the `--spacing-*` theme
+   * namespace. Tailwind v4 resolves named `max-w-*`/`w-*`/`h-*` utilities
+   * by checking the spacing scale, and our names (sm/md/lg/xl/2xl/3xl)
+   * collide with Tailwind's reserved width/max-width scale. That
+   * collision silently hijacked every max-w-md/max-w-sm/etc in the app
+   * down to 16px/8px instead of their intended ~400-600px. Keeping
+   * these as plain `--ds-*` variables and hand-writing the padding/
+   * margin/gap utilities below (see the "custom spacing utilities"
+   * layer) avoids the collision entirely while keeping every existing
+   * p-lg / gap-md / mb-xl class in the codebase working unchanged. */
+  --ds-xs: 4px;
+  --ds-sm: 8px;
+  --ds-md: 16px;
+  --ds-lg: 24px;
+  --ds-xl: 32px;
+  --ds-2xl: 48px;
+  --ds-3xl: 64px;
+  --ds-gutter: 24px;
+  --ds-container-max: 1280px;
+
+  /* ---- Motion ---- */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --duration-fast: 150ms;
+  --duration-base: 200ms;
+  --duration-slow: 250ms;
+}
+
+/* Light theme override: flips to a clean white/gray scale per DESIGN.md */
+:root[data-theme="light"] {
+  --color-surface: #fbfaff;
+  --color-surface-dim: #dbd9e0;
+  --color-surface-bright: #fbfaff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f5f3fa;
+  --color-surface-container: #efedf5;
+  --color-surface-container-high: #e9e7ef;
+  --color-surface-container-highest: #e3e1ea;
+  --color-surface-variant: #e3e1ea;
+
+  --color-on-surface: #1c1b23;
+  --color-on-surface-variant: #47454f;
+  --color-inverse-surface: #303038;
+  --color-inverse-on-surface: #f3f0fc;
+
+  --color-outline: #78767f;
+  --color-outline-variant: #c7c4d0;
+
+  --color-primary: #494bd6;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #e1e0ff;
+  --color-on-primary-container: #0d0096;
+
+  --color-background: #fbfaff;
+  --color-on-background: #1c1b23;
+  --color-waveform-well: #0f172a;
+}
+
+/* ---- Named theme packs ----
+ * Each is a standalone palette (not layered with the light/dark toggle
+ * above) so choosing one gives an immediately distinct look. Secondary,
+ * tertiary, and error tokens are left at their dark-mode defaults for
+ * consistency; only surface, primary, and outline shift per theme. */
+
+:root[data-theme="midnight"] {
+  --color-surface: #0a0e1a;
+  --color-surface-dim: #0a0e1a;
+  --color-surface-bright: #2a3350;
+  --color-surface-container-lowest: #060811;
+  --color-surface-container-low: #101524;
+  --color-surface-container: #141a2c;
+  --color-surface-container-high: #1c2338;
+  --color-surface-container-highest: #262d47;
+  --color-surface-variant: #262d47;
+  --color-on-surface: #dde3ff;
+  --color-on-surface-variant: #b6bede;
+  --color-outline: #7d87ae;
+  --color-outline-variant: #3a4262;
+  --color-primary: #8ab4ff;
+  --color-on-primary: #002c6b;
+  --color-primary-container: #4d7dcf;
+  --color-on-primary-container: #001c47;
+  --color-background: #0a0e1a;
+  --color-on-background: #dde3ff;
+  --color-waveform-well: #050810;
+}
+
+:root[data-theme="ocean"] {
+  --color-surface: #0d1b1e;
+  --color-surface-dim: #0d1b1e;
+  --color-surface-bright: #24444a;
+  --color-surface-container-lowest: #081213;
+  --color-surface-container-low: #122224;
+  --color-surface-container: #16292c;
+  --color-surface-container-high: #1d3337;
+  --color-surface-container-highest: #263f43;
+  --color-surface-variant: #263f43;
+  --color-on-surface: #cdeced;
+  --color-on-surface-variant: #a9c7ca;
+  --color-outline: #74999c;
+  --color-outline-variant: #2f4e52;
+  --color-primary: #4dd0e1;
+  --color-on-primary: #00363d;
+  --color-primary-container: #1f8b9a;
+  --color-on-primary-container: #001f24;
+  --color-background: #0d1b1e;
+  --color-on-background: #cdeced;
+  --color-waveform-well: #071214;
+}
+
+:root[data-theme="forest"] {
+  --color-surface: #0e1712;
+  --color-surface-dim: #0e1712;
+  --color-surface-bright: #2a3d2f;
+  --color-surface-container-lowest: #090f0b;
+  --color-surface-container-low: #131f18;
+  --color-surface-container: #17251c;
+  --color-surface-container-high: #1f2f24;
+  --color-surface-container-highest: #29392e;
+  --color-surface-variant: #29392e;
+  --color-on-surface: #d7ecdb;
+  --color-on-surface-variant: #b0c9b4;
+  --color-outline: #7ea184;
+  --color-outline-variant: #33473a;
+  --color-primary: #7cd992;
+  --color-on-primary: #023917;
+  --color-primary-container: #3f9c5b;
+  --color-on-primary-container: #012109;
+  --color-background: #0e1712;
+  --color-on-background: #d7ecdb;
+  --color-waveform-well: #081009;
+}
+
+:root[data-theme="coffee"] {
+  --color-surface: #1a1410;
+  --color-surface-dim: #1a1410;
+  --color-surface-bright: #453427;
+  --color-surface-container-lowest: #120d0a;
+  --color-surface-container-low: #211a15;
+  --color-surface-container: #271e18;
+  --color-surface-container-high: #33281f;
+  --color-surface-container-highest: #40332a;
+  --color-surface-variant: #40332a;
+  --color-on-surface: #f0dfd0;
+  --color-on-surface-variant: #d0bba8;
+  --color-outline: #a08b76;
+  --color-outline-variant: #4d3d30;
+  --color-primary: #d9a066;
+  --color-on-primary: #402100;
+  --color-primary-container: #a86f34;
+  --color-on-primary-container: #2a1400;
+  --color-background: #1a1410;
+  --color-on-background: #f0dfd0;
+  --color-waveform-well: #120c08;
+}
+
+:root[data-theme="frost"] {
+  --color-surface: #eef4fa;
+  --color-surface-dim: #d5dee6;
+  --color-surface-bright: #eef4fa;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #e6edf4;
+  --color-surface-container: #dfe8f0;
+  --color-surface-container-high: #d6e1ea;
+  --color-surface-container-highest: #ccdae4;
+  --color-surface-variant: #ccdae4;
+  --color-on-surface: #16232e;
+  --color-on-surface-variant: #46545f;
+  --color-outline: #75838e;
+  --color-outline-variant: #c1cdd6;
+  --color-primary: #3a76b0;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #cfe2f3;
+  --color-on-primary-container: #072943;
+  --color-background: #eef4fa;
+  --color-on-background: #16232e;
+  --color-waveform-well: #0f172a;
+}
+
+:root[data-theme="sunrise"] {
+  --color-surface: #fff8f0;
+  --color-surface-dim: #ecdfd0;
+  --color-surface-bright: #fff8f0;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #fbefe0;
+  --color-surface-container: #f6e6d2;
+  --color-surface-container-high: #f0dcc3;
+  --color-surface-container-highest: #ead2b4;
+  --color-surface-variant: #ead2b4;
+  --color-on-surface: #2e1f11;
+  --color-on-surface-variant: #5c4a38;
+  --color-outline: #8c7860;
+  --color-outline-variant: #dcc4a4;
+  --color-primary: #e8703a;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #ffd9c4;
+  --color-on-primary-container: #401800;
+  --color-background: #fff8f0;
+  --color-on-background: #2e1f11;
+  --color-waveform-well: #1a1410;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-outline-variant);
+  }
+  html {
+    color-scheme: dark;
+  }
+  html[data-theme="light"],
+  html[data-theme="frost"],
+  html[data-theme="sunrise"] {
+    color-scheme: light;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+/* ---- Accessibility overrides, toggled independently of theme ---- */
+html[data-high-contrast="true"] {
+  --color-outline-variant: var(--color-outline);
+}
+/* The 6 real spots in the app that fade text via a fractional Tailwind
+ * opacity modifier (e.g. text-on-surface-variant/60), restored to full
+ * strength under high contrast. NOTE: this used to be a single blanket
+ * `body { --tw-text-opacity: 1 }` rule, but Tailwind v4 compiles opacity
+ * modifiers to color-mix() rather than the legacy --tw-text-opacity
+ * variable, so that rule was dead code. It never
+ * restored anything. Fixed by targeting the real compiled classes
+ * directly instead.
+ */
+html[data-high-contrast="true"] .text-on-surface-variant\/40,
+html[data-high-contrast="true"] .text-on-surface-variant\/50,
+html[data-high-contrast="true"] .text-on-surface-variant\/60 {
+  color: var(--color-on-surface-variant);
+}
+html[data-high-contrast="true"] .text-outline-variant\/40 {
+  color: var(--color-outline-variant);
+}
+html[data-high-contrast="true"] .text-outline\/50 {
+  color: var(--color-outline);
+}
+html[data-high-contrast="true"] .text-primary\/70 {
+  color: var(--color-primary);
+}
+html[data-text-size="large"] {
+  font-size: 112.5%; /* ~18px base instead of 16px */
+}
+html[data-text-size="small"] {
+  font-size: 93.75%; /* ~15px base */
+}
+html[data-reduced-motion="true"] *,
+html[data-reduced-motion="true"] *::before,
+html[data-reduced-motion="true"] *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+@layer utilities {
+  /* ---- Custom spacing utilities ----
+   * Hand-written rather than theme-generated so they can't collide
+   * with Tailwind's reserved width/height/max-width scale (see the
+   * note above --ds-xs in @theme). Covers every p-/m-/gap-/space-
+   * variant actually used in the app, for all seven sizes. */
+  .p-xs { padding: var(--ds-xs); } .p-sm { padding: var(--ds-sm); }
+  .p-md { padding: var(--ds-md); } .p-lg { padding: var(--ds-lg); }
+  .p-xl { padding: var(--ds-xl); } .p-2xl { padding: var(--ds-2xl); }
+  .p-3xl { padding: var(--ds-3xl); }
+
+  .px-xs { padding-inline: var(--ds-xs); } .px-sm { padding-inline: var(--ds-sm); }
+  .px-md { padding-inline: var(--ds-md); } .px-lg { padding-inline: var(--ds-lg); }
+  .px-xl { padding-inline: var(--ds-xl); } .px-2xl { padding-inline: var(--ds-2xl); }
+  .px-3xl { padding-inline: var(--ds-3xl); }
+
+  .py-xs { padding-block: var(--ds-xs); } .py-sm { padding-block: var(--ds-sm); }
+  .py-md { padding-block: var(--ds-md); } .py-lg { padding-block: var(--ds-lg); }
+  .py-xl { padding-block: var(--ds-xl); } .py-2xl { padding-block: var(--ds-2xl); }
+  .py-3xl { padding-block: var(--ds-3xl); }
+
+  .pt-xs { padding-top: var(--ds-xs); } .pt-sm { padding-top: var(--ds-sm); }
+  .pt-md { padding-top: var(--ds-md); } .pt-lg { padding-top: var(--ds-lg); }
+  .pt-xl { padding-top: var(--ds-xl); }
+
+  .pb-xs { padding-bottom: var(--ds-xs); } .pb-sm { padding-bottom: var(--ds-sm); }
+  .pb-md { padding-bottom: var(--ds-md); } .pb-lg { padding-bottom: var(--ds-lg); }
+  .pb-xl { padding-bottom: var(--ds-xl); }
+
+  .pl-sm { padding-left: var(--ds-sm); } .pl-md { padding-left: var(--ds-md); }
+  .pr-xs { padding-right: var(--ds-xs); } .pr-md { padding-right: var(--ds-md); }
+
+  .m-xs { margin: var(--ds-xs); } .m-sm { margin: var(--ds-sm); }
+  .m-md { margin: var(--ds-md); } .m-lg { margin: var(--ds-lg); }
+
+  .mt-xs { margin-top: var(--ds-xs); } .mt-sm { margin-top: var(--ds-sm); }
+  .mt-md { margin-top: var(--ds-md); } .mt-lg { margin-top: var(--ds-lg); }
+  .mt-xl { margin-top: var(--ds-xl); }
+
+  .mb-xs { margin-bottom: var(--ds-xs); } .mb-sm { margin-bottom: var(--ds-sm); }
+  .mb-md { margin-bottom: var(--ds-md); } .mb-lg { margin-bottom: var(--ds-lg); }
+  .mb-xl { margin-bottom: var(--ds-xl); } .mb-2xl { margin-bottom: var(--ds-2xl); }
+
+  .gap-xs { gap: var(--ds-xs); } .gap-sm { gap: var(--ds-sm); }
+  .gap-md { gap: var(--ds-md); } .gap-lg { gap: var(--ds-lg); }
+  .gap-xl { gap: var(--ds-xl); } .gap-2xl { gap: var(--ds-2xl); }
+  .gap-gutter { gap: var(--ds-gutter); }
+  .gap-x-lg { column-gap: var(--ds-lg); }
+  .gap-y-sm { row-gap: var(--ds-sm); }
+
+  .space-y-xs > :not([hidden]) ~ :not([hidden]) { margin-top: var(--ds-xs); }
+  .space-y-sm > :not([hidden]) ~ :not([hidden]) { margin-top: var(--ds-sm); }
+
+  .max-w-container-max { max-width: var(--ds-container-max); }
+}
+
+@layer utilities {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-surface-container-highest);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-outline-variant);
+  }
+
+  .progress-ring-circle {
+    transition: stroke-dashoffset 1s var(--ease-standard);
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+  }
+}
+
+@layer utilities {
+  /* ---- Game feedback FX (screen shake, particle burst, combo/score pop) ----
+   * Used by the mini-games in src/features/games for juicier feedback.
+   * All respect the global prefers-reduced-motion override below. */
+  @keyframes game-shake {
+    10%, 90% { transform: translateX(-2px); }
+    20%, 80% { transform: translateX(4px); }
+    30%, 50%, 70% { transform: translateX(-8px); }
+    40%, 60% { transform: translateX(8px); }
+  }
+  .animate-game-shake { animation: game-shake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; }
+
+  @keyframes particle-fly {
+    0% { transform: translate(0, 0) scale(1); opacity: 1; }
+    100% { transform: translate(var(--dx), var(--dy)) scale(0); opacity: 0; }
+  }
+  .particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 9999px;
+    animation: particle-fly 0.6s ease-out forwards;
+  }
+
+  @keyframes combo-pop {
+    0% { transform: scale(0.5); opacity: 0; }
+    60% { transform: scale(1.15); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  .animate-combo-pop { animation: combo-pop 0.25s ease-out both; }
+
+  @keyframes score-float {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-28px); opacity: 0; }
+  }
+  .animate-score-float { animation: score-float 0.7s ease-out forwards; }
+
+  @keyframes flash-error {
+    0% { background-color: color-mix(in srgb, var(--color-error) 22%, transparent); }
+    100% { background-color: transparent; }
+  }
+  .animate-flash-error { animation: flash-error 0.35s ease-out; }
+
+  /* ---- Card-flip (Morse Match) ---- */
+  .flip-card { perspective: 800px; }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+  }
+  .flip-card-inner.is-flipped { transform: rotateY(180deg); }
+  .flip-card-face {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .flip-card-back { transform: rotateY(180deg); }
+
+  @keyframes match-pulse {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+  }
+  .animate-match-pulse { animation: match-pulse 0.35s ease-out; }
+}
+
+@layer utilities {
+  /* ---- Page-load reveal (staggered fade-up) ----
+   * Generic, reusable across screens: apply .reveal-item with an
+   * inline `--reveal-delay` (e.g. style={{ "--reveal-delay": "80ms" }})
+   * to fade+slide each item in on mount, staggered. */
+  @keyframes reveal-up {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .reveal-item {
+    animation: reveal-up 0.5s var(--ease-standard, ease-out) both;
+    animation-delay: var(--reveal-delay, 0ms);
+  }
+
+  @keyframes count-fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+  }
+  .animate-count-fade { animation: count-fade 0.4s ease-out; }
+
+  @keyframes gentle-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.55; }
+  }
+  .animate-gentle-pulse { animation: gentle-pulse 2.2s ease-in-out infinite; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:not([data-reduced-motion="false"]) *,
+  html:not([data-reduced-motion="false"]) *::before,
+  html:not([data-reduced-motion="false"]) *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
