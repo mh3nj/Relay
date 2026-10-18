@@ -1,0 +1,32 @@
+# Relay: SPA routing fallback for Apache and shared hosting (cPanel)
+#
+# Without this, deep links (e.g. /practice, /progress) and hard refreshes
+# on any route other than the homepage return a 404, because Apache
+# looks for a literal file/folder at that path. This rewrites every
+# request that isn't a real file or directory back to index.html, and
+# lets React Router take over from there.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Let real files (JS, CSS, images, the manifest, the service worker,
+  # icons, etc.) be served normally.
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Everything else falls back to the app shell.
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# The service worker must never be cached, so updates roll out promptly.
+<IfModule mod_headers.c>
+  <FilesMatch "^sw\.js$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "^manifest\.webmanifest$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
